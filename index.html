@@ -429,8 +429,34 @@ function buildPlaybook(){
   }).join('');
   const bySub={}; g.forEach(x=>{(bySub[x.sub]=bySub[x.sub]||[]).push(x);});
   const subs=Object.keys(bySub).sort((a,b)=>bySub[b].length-bySub[a].length).slice(0,6);
+  // Subarea labels are first-pass algorithmic (read off the whole abstract), so a grant can
+  // land in the wrong bucket on an incidental word. For the showcased example we instead match
+  // the award TITLE — the cleanest signal — so each example genuinely represents its field.
+  const SUB_TITLE_KW = {
+    'ESKD / Dialysis':['dialysis','hemodialysis','haemodialysis','peritoneal dialysis','end-stage','end stage','eskd','esrd','kidney failure','vascular access','arteriovenous fistula','dialysate'],
+    'Transplant':['transplant','allograft','kidney donor','living donor','waitlist'],
+    'Glomerular disease':['glomerul','podocyte','fsgs','nephrotic','iga nephropathy','membranous','lupus nephritis','crescentic','apol1'],
+    'Acute kidney injury':['acute kidney injury','acute renal failure','acute tubular','ischemia-reperfusion','ischemia reperfusion','cardiorenal','cardio-renal'],
+    'PKD / Genetic':['polycystic','pkd','alport','cyst','ciliary','cilia','monogenic','hereditary kidney','genetic risk'],
+    'Stones / Electrolytes':['kidney stone','nephrolithiasis','oxalate','electrolyte','hyperkalem','hypokalem','phosphate','acid-base','mineral metabolism','k secretion','potassium','magnesium'],
+    'Hypertension':['hypertension','blood pressure','aldosterone','renin','salt-sensitiv','sodium intake'],
+    'Pediatric nephrology':['pediatric','paediatric','children','childhood','neonat','preterm','infant'],
+    'Health services / Epi':['disparit','equity','access to care','implementation','epidemiolog','cost-effective','quality of care','education','telemedicine','risk communication'],
+    'CKD progression':['chronic kidney disease','ckd','egfr','diabetic kidney','diabetic nephropathy','fibrosis','tubulointerstitial','albuminuria','proteinuria']
+  };
+  // Phrases that belong to a more specific sibling field — keep them out of the broad bucket's example.
+  const SUB_EXCLUDE = { 'ESKD / Dialysis':['acute kidney injury','acute renal failure'] };
+  const used=new Set();
   document.getElementById('pb-examples').innerHTML = subs.map(s=>{
-    const top=bySub[s].slice().sort((x,y)=>(y.amt||0)-(x.amt||0))[0];
+    const kws=SUB_TITLE_KW[s]||[];
+    const ex=SUB_EXCLUDE[s]||[];
+    const matches=t=>kws.some(k=>(t||'').toLowerCase().includes(k)) && !ex.some(k=>(t||'').toLowerCase().includes(k));
+    let cands=g.filter(x=>!used.has(x.id) && matches(x.t));        // any award whose TITLE fits this field
+    if(!cands.length) cands=(bySub[s]||[]).filter(x=>!used.has(x.id)); // fallback: classified bucket
+    if(!cands.length) cands=(bySub[s]||[]);
+    const top=cands.slice().sort((x,y)=>(y.amt||0)-(x.amt||0))[0];
+    if(!top) return '';
+    used.add(top.id);
     const foa=top.foa?` · FOA ${top.foa}`:'';
     return `<div style="padding:10px 0;border-bottom:1px solid var(--line)"><div style="font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted)">${s}</div><a href="https://reporter.nih.gov/project-details/${top.id}" target="_blank" rel="noopener" style="font-size:14px">${top.t}</a><div class="muted" style="font-size:12px">${top.pi} · ${shortOrg(top.org)} · ${top.ac} · ${fmtUsd(top.amt)}/yr${foa}</div></div>`;
   }).join('');
