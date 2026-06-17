@@ -141,6 +141,84 @@ def post(body, tries=5):
             time.sleep(wait)
     raise RuntimeError("RePORTER API failed after retries")
 
+PUB_API = "https://api.reporter.nih.gov/v2/publications/search"
+EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi"
+
+def _post_json(url, body, tries=4, timeout=60):
+    data = json.dumps(body).encode()
+    for i in range(tries):
+        try:
+            req = urllib.request.Request(url, data=data,
+                  headers={"Content-Type": "application/json", "Accept": "application/json"})
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return json.loads(r.read().decode())
+        except Exception:
+            time.sleep(1.5 * (i + 1))
+    return {}
+
+def _surname(name):
+    name = (name or "").strip()
+    return (name.split(",")[0] if "," in name else name.split(" ")[0]).lower()
+
+def enrich(grants):
+    """Attach publication counts to each grant and return an inferred-mentor list.
+    Mentor inference: most-common senior (last) author across a scholar's K-supported
+    publications, excluding the scholar; aggregated across scholars. Best-effort — any
+    network/parse failure leaves grants intact and returns []. Never raises."""
+    from collections import Counter
+    try:
+        by_core = {g["core"]: g for g in grants if g.get("core")}
+        cores = list(by_core.keys())
+        pmids_by_core = {}
+        for i in range(0, len(cores), 50):
+            res = _post_json(PUB_API, {"criteria": {"core_project_nums": cores[i:i+50]},
+                                       "include_fields": ["CoreProject", "Pmid"],
+                                       "offset": 0, "limit": 500})
+            for r in (res.get("results") or []):
+                c = r.get("coreproject") or r.get("core_project") or r.get("core_project_num")
+                pm = r.get("pmid") or r.get("pm_id")
+                if c and pm:
+                    pmids_by_core.setdefault(c, []).append(str(pm))
+            time.sleep(0.34)
+        for g in grants:
+            g["pubs"] = len(pmids_by_core.get(g.get("core"), []))
+        all_pmids = sorted({pm for v in pmids_by_core.values() for pm in v})
+        last_author = {}
+        for i in range(0, len(all_pmids), 200):
+            batch = all_pmids[i:i+200]
+            try:
+                url = EUTILS + "?db=pubmed&retmode=json&id=" + ",".join(batch)
+                with urllib.request.urlopen(url, timeout=45) as r:
+                    js = json.loads(r.read().decode())
+                res = js.get("result", {})
+                for pm in res.get("uids", []):
+                    auths = res.get(pm, {}).get("authors") or []
+                    names = [a.get("name") for a in auths if a.get("name")]
+                    if names:
+                        last_author[pm] = names[-1]
+            except Exception:
+                pass
+            time.sleep(0.4)
+        mentors = {}
+        for g in grants:
+            la = [last_author.get(pm) for pm in pmids_by_core.get(g.get("core"), []) if last_author.get(pm)]
+            la = [a for a in la if _surname(a) and _surname(a) != _surname(g.get("pi", ""))]
+            if not la:
+                continue
+            top = Counter(la).most_common(1)[0][0]
+            m = mentors.setdefault(top, {"scholars": set(), "subs": Counter()})
+            m["scholars"].add(g.get("pi"))
+            m["subs"][g.get("sub")] += 1
+        out = [{"name": n, "count": len(v["scholars"]), "subs": v["subs"].most_common(1)[0][0]}
+               for n, v in mentors.items() if len(v["scholars"]) >= 2]
+        out.sort(key=lambda m: -m["count"])
+        sys.stderr.write(f"  enrichment: {sum(1 for g in grants if g.get('pubs'))} awards with pubs, "
+                         f"{len(out)} inferred mentors\n")
+        return out[:25]
+    except Exception as e:
+        sys.stderr.write(f"  enrichment skipped ({e})\n")
+        return []
+
 def fetch_all(years):
     """Pull every matching K award across the requested fiscal years."""
     fields = ["ApplId","ProjectNum","CoreProjectNum","ActivityCode","FiscalYear","AwardAmount",
@@ -254,6 +332,7 @@ def main():
     raw = keep_latest_per_core(raw)
     grants = transform(raw, loose=args.loose)
     grants.sort(key=lambda g: -(g["amt"] or 0))
+    mentors = enrich(grants)   # attaches g["pubs"]; returns inferred mentors (best-effort)
     agg = aggregate(grants)
     total_amt = sum(g["amt"] or 0 for g in grants)
 
@@ -276,6 +355,7 @@ def main():
         "stats": agg["stats"],
         "institutions": agg["institutions"],
         "states": agg["states"],
+        "mentors": mentors,
         "grants": grants,
     }
     out = os.path.abspath(args.out)
