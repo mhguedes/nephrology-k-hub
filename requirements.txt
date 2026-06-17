@@ -1,0 +1,3 @@
+# The pipeline uses only the Python standard library (urllib, json) — no third-party
+# packages required. This file is kept for CI clarity and future extensions
+# (e.g. add `requests` or `biopython` if you wire up PubMed publication linkage).

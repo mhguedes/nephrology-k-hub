@@ -1,0 +1,58 @@
+name: Weekly nephrology K-grant refresh
+
+# Refreshes data.json from NIH RePORTER every Monday (and on demand), commits the
+# change, and republishes the site to GitHub Pages. NIH refreshes RePORTER weekly,
+# so a weekly cadence keeps the hub current with no manual upkeep.
+on:
+  schedule:
+    - cron: "0 10 * * 1"   # Mondays 10:00 UTC (~06:00 ET)
+  workflow_dispatch: {}      # lets you run it any time from the Actions tab
+
+permissions:
+  contents: write   # commit the refreshed data.json
+  pages: write      # publish to GitHub Pages
+  id-token: write   # required by deploy-pages
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pull + classify latest NIH RePORTER data
+        run: python pipeline/reporter_pull.py     # rolling fiscal-year window, study-population filter
+
+      - name: Commit refreshed data.json
+        run: |
+          git config user.name  "neph-k-hub-bot"
+          git config user.email "actions@github.com"
+          if ! git diff --quiet -- data.json; then
+            git add data.json
+            git commit -m "Weekly data refresh ($(date -u +%Y-%m-%d))"
+            git push
+          else
+            echo "No changes in data.json."
+          fi
+
+      - name: Package site for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+  deploy:
+    needs: refresh
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nephrology K-Grant Hub</title>
+<style>
+  :root{
+    --bg:#f6f8fb; --card:#fff; --ink:#152033; --muted:#5b6b82; --line:#e4eaf2;
+    --brand:#1c6dd0; --brand2:#0e9f6e; --accent:#7c3aed; --warn:#b45309;
+    --clin:#1c6dd0; --nonclin:#0e9f6e;
+    --shadow:0 1px 2px rgba(16,40,80,.06),0 6px 20px rgba(16,40,80,.06);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+  a{color:var(--brand);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  header.top{background:linear-gradient(135deg,#0f2c54,#1c6dd0);color:#fff;padding:30px 0 26px}
+  header.top h1{margin:0 0 4px;font-size:26px;letter-spacing:.2px}
+  header.top p{margin:0;color:#d6e4f7;font-size:14px;max-width:760px}
+  .snapshot{margin-top:6px;font-size:12px;color:#aecbf0}
+  nav.tabs{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+  nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto}
+  nav.tabs button{appearance:none;border:0;background:none;padding:14px 14px;font-size:14px;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
+  nav.tabs button.active{color:var(--brand);border-bottom-color:var(--brand)}
+  section.view{display:none;padding:24px 0 60px}
+  section.view.active{display:block}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+  .kpi .n{font-size:26px;font-weight:700}
+  .kpi .l{font-size:12px;color:var(--muted);margin-top:2px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow);margin-bottom:18px}
+  .card h3{margin:0 0 14px;font-size:15px}
+  .card h3 .sub{font-weight:400;color:var(--muted);font-size:12px}
+  .bar-row{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:13px}
+  .bar-row .lab{width:150px;flex:none;color:var(--ink);text-align:right;font-size:12.5px}
+  .bar-row .track{flex:1;background:#eef2f8;border-radius:6px;overflow:hidden;height:20px;display:flex}
+  .bar-row .fill{height:100%;background:var(--brand);display:flex;align-items:center}
+  .bar-row .fill.c{background:var(--clin)}
+  .bar-row .fill.nc{background:var(--nonclin)}
+  .bar-row .val{width:42px;flex:none;font-variant-numeric:tabular-nums;color:var(--muted)}
+  .legend{display:flex;gap:16px;font-size:12px;color:var(--muted);margin-bottom:6px}
+  .legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+  .controls{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+  .controls input,.controls select{padding:9px 11px;border:1px solid var(--line);border-radius:9px;font-size:13px;background:#fff;color:var(--ink)}
+  .controls input[type=search]{min-width:240px;flex:1}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);cursor:pointer;user-select:none;position:sticky;top:49px;background:#fff}
+  tbody tr:hover{background:#f9fbfe}
+  .pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;white-space:nowrap}
+  .pill.clin{background:#e7f0fc;color:#1551a6}
+  .pill.nonclin{background:#e5f6ee;color:#0a7a52}
+  .pill.mech{background:#f0ecfb;color:#5b2bb5}
+  .muted{color:var(--muted)}
+  .note{background:#fff8ee;border:1px solid #f3e2c5;border-radius:12px;padding:14px 16px;font-size:13px;color:#6b4f1d;margin-bottom:18px}
+  .note b{color:#7a4d09}
+  .mapgrid{display:grid;grid-template-columns:repeat(11,1fr);gap:5px;max-width:620px}
+  .tile{aspect-ratio:1/1;border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#3a4759;background:#eef2f8}
+  .tile .c{font-size:10px;font-weight:600;opacity:.85}
+  .tile.empty{background:transparent}
+  .scaleleg{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-top:12px}
+  .scaleleg .sw{width:22px;height:12px;border-radius:3px}
+  footer{padding:26px 0;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
+  .methods p{font-size:13.5px;color:#33425a}
+  .methods h4{margin:18px 0 6px;font-size:14px}
+  code{background:#eef2f8;padding:1px 6px;border-radius:5px;font-size:12px}
+  @media(max-width:820px){.kpis{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.bar-row .lab{width:110px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <h1>Nephrology K-Grant Hub</h1>
+  <p>A living library and institutional map of NIH career-development (K) awards in kidney research — built from NIH RePORTER, organized by subarea and by clinical vs. non-clinical research.</p>
+  <div class="snapshot" id="snapline">Loading…</div>
+</div></header>
+
+<nav class="tabs"><div class="wrap">
+  <button data-v="overview" class="active">Overview</button>
+  <button data-v="library">Grant Library</button>
+  <button data-v="institutions">Institutions &amp; Map</button>
+  <button data-v="methods">Methodology</button>
+</div></nav>
+
+<div class="wrap">
+
+<!-- OVERVIEW -->
+<section class="view active" id="overview">
+  <div class="kpis" id="kpis"></div>
+  <div class="note" id="ov-note"></div>
+  <div class="grid2">
+    <div class="card"><h3>Awards by nephrology subarea</h3><div id="ch-sub"></div></div>
+    <div class="card"><h3>Awards by mechanism <span class="sub">K-series activity code</span></h3><div id="ch-mech"></div></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>Clinical vs. non-clinical research</h3><div id="ch-clin"></div></div>
+    <div class="card"><h3>Active awards by fiscal year <span class="sub">most recent budget year</span></h3><div id="ch-fy"></div></div>
+  </div>
+  <div class="card"><h3>Funding institute <span class="sub">administering IC</span></h3><div id="ch-ic"></div></div>
+</section>
+
+<!-- LIBRARY -->
+<section class="view" id="library">
+  <div class="note">Showing <span id="lib-count"></span> of the <b>159 active nephrology K awards</b> in the June 2026 snapshot. An award is included when kidney disease is the study focus <i>or study population</i> — so comorbidity studies that enroll patients with kidney disease (anemia, cardiovascular, metabolic, etc. in CKD/dialysis/transplant cohorts) are counted; incidental kidney mentions and pure kidney-cancer/urology are excluded. Run the included pipeline to populate the complete 159-award list. <b>Full record / proposal:</b> the <i>Abstract &amp; record ↗</i> link (and the project title) open each award's NIH RePORTER page — the complete public abstract, public-health-relevance statement, investigators, study section, and funding. NIH does not release the full application (Specific Aims / Research Strategy) publicly, so the RePORTER record is the authoritative public document for each award.</div>
+  <div class="controls">
+    <input type="search" id="q" placeholder="Search title, PI, institution…">
+    <select id="f-sub"><option value="">All subareas</option></select>
+    <select id="f-mech"><option value="">All mechanisms</option></select>
+    <select id="f-clin"><option value="">Clinical &amp; non-clinical</option></select>
+  </div>
+  <div class="card" style="padding:6px 4px">
+    <table id="tbl">
+      <thead><tr>
+        <th data-k="t">Project</th><th data-k="pi">Investigator</th><th data-k="org">Institution</th>
+        <th data-k="sub">Subarea</th><th data-k="ac">Mech</th><th data-k="cl">Type</th><th data-k="amt">Award</th><th data-k="fy">FY</th><th>Full record</th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- INSTITUTIONS -->
+<section class="view" id="institutions">
+  <div class="note">Institutional counts and the map below reflect the full June 2026 snapshot of <b>159 active nephrology K awards across 68 institutions</b>. <b>Note on mentors (Goal 2):</b> NIH RePORTER does not publish K-award mentor/sponsor names, so a mentor ranking cannot be produced from the public data directly — see Methodology for the planned coauthorship-based approach.</div>
+  <div class="card">
+    <h3>Top institutions by active nephrology K awards <span class="sub">clinical vs. non-clinical split</span></h3>
+    <div class="legend"><span><i style="background:var(--clin)"></i>Clinical</span><span><i style="background:var(--nonclin)"></i>Non-clinical / basic</span></div>
+    <div id="ch-inst"></div>
+  </div>
+  <div class="card">
+    <h3>Geographic distribution <span class="sub">active awards by state</span></h3>
+    <div class="mapgrid" id="map"></div>
+    <div class="scaleleg" id="mapleg"></div>
+  </div>
+</section>
+
+<!-- METHODS -->
+<section class="view methods" id="methods">
+  <div class="card">
+    <h3>How this hub is built</h3>
+    <p><b>Source.</b> All data come from the <a href="https://reporter.nih.gov" target="_blank" rel="noopener">NIH RePORTER</a> database (API v2), the authoritative public record of NIH-funded awards. NIH refreshes RePORTER weekly.</p>
+    <p><b>Scope.</b> Active career-development (K) awards — K01, K08, K23, K99, K24, K25, K38, K43, K02 and related — funded by NIDDK and other institutes (NHLBI, NIA, NIAID, NICHD, and others). An award is included when <b>kidney disease is the study focus or the study population</b>: a kidney-disease term appears in the title, or the abstract names an explicit kidney-disease population ("patients on dialysis", "kidney transplant recipients", "adults with CKD", etc.). This deliberately keeps <b>comorbidity studies that enroll kidney-disease patients</b> (e.g., anemia, cardiovascular, or metabolic studies in CKD/dialysis/transplant cohorts), while excluding studies that only mention the kidney incidentally and pure kidney-cancer/urology. The result is 159 awards. The pipeline also offers a looser abstract-level mode for maximum recall.</p>
+    <h4>Full record &amp; proposal documents</h4>
+    <p>Each award links to its <b>NIH RePORTER record</b>, which contains the complete public abstract, public-health-relevance statement, investigators, study section, project period, and funding. <b>NIH does not publish the full grant application</b> (Specific Aims, Research Strategy) — those are available only via FOIA — so there is no public proposal PDF to link. Where a funding opportunity (FOA/NOFO) number is available it is shown and linked. For funded science, the award's linked <i>publications</i> (a planned addition via the RePORTER publications endpoint → PubMed/PMC) are the closest thing to the proposal's results.</p>
+    <h4>Clinical vs. non-clinical (Goal 1.1)</h4>
+    <p>Each award is labeled by combining (1) a mechanism prior (K23/K24 lean patient-oriented; K08/K99/K01 lean basic), (2) clinical-trial / cohort language in the abstract, and (3) basic-science language (animal models, in vitro, mechanism). Clinical awards are further split into <i>clinical trial</i> vs. <i>observational</i>. These are first-pass algorithmic labels for triage and contain errors; a human-reviewed override is intended.</p>
+    <h4>Institutional map (Goal 2)</h4>
+    <p>Built by aggregating the administering organization and state across all matched awards, with the clinical/non-clinical split preserved.</p>
+    <h4>Mentors &amp; co-mentors (Goal 2) — known limitation</h4>
+    <p>RePORTER exposes the K <i>scholar</i> (awardee) and NIH program officers, but <b>not the mentor or sponsor</b>. A reliable mentor ranking therefore cannot come straight from the data. The planned approach is to infer likely mentors from the senior/corresponding authors on each scholar's K-supported publications, then aggregate — clearly labeled as inferred — with optional manual curation.</p>
+    <h4>Dynamic weekly updates (Goal 3)</h4>
+    <p>The page reads <code>data.json</code>. A scheduled job (<code>pipeline/reporter_pull.py</code>, runnable weekly via the included GitHub Actions workflow) re-queries RePORTER, re-classifies, recomputes the aggregates, and rewrites <code>data.json</code>. Because the RePORTER API blocks direct in-browser calls (no CORS), the fetch must run server-side in the pipeline rather than from this page.</p>
+    <h4>Caveats</h4>
+    <p>The text filter over-recalls (some non-kidney NIDDK/NCI/NIAID awards match generic terms like "transplant"); the snapshot here applies a tighter nephrology gate. Counts are a point-in-time snapshot (June 2026) of active awards, not a complete historical record — the pipeline can be configured to include past fiscal years.</p>
+  </div>
+</section>
+
+</div>
+
+<footer><div class="wrap">
+  Nephrology K-Grant Hub · data from NIH RePORTER · snapshot generated <span id="genfoot"></span> · this is a research/triage tool, not an official NIH product.
+</div></footer>
+
+<script>
+// ---- Embedded fallback (used when opened via file:// where fetch is blocked). Pipeline updates data.json. ----
+const EMBEDDED = {"meta":{"generated":"2026-06-16","source":"NIH RePORTER (active K-series career development awards; nephrology study-population filter)","snapshot_note":"Complete aggregate statistics are computed over all 159 active nephrology K awards in the June 2026 snapshot. An award is included when kidney disease is the study focus or population — so comorbidity studies that enroll patients with kidney disease (e.g., anemia, cardiovascular, or metabolic studies in CKD/dialysis/transplant populations) are counted, while studies that merely mention the kidney incidentally (and pure kidney-cancer/urology) are excluded. The grant list below is a curated real sample (~64) spanning all subareas and all award sizes; run the pipeline to populate the complete 159-award list. Subarea and clinical/non-clinical labels are first-pass algorithmic classifications.","universe_total_active":159,"total_current_year_award_usd":26318779,"n_institutions":68,"application_pdf_note":"NIH does not publish full grant applications (Specific Aims / Research Strategy) publicly; those are FOIA-only. Each award links to its NIH RePORTER record, which carries the complete public abstract, public-health-relevance statement, PIs, and funding."},"stats":{"by_mechanism":{"K23":77,"K01":36,"K08":31,"K24":5,"K25":4,"K99":4,"K02":1,"K43":1},"by_subarea":{"Transplant":35,"Glomerular disease":32,"ESKD / Dialysis":32,"Acute kidney injury":16,"Hypertension":10,"Stones / Electrolytes":9,"Health services / Epi":9,"Pediatric nephrology":5,"CKD progression":4,"PKD / Genetic":4,"General nephrology":3},"by_clinical":{"Observational / clinical":50,"Non-clinical / basic":45,"Clinical trial":41,"Clinical (other)":23},"by_institute":{"NIDDK":114,"NHLBI":22,"NIAID":6,"NIA":4,"NIEHS":2,"NINR":2,"NIAMS":2,"NCI":2,"AHRQ":1,"NIMH":1,"NIMHD":1,"NIGMS":1,"FIC":1},"by_fiscal_year":{"2024":7,"2025":63,"2026":89}},"institutions":[{"name":"Brigham and Women's Hospital","total":8,"clinical":8,"nonclinical":0,"state":"MA"},{"name":"Columbia University","total":8,"clinical":5,"nonclinical":3,"state":"NY"},{"name":"New York University","total":7,"clinical":7,"nonclinical":0,"state":"NY"},{"name":"University of Alabama at Birmingham","total":6,"clinical":3,"nonclinical":3,"state":"AL"},{"name":"University of California, San Francisco","total":6,"clinical":5,"nonclinical":1,"state":"CA"},{"name":"University of Pittsburgh","total":6,"clinical":2,"nonclinical":4,"state":"PA"},{"name":"Johns Hopkins University","total":5,"clinical":5,"nonclinical":0,"state":"MD"},{"name":"University of Colorado Denver","total":5,"clinical":4,"nonclinical":1,"state":"CO"},{"name":"University of Washington","total":5,"clinical":4,"nonclinical":1,"state":"WA"},{"name":"Indiana University Indianapolis","total":4,"clinical":3,"nonclinical":1,"state":"IN"},{"name":"Massachusetts General Hospital","total":4,"clinical":3,"nonclinical":1,"state":"MA"},{"name":"University of California, San Diego","total":4,"clinical":4,"nonclinical":0,"state":"CA"},{"name":"Yale University","total":4,"clinical":3,"nonclinical":1,"state":"CT"},{"name":"Albert Einstein College of Medicine","total":3,"clinical":3,"nonclinical":0,"state":"NY"},{"name":"Children's Hospital of Philadelphia","total":3,"clinical":3,"nonclinical":0,"state":"PA"},{"name":"Cincinnati Children's Hospital","total":3,"clinical":1,"nonclinical":2,"state":"OH"},{"name":"Duke University","total":3,"clinical":2,"nonclinical":1,"state":"NC"},{"name":"Icahn School of Medicine at Mount Sinai","total":3,"clinical":2,"nonclinical":1,"state":"NY"},{"name":"Stanford University","total":3,"clinical":3,"nonclinical":0,"state":"CA"},{"name":"University of North Carolina, Chapel Hill","total":3,"clinical":3,"nonclinical":0,"state":"NC"},{"name":"University of Michigan","total":3,"clinical":3,"nonclinical":0,"state":"MI"},{"name":"University of Minnesota","total":3,"clinical":2,"nonclinical":1,"state":"MN"},{"name":"University of Pennsylvania","total":3,"clinical":1,"nonclinical":2,"state":"PA"},{"name":"Boston Children's Hospital","total":2,"clinical":0,"nonclinical":2,"state":"MA"},{"name":"Boston Medical Center","total":2,"clinical":2,"nonclinical":0,"state":"MA"},{"name":"Cleveland Clinic (Lerner COM-CWRU)","total":2,"clinical":2,"nonclinical":0,"state":"OH"},{"name":"Medical College of Wisconsin","total":2,"clinical":2,"nonclinical":0,"state":"WI"},{"name":"Oregon Health & Science University","total":2,"clinical":1,"nonclinical":1,"state":"OR"},{"name":"Nationwide Children's Hospital","total":2,"clinical":0,"nonclinical":2,"state":"OH"},{"name":"Seattle Children's Hospital","total":2,"clinical":1,"nonclinical":1,"state":"WA"},{"name":"University of Florida","total":2,"clinical":1,"nonclinical":1,"state":"FL"},{"name":"University of Illinois at Chicago","total":2,"clinical":2,"nonclinical":0,"state":"IL"},{"name":"University of Rochester","total":2,"clinical":1,"nonclinical":1,"state":"NY"},{"name":"University of Wisconsin-madison","total":2,"clinical":2,"nonclinical":0,"state":"WI"},{"name":"Vanderbilt University Medical Center","total":2,"clinical":0,"nonclinical":2,"state":"TN"},{"name":"Baylor College of Medicine","total":1,"clinical":1,"nonclinical":0,"state":"TX"},{"name":"Beth Israel Deaconess Medical Center","total":1,"clinical":1,"nonclinical":0,"state":"MA"},{"name":"Case Western Reserve University","total":1,"clinical":0,"nonclinical":1,"state":"OH"},{"name":"Dana-Farber Cancer Institute","total":1,"clinical":1,"nonclinical":0,"state":"MA"},{"name":"Dartmouth-Hitchcock","total":1,"clinical":1,"nonclinical":0,"state":"NH"},{"name":"Emory University","total":1,"clinical":1,"nonclinical":0,"state":"GA"},{"name":"Feinstein Institute for Medical Research","total":1,"clinical":1,"nonclinical":0,"state":"NY"},{"name":"Kennedy Krieger Institute","total":1,"clinical":1,"nonclinical":0,"state":"MD"},{"name":"Lurie Children's Hospital of Chicago","total":1,"clinical":1,"nonclinical":0,"state":"IL"},{"name":"Makerere University","total":1,"clinical":1,"nonclinical":0,"state":""},{"name":"Mayo Clinic Rochester","total":1,"clinical":1,"nonclinical":0,"state":"MN"},{"name":"Northwestern University","total":1,"clinical":1,"nonclinical":0,"state":"IL"},{"name":"University at Buffalo (SUNY)","total":1,"clinical":0,"nonclinical":1,"state":"NY"},{"name":"Tufts Medical Center","total":1,"clinical":1,"nonclinical":0,"state":"MA"},{"name":"University of California, Davis","total":1,"clinical":1,"nonclinical":0,"state":"CA"},{"name":"University of California, Los Angeles","total":1,"clinical":0,"nonclinical":1,"state":"CA"},{"name":"University of California, Irvine","total":1,"clinical":1,"nonclinical":0,"state":"CA"},{"name":"University of Cincinnati","total":1,"clinical":1,"nonclinical":0,"state":"OH"},{"name":"University of Kansas Medical Center","total":1,"clinical":0,"nonclinical":1,"state":"KS"},{"name":"University of Kentucky","total":1,"clinical":1,"nonclinical":0,"state":"KY"},{"name":"University of Maryland, Baltimore","total":1,"clinical":1,"nonclinical":0,"state":"MD"},{"name":"University of Oklahoma HSC","total":1,"clinical":0,"nonclinical":1,"state":"OK"},{"name":"University of South Florida","total":1,"clinical":0,"nonclinical":1,"state":"FL"},{"name":"University of Southern California","total":1,"clinical":1,"nonclinical":0,"state":"CA"},{"name":"University of Tennessee HSC","total":1,"clinical":1,"nonclinical":0,"state":"TN"},{"name":"University of Texas at Austin","total":1,"clinical":1,"nonclinical":0,"state":"TX"},{"name":"UT Medical Branch, Galveston","total":1,"clinical":0,"nonclinical":1,"state":"TX"},{"name":"UT MD Anderson Cancer Center","total":1,"clinical":0,"nonclinical":1,"state":"TX"},{"name":"University of Virginia","total":1,"clinical":0,"nonclinical":1,"state":"VA"},{"name":"UT Southwestern Medical Center","total":1,"clinical":0,"nonclinical":1,"state":"TX"},{"name":"University of Utah","total":1,"clinical":0,"nonclinical":1,"state":"UT"},{"name":"Vanderbilt University","total":1,"clinical":0,"nonclinical":1,"state":"TN"},{"name":"Wake Forest University","total":1,"clinical":1,"nonclinical":0,"state":"NC"}],"states":{"NY":25,"MA":19,"CA":17,"PA":12,"OH":9,"NC":7,"WA":7,"MD":7,"AL":6,"CO":5,"TX":5,"MN":4,"TN":4,"WI":4,"IN":4,"CT":4,"IL":4,"FL":3,"MI":3,"OR":2,"GA":1,"OK":1,"NH":1,"VA":1,"KS":1,"UT":1,"KY":1},"grants":[]};
+
+let DATA = null;
+
+function init(d){
+  DATA = d;
+  const m = d.meta||{};
+  document.getElementById('snapline').textContent =
+    `Snapshot: ${m.generated||'—'} · ${m.universe_total_active||(d.grants||[]).length} active nephrology K awards · source: NIH RePORTER`;
+  document.getElementById('genfoot').textContent = m.generated||'—';
+  document.getElementById('ov-note').innerHTML = '<b>About this snapshot.</b> ' + (m.snapshot_note||'');
+  buildKpis(); buildCharts(); buildLibrary(); buildInstitutions(); buildMap();
+}
+
+function fmtUsd(n){ if(n>=1e6) return '$'+(n/1e6).toFixed(1)+'M'; if(n>=1e3) return '$'+Math.round(n/1e3)+'k'; return '$'+n; }
+
+function buildKpis(){
+  const s=DATA.stats, m=DATA.meta;
+  const nMech=Object.keys(s.by_mechanism).length;
+  const nInst=DATA.institutions.length;
+  const k=[
+    [m.universe_total_active, 'active nephrology K awards'],
+    [fmtUsd(m.total_current_year_award_usd), 'current-year funding'],
+    [Object.keys(DATA.states).length, 'states represented'],
+    [nMech+' mechanisms', Object.keys(s.by_mechanism).slice(0,5).join(' · ')]
+  ];
+  document.getElementById('kpis').innerHTML = k.map(x=>`<div class="kpi"><div class="n">${x[0]}</div><div class="l">${x[1]}</div></div>`).join('');
+}
+
+function barChart(el, obj, color){
+  const entries=Object.entries(obj).sort((a,b)=>b[1]-a[1]);
+  const max=Math.max(...entries.map(e=>e[1]),1);
+  el.innerHTML = entries.map(([k,v])=>{
+    const w=Math.max(2,Math.round(v/max*100));
+    return `<div class="bar-row"><div class="lab">${k}</div><div class="track"><div class="fill" style="width:${w}%;background:${color||'var(--brand)'}"></div></div><div class="val">${v}</div></div>`;
+  }).join('');
+}
+
+function buildCharts(){
+  const s=DATA.stats;
+  barChart(document.getElementById('ch-sub'), s.by_subarea, 'var(--accent)');
+  barChart(document.getElementById('ch-mech'), s.by_mechanism, 'var(--brand)');
+  // clinical: color trial/obs as clinical(blue), basic as green
+  const clEl=document.getElementById('ch-clin');
+  const ce=Object.entries(s.by_clinical).sort((a,b)=>b[1]-a[1]);
+  const cmax=Math.max(...ce.map(e=>e[1]),1);
+  clEl.innerHTML=ce.map(([k,v])=>{
+    const col = /Non-clinical/.test(k)?'var(--nonclin)':'var(--clin)';
+    const w=Math.max(2,Math.round(v/cmax*100));
+    return `<div class="bar-row"><div class="lab">${k}</div><div class="track"><div class="fill" style="width:${w}%;background:${col}"></div></div><div class="val">${v}</div></div>`;
+  }).join('');
+  barChart(document.getElementById('ch-fy'), s.by_fiscal_year, 'var(--brand2)');
+  barChart(document.getElementById('ch-ic'), s.by_institute, '#475569');
+}
+
+function buildInstitutions(){
+  const el=document.getElementById('ch-inst');
+  const max=Math.max(...DATA.institutions.map(i=>i.total),1);
+  el.innerHTML = DATA.institutions.map(i=>{
+    const cw=Math.round(i.clinical/max*100), nw=Math.round(i.nonclinical/max*100);
+    return `<div class="bar-row"><div class="lab" title="${i.name}">${i.name.length>26?i.name.slice(0,25)+'…':i.name}</div>
+      <div class="track"><div class="fill c" style="width:${cw}%"></div><div class="fill nc" style="width:${nw}%"></div></div>
+      <div class="val">${i.total}</div></div>`;
+  }).join('');
+}
+
+const GRID=[
+ ["AK","","","","","","","","","","ME"],
+ ["","","","","","","","","","VT","NH"],
+ ["WA","ID","MT","ND","MN","IL","WI","MI","","NY","MA"],
+ ["OR","NV","WY","SD","IA","IN","OH","PA","NJ","CT","RI"],
+ ["CA","UT","CO","NE","MO","KY","WV","VA","MD","DE",""],
+ ["AZ","NM","KS","AR","TN","NC","SC","DC","","",""],
+ ["","","OK","LA","MS","AL","GA","","","",""],
+ ["HI","","TX","","","","","FL","","",""]
+];
+function shade(v,max){
+  if(!v) return '#eef2f8';
+  const t=v/max;
+  // light->dark blue
+  const stops=[[219,234,254],[147,197,253],[59,130,246],[29,78,216],[15,40,90]];
+  const idx=Math.min(stops.length-1, Math.floor(t*stops.length));
+  const c=stops[idx]; return `rgb(${c[0]},${c[1]},${c[2]})`;
+}
+function buildMap(){
+  const st=DATA.states; const max=Math.max(...Object.values(st),1);
+  const map=document.getElementById('map');
+  let html='';
+  GRID.forEach(row=>{ row.forEach(ab=>{
+    if(!ab){ html+='<div class="tile empty"></div>'; return; }
+    const v=st[ab]||0; const bg=shade(v,max);
+    const fg = v>max*0.45?'#fff':'#33425a';
+    html+=`<div class="tile" style="background:${bg};color:${fg}" title="${ab}: ${v}">${ab}<span class="c" style="color:${fg}">${v||''}</span></div>`;
+  });});
+  map.innerHTML=html;
+  const leg=document.getElementById('mapleg');
+  leg.innerHTML='<span>fewer</span>'+[1,2,3,4,5].map(i=>`<span class="sw" style="background:${shade(i/5*max,max)}"></span>`).join('')+`<span>more (max ${max})</span>`;
+}
+
+// ---- Library ----
+let sortK='amt', sortDir=-1;
+function buildLibrary(){
+  const g=DATA.grants||[];
+  document.getElementById('lib-count').textContent = g.length+' awards';
+  const subs=[...new Set(g.map(x=>x.sub))].sort();
+  const mechs=[...new Set(g.map(x=>x.ac))].sort();
+  document.getElementById('f-sub').insertAdjacentHTML('beforeend', subs.map(s=>`<option>${s}</option>`).join(''));
+  document.getElementById('f-mech').insertAdjacentHTML('beforeend', mechs.map(s=>`<option>${s}</option>`).join(''));
+  document.getElementById('f-clin').insertAdjacentHTML('beforeend', ['Clinical only','Non-clinical only'].map(s=>`<option>${s}</option>`).join(''));
+  ['q','f-sub','f-mech','f-clin'].forEach(id=>document.getElementById(id).addEventListener('input',renderRows));
+  document.querySelectorAll('#tbl th').forEach(th=>th.addEventListener('click',()=>{
+    const k=th.dataset.k; if(sortK===k) sortDir*=-1; else {sortK=k;sortDir=1;} renderRows();
+  }));
+  renderRows();
+}
+function renderRows(){
+  const q=document.getElementById('q').value.toLowerCase();
+  const fs=document.getElementById('f-sub').value, fm=document.getElementById('f-mech').value, fc=document.getElementById('f-clin').value;
+  let rows=(DATA.grants||[]).filter(g=>{
+    if(fs&&g.sub!==fs) return false;
+    if(fm&&g.ac!==fm) return false;
+    if(fc==='Clinical only'&&/Non-clinical/.test(g.cl)) return false;
+    if(fc==='Non-clinical only'&&!/Non-clinical/.test(g.cl)) return false;
+    if(q){ const hay=(g.t+' '+g.pi+' '+g.org+' '+g.num).toLowerCase(); if(hay.indexOf(q)<0) return false; }
+    return true;
+  });
+  rows.sort((a,b)=>{ let x=a[sortK],y=b[sortK]; if(typeof x==='string'){x=x.toLowerCase();y=(y||'').toLowerCase();} return x<y?-1*sortDir:x>y?1*sortDir:0; });
+  document.getElementById('tbody').innerHTML = rows.map(g=>{
+    const cl = /Non-clinical/.test(g.cl)?'nonclin':'clin';
+    const rep=`https://reporter.nih.gov/project-details/${g.id}`;
+    const foa = g.foa ? ` · <a href="https://reporter.nih.gov/search/_/projects?foa=${encodeURIComponent(g.foa)}" target="_blank" rel="noopener" title="Funding opportunity ${g.foa}">${g.foa}</a>` : '';
+    return `<tr>
+      <td><a href="${rep}" target="_blank" rel="noopener">${g.t}</a><div class="muted" style="font-size:11px">${g.num} · ${g.ic}${foa}</div></td>
+      <td>${g.pi}</td><td>${g.org}<div class="muted" style="font-size:11px">${g.st}</div></td>
+      <td>${g.sub}</td><td><span class="pill mech">${g.ac}</span></td>
+      <td><span class="pill ${cl}">${g.cl}</span></td>
+      <td style="font-variant-numeric:tabular-nums">${fmtUsd(g.amt)}</td><td>${g.fy}</td>
+      <td><a href="${rep}" target="_blank" rel="noopener" title="Opens the NIH RePORTER record: full public abstract, public-health relevance, PIs, funding history">Abstract&nbsp;&amp;&nbsp;record&nbsp;↗</a></td>
+    </tr>`;
+  }).join('') || '<tr><td colspan="9" class="muted" style="padding:20px;text-align:center">No matching awards.</td></tr>';
+}
+
+// ---- Tabs ----
+document.querySelectorAll('nav.tabs button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('nav.tabs button').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('section.view').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); document.getElementById(b.dataset.v).classList.add('active');
+  window.scrollTo(0,0);
+}));
+
+// ---- Load: prefer data.json (fresh from pipeline), fall back to embedded ----
+fetch('data.json').then(r=>{ if(!r.ok) throw 0; return r.json(); })
+  .then(d=>{ if(!d.grants||!d.grants.length){ d.grants=EMBEDDED_GRANTS; } init(d); })
+  .catch(()=>{ const d=JSON.parse(JSON.stringify(EMBEDDED)); d.grants=EMBEDDED_GRANTS; init(d); });
+</script>
+<script>
+// Embedded grant sample kept separate so the file:// fallback has real rows.
+var EMBEDDED_GRANTS = [{"num":"5K23DK128567-05","ac":"K23","fy":2026,"amt":196169,"org":"Massachusetts General Hospital","st":"MA","pi":"Allegretti, Andrew S","ic":"NIDDK","sub":"Acute kidney injury","cl":"Clinical trial","id":11321607,"t":"Personalizing Therapies for Acute Kidney Injury in Cirrhosis"},{"num":"5K23DK128538-05","ac":"K23","fy":2025,"amt":195960,"org":"Johns Hopkins University","st":"MD","pi":"Menez, Steven","ic":"NIDDK","sub":"Acute kidney injury","cl":"Observational / clinical","id":10995267,"t":"Long-Term Kidney Outcomes After COVID-19"},{"num":"5K23DK140535-02","ac":"K23","fy":2026,"amt":194860,"org":"University of Michigan","st":"MI","pi":"Mazumder, Nikhilesh Ray","ic":"NIDDK","sub":"Acute kidney injury","cl":"Observational / clinical","id":11381859,"t":"Albumin Infusion in Cirrhosis and Acute Kidney Injury"},{"num":"5K23HL173650-02","ac":"K23","fy":2026,"amt":194593,"org":"Johns Hopkins University","st":"MD","pi":"Goeddel, Lee Andrew","ic":"NHLBI","sub":"Acute kidney injury","cl":"Observational / clinical","id":11377985,"t":"Cardiac Output and Renal Perfusion Alterations in the Development of Acute Kidney Injury"},{"num":"5K23DK142042-02","ac":"K23","fy":2026,"amt":192258,"org":"Yale University","st":"CT","pi":"Aklilu, Abinet M","ic":"NIDDK","sub":"Acute kidney injury","cl":"Observational / clinical","id":11384879,"t":"SGLT2 Inhibitors for the Amelioration of Acute Cardio-Renal Syndrome"},{"num":"5K23GM151444-03","ac":"K23","fy":2025,"amt":191948,"org":"Cincinnati Children's Hospital","st":"OH","pi":"Stanski, Natalja L","ic":"NIGMS","sub":"Acute kidney injury","cl":"Clinical trial","id":11121792,"t":"Precision Medicine Approach to Pediatric Sepsis-Associated Acute Kidney Injury"},{"num":"5K23DK132459-05","ac":"K23","fy":2026,"amt":188293,"org":"Feinstein Institute for Medical Research","st":"NY","pi":"Ng, Jia Hwei","ic":"NIDDK","sub":"Acute kidney injury","cl":"Clinical trial","id":11289463,"t":"Digital Solutions to Improve Transition of Care for Patients with Acute Kidney Injury"},{"num":"5K23NR021034-03","ac":"K23","fy":2026,"amt":175618,"org":"University of Illinois at Chicago","st":"IL","pi":"Hannan, Mary","ic":"NINR","sub":"CKD progression","cl":"Clinical trial","id":11369115,"t":"RESET-CKD: Reducing sedentary behavior for adults with chronic kidney disease"},{"num":"5K08DK138280-02","ac":"K08","fy":2025,"amt":166644,"org":"Columbia University","st":"NY","pi":"Nestor, Jordan Gabriela","ic":"NIDDK","sub":"CKD progression","cl":"Clinical trial","id":11176923,"t":"Digital Tools for Precision Nephrology"},{"num":"5K01DK135929-03","ac":"K01","fy":2026,"amt":137752,"org":"University of Florida","st":"FL","pi":"Crislip, Gene Ryan","ic":"NIDDK","sub":"CKD progression","cl":"Non-clinical / basic","id":11294191,"t":"Renal Circadian Clock Protein Regulation of Immune Activation"},{"num":"5K01DK135924-04","ac":"K01","fy":2026,"amt":120591,"org":"Vanderbilt University","st":"TN","pi":"Hasenour, Clinton Michael","ic":"NIDDK","sub":"CKD progression","cl":"Non-clinical / basic","id":11285391,"t":"In vivo hepato-renal metabolic flux dysregulation in obesity"},{"num":"5K23DK139462-02","ac":"K23","fy":2026,"amt":207548,"org":"New York University","st":"NY","pi":"Soomro, Qandeel","ic":"NIDDK","sub":"ESKD / Dialysis","cl":"Clinical trial","id":11260225,"t":"Deep phenotyping of autonomic dysfunction in chronic kidney disease"},{"num":"5K23DK128605-05","ac":"K23","fy":2026,"amt":201150,"org":"University of California, San Francisco","st":"CA","pi":"McCoy, Ian","ic":"NIDDK","sub":"ESKD / Dialysis","cl":"Clinical trial","id":11293456,"t":"Towards improving recovery from dialysis-requiring acute kidney injury"},{"num":"5K23DK139456-03","ac":"K23","fy":2026,"amt":197745,"org":"University of California, San Francisco","st":"CA","pi":"Kwong, Yuenting Diana","ic":"NIDDK","sub":"ESKD / Dialysis","cl":"Observational / clinical","id":11319043,"t":"Improving proteinuria testing and management after acute kidney injury"},{"num":"5K23DK140642-02","ac":"K23","fy":2026,"amt":197474,"org":"Massachusetts General Hospital","st":"MA","pi":"Wulczyn, Kendra Elizabeth","ic":"NIDDK","sub":"ESKD / Dialysis","cl":"Clinical trial","id":11365116,"t":"Patient-Reported Outcome Measure (PROM) Utilization to Advance Patient-Centered Dialysis Care"},{"num":"5K23HL151816-05","ac":"K23","fy":2025,"amt":194230,"org":"University of Cincinnati","st":"OH","pi":"Shah, Silvi","ic":"NHLBI","sub":"ESKD / Dialysis","cl":"Observational / clinical","id":11092744,"t":"Sex Disparities in Cardiovascular Disease and Coronary Revascularization in Dialysis Patients"},{"num":"5K23DK127248-04","ac":"K23","fy":2025,"amt":193505,"org":"Brigham and Women's Hospital","st":"MA","pi":"Ravi, Katherine Scovner","ic":"NIDDK","sub":"ESKD / Dialysis","cl":"Clinical (other)","id":11090331,"t":"Association of Dialysate Bicarbonate with Hemodynamic Instability and Arrhythmia"},{"num":"5K23DK140602-03","ac":"K23","fy":2026,"amt":191787,"org":"University of California, Davis","st":"CA","pi":"Razon, Na'amah","ic":"NIDDK","sub":"ESKD / Dialysis","cl":"Observational / clinical","id":11326749,"t":"MOBILIZE: Mobility & Transportation Solutions to Improve Hemodialysis Access"},{"num":"5K08DK132463-04","ac":"K08","fy":2026,"amt":165067,"org":"University of Virginia","st":"VA","pi":"Culver, Silas A","ic":"NIDDK","sub":"General nephrology","cl":"Non-clinical / basic","id":11289421,"t":"Role of Atp6ap2 in renal proximal tubule lipotoxicity"},{"num":"5K01DK135917-02","ac":"K01","fy":2025,"amt":152040,"org":"Columbia University","st":"NY","pi":"Xu, Katherine","ic":"NIDDK","sub":"General nephrology","cl":"Non-clinical / basic","id":11172515,"t":"Human Genetic Approach for UTI Points to Novel Immune Defense Cells of the Kidney Epithelia"},{"num":"5K23DK119562-05","ac":"K23","fy":2025,"amt":201558,"org":"University of California, San Francisco","st":"CA","pi":"Muiru, Anthony N","ic":"NIDDK","sub":"Glomerular disease","cl":"Observational / clinical","id":11058507,"t":"SEARCH-CKD: Chronic kidney disease and elevated blood pressure in sub-Saharan Africa"},{"num":"5K23DK135855-03","ac":"K23","fy":2026,"amt":198444,"org":"Oregon Health & Science University","st":"OR","pi":"Avasare, Rupali","ic":"NIDDK","sub":"Glomerular disease","cl":"Clinical (other)","id":11310860,"t":"Autoimmune dysregulation in lipoic acid users at risk for NELL1 membranous nephropathy"},{"num":"5K23AI163359-06","ac":"K23","fy":2025,"amt":197640,"org":"University of Maryland, Baltimore","st":"MD","pi":"Blazer, Ashira Deshon","ic":"NIAID","sub":"Glomerular disease","cl":"Observational / clinical","id":10908542,"t":"SLE-AWARE: SLE - A Window into APOL1 Regulation and Expression"},{"num":"5K23DK132680-05","ac":"K23","fy":2026,"amt":193881,"org":"University of California, San Diego","st":"CA","pi":"Malhotra, Rakesh","ic":"NIDDK","sub":"Glomerular disease","cl":"Clinical trial","id":11289447,"t":"Non-Invasive Assessment of Microcirculation Function and Kidney Disease"},{"num":"1K23DK146189-01","ac":"K23","fy":2026,"amt":193075,"org":"University of Colorado Denver","st":"CO","pi":"Dixon, Angelina","ic":"NIDDK","sub":"Glomerular disease","cl":"Clinical (other)","id":11283130,"t":"SMART-2D: Montelukast's Effects on Renal and Cardiovascular Health in Adolescents"},{"num":"5K23AI159073-05","ac":"K23","fy":2026,"amt":192955,"org":"University of North Carolina, Chapel Hill","st":"NC","pi":"Glenn, Dorey","ic":"NIAID","sub":"Glomerular disease","cl":"Observational / clinical","id":11284044,"t":"Protecting Patients with Glomerular Disease from Vaccine-Preventable Infections"},{"num":"5K23HL155076-05","ac":"K23","fy":2025,"amt":192632,"org":"Brigham and Women's Hospital","st":"MA","pi":"Haas, Andrea","ic":"NHLBI","sub":"Glomerular disease","cl":"Observational / clinical","id":11173806,"t":"Role of LSD1 in Hypertension and Renal Injury in Blacks"},{"num":"1K23DK141365-01A1","ac":"K23","fy":2026,"amt":201084,"org":"Albert Einstein College of Medicine","st":"NY","pi":"Fisher, Molly","ic":"NIDDK","sub":"Health services / Epi","cl":"Observational / clinical","id":11328453,"t":"Inflammation and Senescence in Kidney Injury in People with HIV"},{"num":"5K23HL150311-05","ac":"K23","fy":2024,"amt":199777,"org":"Brigham and Women's Hospital","st":"MA","pi":"Buckley, Leo Francis","ic":"NHLBI","sub":"Health services / Epi","cl":"Clinical trial","id":10894749,"t":"Inflammasome Activity as a Potential Contributor to Uremic Cardiomyopathy"},{"num":"1K23DK143316-01A1","ac":"K23","fy":2026,"amt":197320,"org":"Massachusetts General Hospital","st":"MA","pi":"Tang, Mengyao","ic":"NIDDK","sub":"Health services / Epi","cl":"Observational / clinical","id":11301702,"t":"Glycemic Monitoring and Management in People with Type 2 Diabetes and Chronic Kidney Disease"},{"num":"5K23DK144712-02","ac":"K23","fy":2026,"amt":190836,"org":"University of California, San Francisco","st":"CA","pi":"Ikeme, Jesse Chimezie","ic":"NIDDK","sub":"Health services / Epi","cl":"Clinical (other)","id":11369248,"t":"Enhancing Risk Communication to Improve Treatment Persistence in Kidney Disease"},{"num":"5K23DK138320-03","ac":"K23","fy":2026,"amt":189981,"org":"Beth Israel Deaconess Medical Center","st":"MA","pi":"Raines, Nathan","ic":"NIDDK","sub":"Health services / Epi","cl":"Clinical trial","id":11322708,"t":"NAD+ Metabolism During Observational and Experimental Heat Exposure"},{"num":"5K01NR021272-02","ac":"K01","fy":2025,"amt":162096,"org":"University at Buffalo (SUNY)","st":"NY","pi":"Smith, Daniel Jackson","ic":"NINR","sub":"Health services / Epi","cl":"Non-clinical / basic","id":11159696,"t":"High Heat and Human Health: Impacts of Heatwaves on Kidney Disease"},{"num":"5K01DK132495-04","ac":"K01","fy":2025,"amt":129566,"org":"Columbia University","st":"NY","pi":"Milo Rasouly, Hila","ic":"NIDDK","sub":"Health services / Epi","cl":"Clinical trial","id":11178634,"t":"Advancing broad implementation of genomic medicine in nephrology"},{"num":"5K23DK131289-03","ac":"K23","fy":2025,"amt":199450,"org":"University of North Carolina, Chapel Hill","st":"NC","pi":"Sanderson, Keia","ic":"NIDDK","sub":"Hypertension","cl":"Clinical (other)","id":11081722,"t":"Machine Learning Risk Prediction of Kidney Disease After Extremely Preterm Birth"},{"num":"5K23HL150236-05","ac":"K23","fy":2025,"amt":188991,"org":"Northwestern University","st":"IL","pi":"Mehta, Rupal","ic":"NHLBI","sub":"Hypertension","cl":"Observational / clinical","id":11092138,"t":"Pathogenesis of Heart Failure with Preserved Ejection Fraction in Chronic Kidney Disease"},{"num":"5K23DK138313-03","ac":"K23","fy":2026,"amt":184335,"org":"Lurie Children's Hospital of Chicago","st":"IL","pi":"Kula, Alexander James","ic":"NIDDK","sub":"Hypertension","cl":"Clinical trial","id":11291800,"t":"Subclinical Diastolic Dysfunction in Youth with Chronic Kidney Disease"},{"num":"5K08DK138291-02","ac":"K08","fy":2026,"amt":167386,"org":"UT Southwestern Medical Center","st":"TX","pi":"Clark, Amanda J","ic":"NIDDK","sub":"Hypertension","cl":"Non-clinical / basic","id":11321192,"t":"Role of NAD+ and PARylation in Nephron Endowment"},{"num":"1K01HL179491-01","ac":"K01","fy":2025,"amt":162384,"org":"University of Colorado Denver","st":"CO","pi":"Oh, Ester Soo Jung","ic":"NHLBI","sub":"Hypertension","cl":"Clinical trial","id":11113106,"t":"Equol Supplementation for Vascular Function in Postmenopausal Women with CKD"},{"num":"5K01HL159047-05","ac":"K01","fy":2025,"amt":161689,"org":"University of Alabama at Birmingham","st":"AL","pi":"Becker, Bryan K","ic":"NHLBI","sub":"Hypertension","cl":"Non-clinical / basic","id":11144946,"t":"Renal Sensory Nerve Contribution to Hypertension"},{"num":"5K23HL148394-05","ac":"K23","fy":2024,"amt":156600,"org":"Wake Forest University","st":"NC","pi":"South, Andrew Michael","ic":"NHLBI","sub":"Hypertension","cl":"Observational / clinical","id":10868656,"t":"Role of angiotensin-(1-7) in hypertension and hypertension-induced injury"},{"num":"5K23DK139454-03","ac":"K23","fy":2026,"amt":193521,"org":"Icahn School of Medicine at Mount Sinai","st":"NY","pi":"Mohottige, Dinushika","ic":"NIDDK","sub":"PKD / Genetic","cl":"Observational / clinical","id":11369227,"t":"Structural Racism as a Third Hit on Kidney Outcomes of Black Individuals with Genetic Risk"},{"num":"5K08DK143339-02","ac":"K08","fy":2026,"amt":174744,"org":"University of California, San Francisco","st":"CA","pi":"Loeb, Gabriel B","ic":"NIDDK","sub":"PKD / Genetic","cl":"Non-clinical / basic","id":11348883,"t":"Regulation of GLIS3, a Ciliary Transcription Factor that Prevents Kidney Cysts"},{"num":"5K08DK135931-04","ac":"K08","fy":2026,"amt":158436,"org":"Vanderbilt University Medical Center","st":"TN","pi":"Arroyo Ornelas, Juan Pablo","ic":"NIDDK","sub":"PKD / Genetic","cl":"Non-clinical / basic","id":11316992,"t":"Physiology and pathophysiology of kidney-derived vasopressin"},{"num":"7K01DK140605-02","ac":"K01","fy":2025,"amt":141402,"org":"University of Alabama at Birmingham","st":"AL","pi":"Van Sciver, Robert E","ic":"NIDDK","sub":"PKD / Genetic","cl":"Non-clinical / basic","id":11369475,"t":"Unraveling the Ciliary Driver of Polycystic Kidney Disease"},{"num":"5K23DK134847-03","ac":"K23","fy":2026,"amt":182179,"org":"Children's Hospital of Philadelphia","st":"PA","pi":"Kogon, Amy","ic":"NIDDK","sub":"Pediatric nephrology","cl":"Clinical trial","id":11239787,"t":"Physical Activity and Muscle Strength in Pediatric CKD"},{"num":"5K08DK131259-03","ac":"K08","fy":2024,"amt":165780,"org":"Cincinnati Children's Hospital","st":"OH","pi":"Schuh, Meredith","ic":"NIDDK","sub":"Pediatric nephrology","cl":"Non-clinical / basic","id":10909239,"t":"Late-gestation human nephrogenesis using a non-human primate model"},{"num":"5K08DK137042-02","ac":"K08","fy":2026,"amt":155011,"org":"Cleveland Clinic (Lerner COM-CWRU)","st":"OH","pi":"Weaver, John","ic":"NIDDK","sub":"Pediatric nephrology","cl":"Observational / clinical","id":11295473,"t":"Deep Learning of Renal Scans and Kidney Ultrasounds in Children with Antenatal Hydronephrosis"},{"num":"5K01DK126991-05","ac":"K01","fy":2025,"amt":145295,"org":"Nationwide Children's Hospital","st":"OH","pi":"Jackson, Ashley R","ic":"NIDDK","sub":"Pediatric nephrology","cl":"Non-clinical / basic","id":11093476,"t":"Defining the renal urothelium progenitor and its regulation during development"},{"num":"5K25DK132416-04","ac":"K25","fy":2026,"amt":191624,"org":"University of Washington","st":"WA","pi":"Ghanem, Mohamed A","ic":"NIDDK","sub":"Stones / Electrolytes","cl":"Non-clinical / basic","id":11239007,"t":"Noninvasive Repositioning of Kidney Stone Fragments with Acoustic Forceps"},{"num":"1K23DK144695-01A1","ac":"K23","fy":2026,"amt":190404,"org":"University of Pittsburgh","st":"PA","pi":"Weltman, Melanie","ic":"NIDDK","sub":"Stones / Electrolytes","cl":"Clinical trial","id":11371800,"t":"Pharmacist-Led Population Health Management to Optimize Guideline-Based Stone Care"},{"num":"5K23DK135844-04","ac":"K23","fy":2026,"amt":183174,"org":"University of Alabama at Birmingham","st":"AL","pi":"Crivelli, Joseph James","ic":"NIDDK","sub":"Stones / Electrolytes","cl":"Observational / clinical","id":11294194,"t":"Basis for Kidney Stone Risk: Diet and Beyond"},{"num":"5K08DK132486-04","ac":"K08","fy":2026,"amt":169560,"org":"University of California, Los Angeles","st":"CA","pi":"Scotland, Kymora B","ic":"NIDDK","sub":"Stones / Electrolytes","cl":"Non-clinical / basic","id":11332646,"t":"Role of Biofilm-Forming Bacteria in Nephrolithiasis"},{"num":"1K01DK147422-01","ac":"K01","fy":2026,"amt":161275,"org":"University of Minnesota","st":"MN","pi":"Coffey, Emily Lynn","ic":"NIDDK","sub":"Stones / Electrolytes","cl":"Observational / clinical","id":11346750,"t":"Short Chain Fatty Acids and Calcium Regulatory Pathways in Kidney Stone Formers"},{"num":"1K01DK140634-01A1","ac":"K01","fy":2025,"amt":148986,"org":"University of Pittsburgh","st":"PA","pi":"Nickerson, Andrew J","ic":"NIDDK","sub":"Stones / Electrolytes","cl":"Clinical (other)","id":11135912,"t":"Role of BK gamma subunits in renal K secretion"},{"num":"1K23DK146153-01","ac":"K23","fy":2026,"amt":206496,"org":"New York University","st":"NY","pi":"Hasson, Denise Claire","ic":"NIDDK","sub":"Acute kidney injury","cl":"Observational / clinical","id":11282299,"t":"Surveillance of Nutritional Risk for Acute Kidney Injury in Critically Ill Kids"},{"num":"5K23MH128613-04","ac":"K23","fy":2025,"amt":202595,"org":"University of North Carolina, Chapel Hill","st":"NC","pi":"Nash, Rebekah Potts","ic":"NIMH","sub":"Transplant","cl":"Observational / clinical","id":11143102,"t":"Biopsychosocial Risk Factors for Psychiatric Disorders Following Kidney Transplantation"},{"num":"5K23DK129820-06","ac":"K23","fy":2025,"amt":195499,"org":"University of California, Irvine","st":"CA","pi":"Al Ammary, Fawaz","ic":"NIDDK","sub":"Transplant","cl":"Clinical (other)","id":11103263,"t":"Telemedicine for Evaluation and Counseling of Living Kidney Donor Candidates"},{"num":"5K23DK133677-04","ac":"K23","fy":2026,"amt":195390,"org":"Johns Hopkins University","st":"MD","pi":"Hladek, Melissa","ic":"NIDDK","sub":"Transplant","cl":"Observational / clinical","id":11289477,"t":"Addressing Inactive Kidney Transplant Waitlist Status through a Tailored Intervention"},{"num":"1K23DK146149-01","ac":"K23","fy":2026,"amt":194147,"org":"Boston Medical Center","st":"MA","pi":"Rizzolo, Katherine","ic":"NIDDK","sub":"Transplant","cl":"Clinical trial","id":11282675,"t":"Improving kidney education for Spanish speakers with advanced kidney disease"},{"num":"1K23HL171893-01A1","ac":"K23","fy":2025,"amt":193984,"org":"Brigham and Women's Hospital","st":"MA","pi":"Huck, Daniel Michael","ic":"NHLBI","sub":"Transplant","cl":"Observational / clinical","id":11229969,"t":"Inflammation, Angiogenesis, and Coronary Microvascular Perfusion in Advanced Kidney Disease"},{"num":"5K23DK138312-03","ac":"K23","fy":2026,"amt":164903,"org":"Stanford University","st":"CA","pi":"Fielding-Singh, Vikram","ic":"NIDDK","sub":"ESKD / Dialysis","cl":"Observational / clinical","id":11311361,"t":"Toward optimizing dialysis in the perioperative period"},{"num":"5K23DK141988-02","ac":"K23","fy":2026,"amt":191470,"org":"Stanford University","st":"CA","pi":"Ziolkowski, Susan","ic":"NIDDK","sub":"CKD progression","cl":"Observational / clinical","id":11365200,"t":"Machine learning to improve kidney disease risk assessment for patients on cancer therapy"},{"num":"5K24AG073615-05","ac":"K24","fy":2026,"amt":137592,"org":"Stanford University","st":"CA","pi":"Kurella Tamura, Manjula","ic":"NIA","sub":"Health services / Epi","cl":"Clinical (other)","id":11380787,"t":"A Mentoring Program in Kidney Care for Older Adults"}];
+</script>
+</body>
+</html>
