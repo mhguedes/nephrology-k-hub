@@ -47,7 +47,13 @@ POP = ["patients on dialysis","on hemodialysis","on maintenance dialysis","maint
        "kidney transplant recipients","renal transplant recipients","kidney transplant candidates","living kidney donor",
        "patients with kidney disease","individuals with ckd","persons with ckd","people with kidney disease",
        "glomerular disease","predialysis ckd","advanced ckd","incident dialysis","kidney disease patients"]
-RCC = ["renal cell","kidney cancer","nephroblastoma","wilms","clear cell renal","renal tumor","renal mass","urothelial"]
+# Onco- and urology-primary signals. A title hit here drops the award UNLESS the study also has an
+# explicit kidney-disease context (DCTX) — that keeps e.g. AKI-in-cancer or CKD-in-transplant work
+# while removing renal-cell/renal carcinoma oncology and surgical-urology (renal colic, lithotripsy…).
+ONCO_URO = ["renal cell","renal carcinoma","renal cancer","kidney cancer","carcinoma","oncolog",
+            "nephroblastoma","wilms","clear cell renal","renal tumor","renal mass","urothelial",
+            "renal colic","urolog","ureteroscop","lithotripsy","nephrolithotomy","cystoscop",
+            "prostate","bladder cancer"]
 DCTX = ["ckd","eskd","esrd","dialysis","kidney disease","kidney failure","renal failure","glomerul",
         "nephritis","nephropathy","nephrotic","proteinuria","kidney transplant","renal transplant",
         "podocyte","tubular","kidney injury","cast nephropathy"]
@@ -63,8 +69,8 @@ def is_nephrology(title, terms, abstract, loose=False):
         if not (title_focus or pop_hit):
             return False
     allt = title_s + " " + terms_s + " " + ab_s
-    if any(k in title_s for k in RCC) and not any(k in allt for k in DCTX):
-        return False  # pure kidney-cancer with no kidney-disease context
+    if any(k in title_s for k in ONCO_URO) and not any(k in allt for k in DCTX):
+        return False  # onco-/urology-primary with no kidney-disease context
     return True
 
 def extract_foa(rec):
