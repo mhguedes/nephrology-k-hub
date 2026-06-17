@@ -111,28 +111,82 @@ def start_year(rec):
         return None
 
 # ---- subarea classifier --------------------------------------------------------
-def classify_subarea(text):
-    t = text.lower()
-    has = lambda *a: any(k in t for k in a)
-    if has("transplant") and has("kidney","renal","allograft"): return "Transplant"
-    if has("dialysis","hemodialysis","peritoneal dialysis","esrd","eskd","end-stage",
-           "end stage renal","vascular access","arteriovenous fistula"): return "ESKD / Dialysis"
-    if has("glomerul","podocyte","fsgs","nephrotic","iga nephropathy","membranous",
-           "lupus nephritis","crescentic"): return "Glomerular disease"
-    if has("acute kidney injury","aki ","ischemia-reperfusion","ischemia reperfusion",
-           "acute tubular","acute renal failure"): return "Acute kidney injury"
-    if has("polycystic","pkd","alport","ciliopath","apol1","monogenic kidney","cystic kidney",
-           "hereditary kidney","congenital anomalies of the kidney"): return "PKD / Genetic"
-    if has("nephrolithiasis","kidney stone","oxalate","electrolyte","acid-base","hypokalem",
-           "hyperkalem","phosphate","mineral metabolism","magnesium"): return "Stones / Electrolytes"
-    if has("hypertension","blood pressure","aldosterone","renin","salt-sensitiv","sodium intake"):
-        return "Hypertension"
-    if has("pediatric","paediatric","children","neonat","childhood"): return "Pediatric nephrology"
-    if has("disparit","health services","outcomes research","epidemiolog","implementation",
-           "access to care","cost-effective","quality of care","patient-reported","equity",
-           "social determinants"): return "Health services / Epi"
-    if has("chronic kidney disease","ckd","egfr decline","diabetic kidney","diabetic nephropathy",
-           "fibrosis","tubulointerstitial"): return "CKD progression"
+# Subarea = the kidney-disease ENTITY or PATIENT POPULATION a study centers on, judged
+# primarily from the TITLE (the study's stated subject). This prevents an incidental
+# outcome mention ("...at risk for ESRD") from hijacking the label. Disease entities are
+# tested before ESKD / Dialysis, which is reserved for studies *of* dialysis/ESKD or that
+# enroll patients *already on* dialysis / with ESKD — not studies that list them as outcomes.
+GLOM  = ["glomerul","podocyte","fsgs","focal segmental","nephrotic","iga nephropathy","membranous",
+         "lupus nephritis","crescentic","anca","c3 glomerulopathy","minimal change disease","mpgn","nell1","pla2r"]
+TX    = ["transplant","allograft","kidney donor","living donor"]
+AKI   = ["acute kidney injury","acute renal failure","acute tubular","ischemia-reperfusion",
+         "ischemia reperfusion","ischemic kidney","cardiorenal","cardio-renal"]
+PKD   = ["polycystic","pkd","alport","ciliopath","cystic kidney","monogenic","hereditary kidney",
+         "congenital anomalies of the kidney","cakut","apol1"]
+STONE = ["nephrolithiasis","kidney stone","renal stone","urolithiasis","oxalate","hypercalciuria",
+         "electrolyte","acid-base","hypokalem","hyperkalem","hyperphosphat","mineral metabolism",
+         "magnesium","potassium secretion","calcium oxalate"]
+# Dialysis/ESKD as a POPULATION or treatment (the study's subject) — these rarely appear as a mere
+# outcome, so they identify a genuine dialysis/ESKD study.
+ESKD_POP = ["dialysis patient","on dialysis","on hemodialysis","hemodialysis","haemodialysis",
+            "peritoneal dialysis","dialysate","dialysis care","dialysis unit","dialysis access",
+            "maintenance dialysis","maintenance hemodialysis","incident dialysis","prevalent dialysis",
+            "vascular access","arteriovenous fistula","renal replacement therapy"]
+# Dialysis/ESKD as a bare term that is often an OUTCOME ("progression to ESRD", "predicting dialysis").
+# Only assigned when no disease entity or CKD was named first.
+ESKD_OUT = ["dialysis","esrd","eskd","end-stage renal","end stage renal","end-stage kidney",
+            "end stage kidney","kidney failure","renal failure"]
+HTN   = ["hypertension","blood pressure","aldosterone","renin-angiotensin","salt-sensitiv","sodium intake","preeclampsia"]
+PEDS  = ["pediatric","paediatric","childhood","neonat","preterm","infant","youth","adolescen","children"]
+HSR   = ["disparit","health services","outcomes research","epidemiolog","implementation","access to care",
+         "cost-effective","quality of care","patient-reported","health equity","social determinants","telemedicine","education"]
+CKD   = ["chronic kidney disease","ckd","egfr","diabetic kidney","diabetic nephropathy","fibrosis",
+         "tubulointerstitial","albuminuria","proteinuria","kidney function decline"]
+# Population phrases proving the study enrolls a specific kidney population (abstract fallback).
+POP_TX   = ["kidney transplant recipients","renal transplant recipients","kidney transplant candidates",
+            "living kidney donor","transplant recipients","transplant waitlist","post-transplant","posttransplant"]
+POP_ESKD = ["on dialysis","on hemodialysis","on maintenance dialysis","maintenance hemodialysis",
+            "dialysis patients","hemodialysis patients","peritoneal dialysis patients","patients receiving dialysis",
+            "patients with esrd","patients with eskd","patients with end-stage","incident dialysis",
+            "prevalent dialysis","undergoing dialysis","receiving hemodialysis"]
+POP_CKD  = ["patients with chronic kidney disease","patients with ckd","adults with ckd","children with ckd",
+            "persons with ckd","individuals with ckd","predialysis ckd","advanced ckd","ckd cohort"]
+
+def _hits(text, kws):
+    return any(k in text for k in kws)
+
+def classify_subarea(title, text=None):
+    ti = _strip(title)
+    tx = _strip(text) if text is not None else ti
+    # 1) TITLE-first: the study's stated subject wins. Disease entities are tested before
+    #    ESKD / Dialysis so an entity (e.g. membranous nephropathy) is not relabeled by an
+    #    incidental dialysis/ESRD outcome mentioned elsewhere.
+    if _hits(ti, TX):       return "Transplant"
+    if _hits(ti, GLOM):     return "Glomerular disease"
+    if _hits(ti, PKD):      return "PKD / Genetic"
+    if _hits(ti, AKI):      return "Acute kidney injury"
+    if _hits(ti, STONE):    return "Stones / Electrolytes"
+    if _hits(ti, ESKD_POP): return "ESKD / Dialysis"  # enrolled dialysis/ESKD population or treatment
+    if _hits(ti, HTN):      return "Hypertension"
+    if _hits(ti, PEDS):     return "Pediatric nephrology"
+    if _hits(ti, HSR):      return "Health services / Epi"
+    if _hits(ti, CKD):      return "CKD progression"   # named CKD entity beats a bare ESRD/dialysis outcome
+    if _hits(ti, ESKD_OUT): return "ESKD / Dialysis"  # dialysis/ESKD is the title subject (no entity named)
+    # 2) POPULATION fallback: a generic title — classify by the population actually enrolled.
+    if _hits(tx, POP_TX):   return "Transplant"
+    if _hits(tx, POP_ESKD): return "ESKD / Dialysis"  # study enrolls patients already on dialysis/ESKD
+    if _hits(tx, POP_CKD):  return "CKD progression"
+    # 3) ABSTRACT entity fallback. NOTE: generic ESKD terms are deliberately NOT consulted here,
+    #    so a dialysis/ESRD mention in the body (as an outcome) cannot create an ESKD label.
+    if _hits(tx, TX):    return "Transplant"
+    if _hits(tx, GLOM):  return "Glomerular disease"
+    if _hits(tx, PKD):   return "PKD / Genetic"
+    if _hits(tx, AKI):   return "Acute kidney injury"
+    if _hits(tx, STONE): return "Stones / Electrolytes"
+    if _hits(tx, HTN):   return "Hypertension"
+    if _hits(tx, PEDS):  return "Pediatric nephrology"
+    if _hits(tx, HSR):   return "Health services / Epi"
+    if _hits(tx, CKD):   return "CKD progression"
     return "General nephrology"
 
 # ---- clinical vs non-clinical classifier --------------------------------------
@@ -307,7 +361,7 @@ def transform(rows, loose=False):
             "po": [p.get("full_name") for p in (r.get("program_officers") or []) if p.get("full_name")],
             "ic": ic.get("abbreviation") or ic.get("code") or "",
             "t": r.get("project_title") or "",
-            "sub": classify_subarea(full_text), "cl": classify_clinical(full_text, r.get("activity_code")),
+            "sub": classify_subarea(title, full_text), "cl": classify_clinical(full_text, r.get("activity_code")),
             "id": r.get("appl_id"), "foa": extract_foa(r),
             "ss": extract_study_section(r), "sy": start_year(r),
         })
