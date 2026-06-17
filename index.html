@@ -389,7 +389,7 @@ function renderRows(){
     const on = SHORTLIST.has(g.id);
     return `<tr>
       <td><button class="star${on?' on':''}" data-sid="${g.id}" title="Save to shortlist" aria-label="Save to shortlist">${on?'★':'☆'}</button></td>
-      <td><a href="${rep}" target="_blank" rel="noopener">${g.t}</a><div class="muted" style="font-size:11px">${g.num} · ${g.ic}${foa}</div></td>
+      <td><a href="${rep}" target="_blank" rel="noopener">${g.t}</a><div class="muted" style="font-size:11px">${g.num} · ${g.ic}${foa}${(g.pubs!=null)?' · '+g.pubs+' pub'+(g.pubs===1?'':'s'):''}</div></td>
       <td>${g.pi}</td><td>${g.org}<div class="muted" style="font-size:11px">${g.st}</div></td>
       <td>${g.sub}</td><td><span class="pill mech">${g.ac}</span></td>
       <td><span class="pill ${cl}">${g.cl}</span></td>
