@@ -4,13 +4,13 @@
   "source": "NIH RePORTER API v2 (active K-series, kidney study-population filter)",
   "snapshot_note": "Active career-development (K) awards where kidney disease is the study focus or study population (comorbidity studies in CKD/dialysis/transplant cohorts are included; incidental kidney mentions and pure kidney-cancer/urology are excluded). Subarea and clinical/non-clinical labels are first-pass algorithmic classifications.",
   "application_pdf_note": "NIH does not publish full grant applications publicly (FOIA-only); each award links to its NIH RePORTER record with the public abstract.",
-  "universe_total_active": 202,
+  "universe_total_active": 203,
   "n_institutions": 75,
-  "total_current_year_award_usd": 32581487
+  "total_current_year_award_usd": 32643146
  },
  "stats": {
   "by_mechanism": {
-   "K23": 92,
+   "K23": 93,
    "K08": 45,
    "K01": 43,
    "K24": 8,
@@ -21,7 +21,7 @@
    "K43": 1
   },
   "by_subarea": {
-   "ESKD / Dialysis": 65,
+   "ESKD / Dialysis": 66,
    "Transplant": 46,
    "Glomerular disease": 25,
    "Acute kidney injury": 24,
@@ -34,13 +34,13 @@
    "General nephrology": 1
   },
   "by_clinical": {
-   "Observational / clinical": 97,
+   "Observational / clinical": 98,
    "Non-clinical / basic": 61,
    "Clinical trial": 41,
    "Clinical (other)": 3
   },
   "by_institute": {
-   "NIDDK": 145,
+   "NIDDK": 146,
    "NHLBI": 25,
    "NIAID": 7,
    "NIA": 6,
@@ -58,7 +58,7 @@
   "by_fiscal_year": {
    "2026": 89,
    "2025": 76,
-   "2024": 37
+   "2024": 38
   }
  },
  "institutions": [
@@ -168,6 +168,13 @@
    "nonclinical": 2
   },
   {
+   "name": "INDIANA UNIVERSITY INDIANAPOLIS",
+   "state": "IN",
+   "total": 4,
+   "clinical": 4,
+   "nonclinical": 0
+  },
+  {
    "name": "UNIV OF NORTH CAROLINA CHAPEL HILL",
    "state": "NC",
    "total": 4,
@@ -215,13 +222,6 @@
    "total": 3,
    "clinical": 2,
    "nonclinical": 1
-  },
-  {
-   "name": "INDIANA UNIVERSITY INDIANAPOLIS",
-   "state": "IN",
-   "total": 3,
-   "clinical": 3,
-   "nonclinical": 0
   },
   {
    "name": "LURIE CHILDREN'S HOSPITAL OF CHICAGO",
@@ -605,10 +605,10 @@
   "FL": 6,
   "WI": 5,
   "CT": 4,
+  "IN": 4,
   "MN": 4,
   "TN": 4,
   "OR": 3,
-  "IN": 3,
   "GA": 3,
   "UT": 2,
   "VA": 2,
@@ -619,6 +619,38 @@
   "MO": 1,
   "KY": 1
  },
+ "mentors": [
+  {
+   "name": "McAdams-DeMarco MA",
+   "count": 4,
+   "subs": "Transplant"
+  },
+  {
+   "name": "Abdel-Rahman EM",
+   "count": 2,
+   "subs": "ESKD / Dialysis"
+  },
+  {
+   "name": "CRIC Study Investigators",
+   "count": 2,
+   "subs": "Hypertension"
+  },
+  {
+   "name": "de Boer IH",
+   "count": 2,
+   "subs": "ESKD / Dialysis"
+  },
+  {
+   "name": "Navaneethan SD",
+   "count": 2,
+   "subs": "Transplant"
+  },
+  {
+   "name": "Saraf SL",
+   "count": 2,
+   "subs": "ESKD / Dialysis"
+  }
+ ],
  "grants": [
   {
    "num": "5K23DK139462-02",
@@ -641,7 +673,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Clinical trial",
    "id": 11260225,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 3
   },
   {
    "num": "1K23DK146153-01",
@@ -664,7 +697,8 @@
    "sub": "Transplant",
    "cl": "Clinical trial",
    "id": 11282299,
-   "foa": "PA-24-185"
+   "foa": "PA-24-185",
+   "pubs": 0
   },
   {
    "num": "5K23MH128613-04",
@@ -687,7 +721,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11143102,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 4
   },
   {
    "num": "5K23DK119562-05",
@@ -710,7 +745,8 @@
    "sub": "Glomerular disease",
    "cl": "Observational / clinical",
    "id": 11058507,
-   "foa": "PA-19-119"
+   "foa": "PA-19-119",
+   "pubs": 0
   },
   {
    "num": "5K23DK128605-05",
@@ -733,7 +769,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11293456,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 0
   },
   {
    "num": "1K23DK141365-01A1",
@@ -756,7 +793,8 @@
    "sub": "Acute kidney injury",
    "cl": "Observational / clinical",
    "id": 11328453,
-   "foa": "PA-24-185"
+   "foa": "PA-24-185",
+   "pubs": 0
   },
   {
    "num": "5K23AI177939-02",
@@ -779,7 +817,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11167758,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 0
   },
   {
    "num": "5K23DK131289-03",
@@ -802,7 +841,8 @@
    "sub": "Hypertension",
    "cl": "Observational / clinical",
    "id": 11081722,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 13
   },
   {
    "num": "5K23DK135855-03",
@@ -825,7 +865,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11310860,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 4
   },
   {
    "num": "5K23DK139456-03",
@@ -848,7 +889,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11319043,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 8
   },
   {
    "num": "5K23AI163359-06",
@@ -871,7 +913,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 10908542,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 0
   },
   {
    "num": "5K23DK140642-02",
@@ -894,7 +937,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Clinical trial",
    "id": 11365116,
-   "foa": "PA-24-184"
+   "foa": "PA-24-184",
+   "pubs": 1
   },
   {
    "num": "1K23DK143316-01A1",
@@ -917,30 +961,8 @@
    "sub": "Health services / Epi",
    "cl": "Observational / clinical",
    "id": 11301702,
-   "foa": "PA-24-184"
-  },
-  {
-   "num": "5K23DK123413-05",
-   "core": "K23DK123413",
-   "ac": "K23",
-   "fy": 2024,
-   "amt": 196542,
-   "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
-   "st": "MI",
-   "city": "ANN ARBOR",
-   "pi": "Andrea L Oliverio",
-   "pis": [
-    "Andrea L Oliverio"
-   ],
-   "po": [
-    "RAQUEL CHARLES GREER"
-   ],
-   "ic": "NIDDK",
-   "t": "Developing a decision aid for reproductive health for women with kidney disease",
-   "sub": "Hypertension",
-   "cl": "Clinical trial",
-   "id": 10846602,
-   "foa": "PA-19-118"
+   "foa": "PA-24-184",
+   "pubs": 0
   },
   {
    "num": "5K23DK128567-05",
@@ -963,7 +985,8 @@
    "sub": "Acute kidney injury",
    "cl": "Clinical trial",
    "id": 11321607,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 0
   },
   {
    "num": "5K23DK128538-05",
@@ -986,7 +1009,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 10995267,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 0
   },
   {
    "num": "5K23DK129820-06",
@@ -1009,7 +1033,8 @@
    "sub": "Transplant",
    "cl": "Clinical trial",
    "id": 11103263,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 4
   },
   {
    "num": "5K23DK133677-04",
@@ -1032,7 +1057,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11289477,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 12
   },
   {
    "num": "5K23DK140535-02",
@@ -1055,7 +1081,8 @@
    "sub": "Acute kidney injury",
    "cl": "Observational / clinical",
    "id": 11381859,
-   "foa": "PA-24-185"
+   "foa": "PA-24-185",
+   "pubs": 0
   },
   {
    "num": "5K23HL173650-02",
@@ -1078,7 +1105,8 @@
    "sub": "Acute kidney injury",
    "cl": "Observational / clinical",
    "id": 11377985,
-   "foa": "PA-24-185"
+   "foa": "PA-24-185",
+   "pubs": 0
   },
   {
    "num": "5K23HL151816-05",
@@ -1101,7 +1129,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11092744,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 30
   },
   {
    "num": "1K23DK146149-01",
@@ -1124,7 +1153,8 @@
    "sub": "Transplant",
    "cl": "Clinical trial",
    "id": 11282675,
-   "foa": "PA-24-184"
+   "foa": "PA-24-184",
+   "pubs": 0
   },
   {
    "num": "1K23HL171893-01A1",
@@ -1147,7 +1177,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11229969,
-   "foa": "PA-24-185"
+   "foa": "PA-24-185",
+   "pubs": 5
   },
   {
    "num": "5K23DK132680-05",
@@ -1170,7 +1201,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Clinical trial",
    "id": 11289447,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 8
   },
   {
    "num": "5K23DK139454-03",
@@ -1193,7 +1225,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11369227,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 16
   },
   {
    "num": "1K23DK146189-01",
@@ -1216,7 +1249,8 @@
    "sub": "Glomerular disease",
    "cl": "Clinical trial",
    "id": 11283130,
-   "foa": "PA-24-184"
+   "foa": "PA-24-184",
+   "pubs": 0
   },
   {
    "num": "5K23AI159073-05",
@@ -1239,7 +1273,8 @@
    "sub": "Glomerular disease",
    "cl": "Observational / clinical",
    "id": 11284044,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 0
   },
   {
    "num": "1K23DK143377-01A1",
@@ -1262,7 +1297,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11300894,
-   "foa": "PA-24-185"
+   "foa": "PA-24-185",
+   "pubs": 0
   },
   {
    "num": "5K23HL155076-05",
@@ -1285,7 +1321,8 @@
    "sub": "Glomerular disease",
    "cl": "Clinical trial",
    "id": 11173806,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 9
   },
   {
    "num": "5K23DK127153-05",
@@ -1308,7 +1345,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11111280,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 0
   },
   {
    "num": "5K23DK142042-02",
@@ -1331,7 +1369,8 @@
    "sub": "Acute kidney injury",
    "cl": "Clinical trial",
    "id": 11384879,
-   "foa": "PA-24-184"
+   "foa": "PA-24-184",
+   "pubs": 0
   },
   {
    "num": "5K08AI168450-04",
@@ -1354,7 +1393,8 @@
    "sub": "Glomerular disease",
    "cl": "Non-clinical / basic",
    "id": 11335628,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 0
   },
   {
    "num": "5K23DK125529-05",
@@ -1377,7 +1417,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11000309,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 0
   },
   {
    "num": "1K01AI199717-01",
@@ -1400,7 +1441,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11352607,
-   "foa": "PA-24-176"
+   "foa": "PA-24-176",
+   "pubs": 0
   },
   {
    "num": "5K23GM151444-03",
@@ -1423,7 +1465,8 @@
    "sub": "Acute kidney injury",
    "cl": "Observational / clinical",
    "id": 11121792,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 33
   },
   {
    "num": "5K23DK140602-03",
@@ -1446,7 +1489,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11326749,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 5
   },
   {
    "num": "5K25DK132416-04",
@@ -1469,7 +1513,8 @@
    "sub": "Stones / Electrolytes",
    "cl": "Clinical trial",
    "id": 11239007,
-   "foa": "PA-20-199"
+   "foa": "PA-20-199",
+   "pubs": 1
   },
   {
    "num": "5K23DK141988-02",
@@ -1492,7 +1537,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11365200,
-   "foa": "PA-24-185"
+   "foa": "PA-24-185",
+   "pubs": 5
   },
   {
    "num": "5K24AI144954-11",
@@ -1515,7 +1561,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 10798223,
-   "foa": "PA-19-122"
+   "foa": "PA-19-122",
+   "pubs": 299
   },
   {
    "num": "5K23DK128657-04",
@@ -1538,7 +1585,8 @@
    "sub": "Glomerular disease",
    "cl": "Observational / clinical",
    "id": 11256733,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 0
   },
   {
    "num": "5K23DK144712-02",
@@ -1561,7 +1609,8 @@
    "sub": "Health services / Epi",
    "cl": "Clinical trial",
    "id": 11369248,
-   "foa": "PA-24-184"
+   "foa": "PA-24-184",
+   "pubs": 0
   },
   {
    "num": "5K23DK139465-02",
@@ -1584,7 +1633,8 @@
    "sub": "Transplant",
    "cl": "Clinical trial",
    "id": 11260191,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 2
   },
   {
    "num": "5K23DK127154-05",
@@ -1607,7 +1657,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11098477,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 0
   },
   {
    "num": "1K23DK144695-01A1",
@@ -1630,7 +1681,8 @@
    "sub": "Stones / Electrolytes",
    "cl": "Clinical trial",
    "id": 11371800,
-   "foa": "PA-24-184"
+   "foa": "PA-24-184",
+   "pubs": 0
   },
   {
    "num": "5K23DK124645-05",
@@ -1653,7 +1705,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 10991307,
-   "foa": "PA-19-119"
+   "foa": "PA-19-119",
+   "pubs": 0
   },
   {
    "num": "5K23DK125670-05",
@@ -1676,7 +1729,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 10820460,
-   "foa": "PA-19-119"
+   "foa": "PA-19-119",
+   "pubs": 0
   },
   {
    "num": "5K23DK138320-03",
@@ -1699,7 +1753,8 @@
    "sub": "Acute kidney injury",
    "cl": "Clinical trial",
    "id": 11322708,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 4
   },
   {
    "num": "5K23DK125840-05",
@@ -1722,7 +1777,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Clinical trial",
    "id": 10820498,
-   "foa": "PA-19-118"
+   "foa": "PA-19-118",
+   "pubs": 0
   },
   {
    "num": "5K23DK128604-05",
@@ -1745,7 +1801,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11080759,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 0
   },
   {
    "num": "5K23DK129836-06",
@@ -1768,7 +1825,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Clinical trial",
    "id": 11111282,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 17
   },
   {
    "num": "5K23HL150236-05",
@@ -1791,7 +1849,8 @@
    "sub": "Hypertension",
    "cl": "Observational / clinical",
    "id": 11092138,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 17
   },
   {
    "num": "5K23AG073534-05",
@@ -1814,7 +1873,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11097308,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 19
   },
   {
    "num": "5K23DK132459-05",
@@ -1837,7 +1897,8 @@
    "sub": "Acute kidney injury",
    "cl": "Clinical trial",
    "id": 11289463,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 7
   },
   {
    "num": "5K23DK125672-05",
@@ -1860,7 +1921,8 @@
    "sub": "Acute kidney injury",
    "cl": "Clinical trial",
    "id": 11237074,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 28
   },
   {
    "num": "5K23DK135789-04",
@@ -1883,7 +1945,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11267224,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 7
   },
   {
    "num": "5K23DK129770-05",
@@ -1906,7 +1969,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11088708,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 2
   },
   {
    "num": "5K23DK138299-03",
@@ -1929,7 +1993,8 @@
    "sub": "Acute kidney injury",
    "cl": "Observational / clinical",
    "id": 11238098,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 0
   },
   {
    "num": "5K23DK136930-04",
@@ -1952,7 +2017,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11324523,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 4
   },
   {
    "num": "5K23DK127252-04",
@@ -1975,7 +2041,8 @@
    "sub": "Stones / Electrolytes",
    "cl": "Observational / clinical",
    "id": 11081754,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 12
   },
   {
    "num": "5K23HL155734-05",
@@ -1998,7 +2065,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11158670,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 2
   },
   {
    "num": "5K23DK119542-05",
@@ -2021,7 +2089,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 10808880,
-   "foa": "PA-19-119"
+   "foa": "PA-19-119",
+   "pubs": 15
   },
   {
    "num": "5K23DK129777-05",
@@ -2044,7 +2113,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11289413,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 23
   },
   {
    "num": "5K23DK138313-03",
@@ -2067,7 +2137,8 @@
    "sub": "Hypertension",
    "cl": "Clinical trial",
    "id": 11291800,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 4
   },
   {
    "num": "5K23DK122131-05",
@@ -2090,7 +2161,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 10844557,
-   "foa": "PA-19-119"
+   "foa": "PA-19-119",
+   "pubs": 20
   },
   {
    "num": "5K23DK135844-04",
@@ -2113,7 +2185,32 @@
    "sub": "Stones / Electrolytes",
    "cl": "Observational / clinical",
    "id": 11294194,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 1
+  },
+  {
+   "num": "7K23DK123378-05",
+   "core": "K23DK123378",
+   "ac": "K23",
+   "fy": 2024,
+   "amt": 182602,
+   "org": "INDIANA UNIVERSITY INDIANAPOLIS",
+   "st": "IN",
+   "city": "INDIANAPOLIS",
+   "pi": "Marciana Lee Laster",
+   "pis": [
+    "Marciana Lee Laster"
+   ],
+   "po": [
+    "RAQUEL CHARLES GREER"
+   ],
+   "ic": "NIDDK",
+   "t": "Vitamin D Genetics and Racial Differences in Pediatric Chronic KidneyDisease-Mineral and Bone Disorder",
+   "sub": "ESKD / Dialysis",
+   "cl": "Observational / clinical",
+   "id": 11044367,
+   "foa": "PA-21-268",
+   "pubs": 13
   },
   {
    "num": "5K23HL168362-03",
@@ -2136,7 +2233,8 @@
    "sub": "Acute kidney injury",
    "cl": "Observational / clinical",
    "id": 11239767,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 18
   },
   {
    "num": "5K23HL159292-06",
@@ -2159,7 +2257,8 @@
    "sub": "Glomerular disease",
    "cl": "Clinical trial",
    "id": 11158675,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 30
   },
   {
    "num": "5K23DK123319-05",
@@ -2182,7 +2281,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Clinical trial",
    "id": 10839297,
-   "foa": "PA-19-118"
+   "foa": "PA-19-118",
+   "pubs": 9
   },
   {
    "num": "5K23DK134847-03",
@@ -2205,7 +2305,8 @@
    "sub": "Pediatric nephrology",
    "cl": "Observational / clinical",
    "id": 11239787,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 1
   },
   {
    "num": "7K23DK133729-04",
@@ -2228,7 +2329,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11363029,
-   "foa": "PA-24-254"
+   "foa": "PA-24-254",
+   "pubs": 56
   },
   {
    "num": "5K23HL151882-05",
@@ -2251,7 +2353,8 @@
    "sub": "Acute kidney injury",
    "cl": "Clinical trial",
    "id": 10909850,
-   "foa": "PA-19-118"
+   "foa": "PA-19-118",
+   "pubs": 8
   },
   {
    "num": "5K23DK131331-05",
@@ -2274,7 +2377,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11324574,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 14
   },
   {
    "num": "5K23DK123384-06",
@@ -2297,7 +2401,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 10749909,
-   "foa": "PA-19-118"
+   "foa": "PA-19-118",
+   "pubs": 57
   },
   {
    "num": "1K23AR085758-01A1",
@@ -2320,7 +2425,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11302021,
-   "foa": "PA-24-185"
+   "foa": "PA-24-185",
+   "pubs": 0
   },
   {
    "num": "1K08DK143336-01A1",
@@ -2343,7 +2449,8 @@
    "sub": "Transplant",
    "cl": "Non-clinical / basic",
    "id": 11301095,
-   "foa": "PA-24-182"
+   "foa": "PA-24-182",
+   "pubs": 0
   },
   {
    "num": "5K23NR021034-03",
@@ -2366,7 +2473,8 @@
    "sub": "CKD progression",
    "cl": "Clinical trial",
    "id": 11369115,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 1
   },
   {
    "num": "5K23DK132487-04",
@@ -2389,7 +2497,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11310813,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 2
   },
   {
    "num": "5K08DK143339-02",
@@ -2412,7 +2521,8 @@
    "sub": "PKD / Genetic",
    "cl": "Non-clinical / basic",
    "id": 11348883,
-   "foa": "PA-24-182"
+   "foa": "PA-24-182",
+   "pubs": 1
   },
   {
    "num": "5K08DK134762-03",
@@ -2435,7 +2545,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11092334,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 10
   },
   {
    "num": "1K08DK143346-01A1",
@@ -2458,7 +2569,8 @@
    "sub": "Glomerular disease",
    "cl": "Non-clinical / basic",
    "id": 11371546,
-   "foa": "PA-24-182"
+   "foa": "PA-24-182",
+   "pubs": 0
   },
   {
    "num": "5K08DK124568-05",
@@ -2481,7 +2593,8 @@
    "sub": "Acute kidney injury",
    "cl": "Non-clinical / basic",
    "id": 10755684,
-   "foa": "PA-19-117"
+   "foa": "PA-19-117",
+   "pubs": 0
   },
   {
    "num": "1K08AR086331-01A1",
@@ -2504,7 +2617,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11371974,
-   "foa": "PA-24-182"
+   "foa": "PA-24-182",
+   "pubs": 0
   },
   {
    "num": "5K23DK144665-02",
@@ -2527,7 +2641,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11374574,
-   "foa": "PA-24-185"
+   "foa": "PA-24-185",
+   "pubs": 1
   },
   {
    "num": "5K08AG065520-05",
@@ -2550,7 +2665,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 10778552,
-   "foa": "PA-19-117"
+   "foa": "PA-19-117",
+   "pubs": 0
   },
   {
    "num": "5K23DK128573-05",
@@ -2573,7 +2689,8 @@
    "sub": "Transplant",
    "cl": "Clinical trial",
    "id": 11103311,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 2
   },
   {
    "num": "5K08DK132411-05",
@@ -2596,7 +2713,8 @@
    "sub": "Glomerular disease",
    "cl": "Non-clinical / basic",
    "id": 11327226,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 3
   },
   {
    "num": "5K08DK132486-04",
@@ -2619,7 +2737,8 @@
    "sub": "Stones / Electrolytes",
    "cl": "Non-clinical / basic",
    "id": 11332646,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 1
   },
   {
    "num": "5K08DK125776-05",
@@ -2642,7 +2761,8 @@
    "sub": "Acute kidney injury",
    "cl": "Non-clinical / basic",
    "id": 10830352,
-   "foa": "PA-19-117"
+   "foa": "PA-19-117",
+   "pubs": 10
   },
   {
    "num": "5K08DK124449-05",
@@ -2665,7 +2785,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 10755642,
-   "foa": "PA-19-117"
+   "foa": "PA-19-117",
+   "pubs": 0
   },
   {
    "num": "5K25DK128563-05",
@@ -2688,7 +2809,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11063920,
-   "foa": "PA-20-199"
+   "foa": "PA-20-199",
+   "pubs": 34
   },
   {
    "num": "5K08DK124685-05",
@@ -2711,7 +2833,8 @@
    "sub": "Transplant",
    "cl": "Non-clinical / basic",
    "id": 10820408,
-   "foa": "PA-19-117"
+   "foa": "PA-19-117",
+   "pubs": 11
   },
   {
    "num": "5K08DK126847-05",
@@ -2734,7 +2857,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11247967,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 17
   },
   {
    "num": "5K08DK125768-05",
@@ -2757,7 +2881,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11058473,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 15
   },
   {
    "num": "5K25CA297149-02",
@@ -2780,7 +2905,8 @@
    "sub": "Stones / Electrolytes",
    "cl": "Clinical (other)",
    "id": 11328823,
-   "foa": "PA-20-199"
+   "foa": "PA-20-199",
+   "pubs": 5
   },
   {
    "num": "5K08DK131346-04",
@@ -2803,7 +2929,8 @@
    "sub": "Acute kidney injury",
    "cl": "Observational / clinical",
    "id": 11168758,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 16
   },
   {
    "num": "5K08DK138291-02",
@@ -2826,7 +2953,8 @@
    "sub": "Hypertension",
    "cl": "Non-clinical / basic",
    "id": 11321192,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 2
   },
   {
    "num": "5K08DK119535-05",
@@ -2849,7 +2977,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 10766185,
-   "foa": "PA-19-117"
+   "foa": "PA-19-117",
+   "pubs": 0
   },
   {
    "num": "1K23DK144716-01",
@@ -2872,7 +3001,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11213560,
-   "foa": "PA-24-184"
+   "foa": "PA-24-184",
+   "pubs": 0
   },
   {
    "num": "5K23DK134756-04",
@@ -2895,7 +3025,8 @@
    "sub": "Transplant",
    "cl": "Clinical trial",
    "id": 11324524,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 7
   },
   {
    "num": "5K08DK127250-05",
@@ -2918,7 +3049,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11143147,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 12
   },
   {
    "num": "1K08DK143343-01",
@@ -2941,7 +3073,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11114613,
-   "foa": "PA-24-182"
+   "foa": "PA-24-182",
+   "pubs": 1
   },
   {
    "num": "5K08DK138280-02",
@@ -2964,7 +3097,8 @@
    "sub": "Health services / Epi",
    "cl": "Observational / clinical",
    "id": 11176923,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 3
   },
   {
    "num": "5K23HL157554-05",
@@ -2987,7 +3121,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11294279,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 8
   },
   {
    "num": "5K01HL164978-03",
@@ -3010,7 +3145,8 @@
    "sub": "Glomerular disease",
    "cl": "Clinical trial",
    "id": 11167639,
-   "foa": "PA-20-176"
+   "foa": "PA-20-176",
+   "pubs": 9
   },
   {
    "num": "5K08DK133496-04",
@@ -3033,7 +3169,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11169026,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 1
   },
   {
    "num": "5K08DK132509-03",
@@ -3056,7 +3193,8 @@
    "sub": "Transplant",
    "cl": "Non-clinical / basic",
    "id": 11042822,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 1
   },
   {
    "num": "1K01DK139428-01A1",
@@ -3079,7 +3217,8 @@
    "sub": "Transplant",
    "cl": "Clinical trial",
    "id": 11137269,
-   "foa": "PA-24-175"
+   "foa": "PA-24-175",
+   "pubs": 0
   },
   {
    "num": "5K08DK132519-04",
@@ -3102,7 +3241,8 @@
    "sub": "Acute kidney injury",
    "cl": "Non-clinical / basic",
    "id": 11289448,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 1
   },
   {
    "num": "5K08DK132463-04",
@@ -3125,7 +3265,8 @@
    "sub": "CKD progression",
    "cl": "Non-clinical / basic",
    "id": 11289421,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 4
   },
   {
    "num": "5K23DK138312-03",
@@ -3148,7 +3289,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Clinical trial",
    "id": 11311361,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 11
   },
   {
    "num": "1K01DK140521-01A1",
@@ -3171,7 +3313,8 @@
    "sub": "Glomerular disease",
    "cl": "Non-clinical / basic",
    "id": 11302550,
-   "foa": "PA-24-176"
+   "foa": "PA-24-176",
+   "pubs": 0
   },
   {
    "num": "5K08DK132501-04",
@@ -3194,7 +3337,8 @@
    "sub": "Transplant",
    "cl": "Non-clinical / basic",
    "id": 11348961,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 4
   },
   {
    "num": "5K23DK123410-05",
@@ -3217,7 +3361,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 10836499,
-   "foa": "PA-19-119"
+   "foa": "PA-19-119",
+   "pubs": 13
   },
   {
    "num": "5K01ES036193-03",
@@ -3240,7 +3385,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11309156,
-   "foa": "PAR-21-172"
+   "foa": "PAR-21-172",
+   "pubs": 14
   },
   {
    "num": "5K08DK136914-03",
@@ -3263,7 +3409,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11323499,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 1
   },
   {
    "num": "1K01HL179491-01",
@@ -3286,7 +3433,8 @@
    "sub": "Hypertension",
    "cl": "Non-clinical / basic",
    "id": 11113106,
-   "foa": "PA-24-175"
+   "foa": "PA-24-175",
+   "pubs": 0
   },
   {
    "num": "5K08DK118180-05",
@@ -3309,7 +3457,8 @@
    "sub": "Transplant",
    "cl": "Non-clinical / basic",
    "id": 10755675,
-   "foa": "PA-19-117"
+   "foa": "PA-19-117",
+   "pubs": 3
   },
   {
    "num": "5K01NR021272-02",
@@ -3332,7 +3481,8 @@
    "sub": "Acute kidney injury",
    "cl": "Clinical trial",
    "id": 11159696,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 3
   },
   {
    "num": "5K23DK131278-06",
@@ -3355,7 +3505,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11370135,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 34
   },
   {
    "num": "5K01HL159047-05",
@@ -3378,7 +3529,8 @@
    "sub": "Hypertension",
    "cl": "Non-clinical / basic",
    "id": 11144946,
-   "foa": "RFA-HL-19-026"
+   "foa": "RFA-HL-19-026",
+   "pubs": 2
   },
   {
    "num": "1K01DK147422-01",
@@ -3401,7 +3553,8 @@
    "sub": "Stones / Electrolytes",
    "cl": "Observational / clinical",
    "id": 11346750,
-   "foa": "PA-24-176"
+   "foa": "PA-24-176",
+   "pubs": 0
   },
   {
    "num": "5K08DK123411-05",
@@ -3424,7 +3577,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 10830348,
-   "foa": "PA-19-117"
+   "foa": "PA-19-117",
+   "pubs": 10
   },
   {
    "num": "1K01DK144648-01",
@@ -3447,7 +3601,8 @@
    "sub": "Transplant",
    "cl": "Non-clinical / basic",
    "id": 11214243,
-   "foa": "PA-24-176"
+   "foa": "PA-24-176",
+   "pubs": 0
   },
   {
    "num": "1K08HS029562-01A1",
@@ -3470,7 +3625,8 @@
    "sub": "Health services / Epi",
    "cl": "Clinical (other)",
    "id": 10985581,
-   "foa": "PA-22-050"
+   "foa": "PA-22-050",
+   "pubs": 1
   },
   {
    "num": "1K01DK146251-01",
@@ -3493,7 +3649,8 @@
    "sub": "Glomerular disease",
    "cl": "Non-clinical / basic",
    "id": 11282473,
-   "foa": "PA-24-176"
+   "foa": "PA-24-176",
+   "pubs": 0
   },
   {
    "num": "5K08DK134879-04",
@@ -3516,7 +3673,8 @@
    "sub": "Acute kidney injury",
    "cl": "Non-clinical / basic",
    "id": 11331266,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 16
   },
   {
    "num": "5K08DK135931-04",
@@ -3539,7 +3697,8 @@
    "sub": "PKD / Genetic",
    "cl": "Non-clinical / basic",
    "id": 11316992,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 12
   },
   {
    "num": "5K08DK124658-05",
@@ -3562,7 +3721,8 @@
    "sub": "Acute kidney injury",
    "cl": "Observational / clinical",
    "id": 10986978,
-   "foa": "PA-19-117"
+   "foa": "PA-19-117",
+   "pubs": 14
   },
   {
    "num": "1K08DK147651-01",
@@ -3585,7 +3745,8 @@
    "sub": "Glomerular disease",
    "cl": "Non-clinical / basic",
    "id": 11351963,
-   "foa": "PA-24-182"
+   "foa": "PA-24-182",
+   "pubs": 0
   },
   {
    "num": "7K01DK121737-05",
@@ -3608,7 +3769,8 @@
    "sub": "Glomerular disease",
    "cl": "Non-clinical / basic",
    "id": 11082126,
-   "foa": "PA-21-268"
+   "foa": "PA-21-268",
+   "pubs": 13
   },
   {
    "num": "5K23HL148394-05",
@@ -3631,7 +3793,8 @@
    "sub": "Hypertension",
    "cl": "Observational / clinical",
    "id": 10868656,
-   "foa": "PA-19-119"
+   "foa": "PA-19-119",
+   "pubs": 81
   },
   {
    "num": "5K01DK125616-04",
@@ -3654,7 +3817,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 10848343,
-   "foa": "PAR-18-419"
+   "foa": "PAR-18-419",
+   "pubs": 12
   },
   {
    "num": "5K08DK139369-03",
@@ -3677,7 +3841,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11289455,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 2
   },
   {
    "num": "5K01DK137620-02",
@@ -3700,7 +3865,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11172412,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 2
   },
   {
    "num": "5K08DK137042-02",
@@ -3723,7 +3889,8 @@
    "sub": "Pediatric nephrology",
    "cl": "Observational / clinical",
    "id": 11295473,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 0
   },
   {
    "num": "5K08DK138302-03",
@@ -3746,7 +3913,8 @@
    "sub": "Transplant",
    "cl": "Non-clinical / basic",
    "id": 11336866,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 1
   },
   {
    "num": "5K01DK139420-03",
@@ -3769,7 +3937,8 @@
    "sub": "Glomerular disease",
    "cl": "Observational / clinical",
    "id": 11318961,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 14
   },
   {
    "num": "5K01DK132490-04",
@@ -3792,7 +3961,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11292837,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 11
   },
   {
    "num": "5K01DK139400-02",
@@ -3815,7 +3985,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Clinical trial",
    "id": 11170426,
-   "foa": "PA-20-176"
+   "foa": "PA-20-176",
+   "pubs": 4
   },
   {
    "num": "5K08HS028684-03",
@@ -3838,7 +4009,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 10896944,
-   "foa": "PA-17-232"
+   "foa": "PA-17-232",
+   "pubs": 16
   },
   {
    "num": "7K01DK126792-05",
@@ -3861,7 +4033,8 @@
    "sub": "Glomerular disease",
    "cl": "Non-clinical / basic",
    "id": 11280843,
-   "foa": "PA-24-254"
+   "foa": "PA-24-254",
+   "pubs": 16
   },
   {
    "num": "5K01DK124443-05",
@@ -3884,7 +4057,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11059948,
-   "foa": "PAR-18-419"
+   "foa": "PAR-18-419",
+   "pubs": 3
   },
   {
    "num": "5K08DK134761-03",
@@ -3907,7 +4081,8 @@
    "sub": "Glomerular disease",
    "cl": "Non-clinical / basic",
    "id": 11309624,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 2
   },
   {
    "num": "5K08DK136924-03",
@@ -3930,7 +4105,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11292413,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 1
   },
   {
    "num": "5K01DK123497-05",
@@ -3953,7 +4129,8 @@
    "sub": "Glomerular disease",
    "cl": "Non-clinical / basic",
    "id": 10793659,
-   "foa": "PAR-18-419"
+   "foa": "PAR-18-419",
+   "pubs": 3
   },
   {
    "num": "5K01DK136973-02",
@@ -3976,7 +4153,8 @@
    "sub": "Glomerular disease",
    "cl": "Observational / clinical",
    "id": 11172613,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 4
   },
   {
    "num": "5K01DK135917-02",
@@ -3999,7 +4177,8 @@
    "sub": "CKD progression",
    "cl": "Non-clinical / basic",
    "id": 11172515,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 2
   },
   {
    "num": "5K02AG076883-04",
@@ -4022,7 +4201,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11231675,
-   "foa": "PA-20-174"
+   "foa": "PA-20-174",
+   "pubs": 49
   },
   {
    "num": "1K01DK140628-01A1",
@@ -4045,7 +4225,8 @@
    "sub": "Glomerular disease",
    "cl": "Non-clinical / basic",
    "id": 11228694,
-   "foa": "PA-24-176"
+   "foa": "PA-24-176",
+   "pubs": 0
   },
   {
    "num": "5K08DK122124-05",
@@ -4068,7 +4249,8 @@
    "sub": "Acute kidney injury",
    "cl": "Non-clinical / basic",
    "id": 10830367,
-   "foa": "PA-19-117"
+   "foa": "PA-19-117",
+   "pubs": 2
   },
   {
    "num": "5K01DK133643-04",
@@ -4091,7 +4273,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11358303,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 0
   },
   {
    "num": "5K23MD016448-04",
@@ -4114,7 +4297,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Clinical trial",
    "id": 11076766,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 5
   },
   {
    "num": "1K01DK140634-01A1",
@@ -4137,7 +4321,8 @@
    "sub": "Stones / Electrolytes",
    "cl": "Non-clinical / basic",
    "id": 11135912,
-   "foa": "PA-24-176"
+   "foa": "PA-24-176",
+   "pubs": 0
   },
   {
    "num": "1K01DK147652-01",
@@ -4160,7 +4345,8 @@
    "sub": "Glomerular disease",
    "cl": "Clinical trial",
    "id": 11351923,
-   "foa": "PA-24-175"
+   "foa": "PA-24-175",
+   "pubs": 0
   },
   {
    "num": "5K23NR020356-03",
@@ -4183,7 +4369,8 @@
    "sub": "Acute kidney injury",
    "cl": "Observational / clinical",
    "id": 10899765,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 7
   },
   {
    "num": "5K23DK119463-05",
@@ -4206,7 +4393,8 @@
    "sub": "Acute kidney injury",
    "cl": "Clinical trial",
    "id": 10756441,
-   "foa": "PA-19-118"
+   "foa": "PA-19-118",
+   "pubs": 83
   },
   {
    "num": "5K01DK124357-05",
@@ -4229,7 +4417,8 @@
    "sub": "Transplant",
    "cl": "Non-clinical / basic",
    "id": 11081665,
-   "foa": "PAR-18-419"
+   "foa": "PAR-18-419",
+   "pubs": 0
   },
   {
    "num": "7K01DK128384-05",
@@ -4252,7 +4441,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11211193,
-   "foa": "PA-24-254"
+   "foa": "PA-24-254",
+   "pubs": 0
   },
   {
    "num": "1K01HL169309-01A1",
@@ -4275,7 +4465,8 @@
    "sub": "Hypertension",
    "cl": "Observational / clinical",
    "id": 11052231,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 0
   },
   {
    "num": "5K23HL161428-04",
@@ -4298,7 +4489,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Clinical (other)",
    "id": 11135550,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 3
   },
   {
    "num": "5K01DK126991-05",
@@ -4321,7 +4513,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11093476,
-   "foa": "PAR-18-419"
+   "foa": "PAR-18-419",
+   "pubs": 0
   },
   {
    "num": "5K08HS028476-04",
@@ -4344,7 +4537,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11169694,
-   "foa": "PA-17-232"
+   "foa": "PA-17-232",
+   "pubs": 18
   },
   {
    "num": "5K01DK128379-05",
@@ -4367,7 +4561,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11081780,
-   "foa": "PAR-18-419"
+   "foa": "PAR-18-419",
+   "pubs": 0
   },
   {
    "num": "7K01DK140605-02",
@@ -4390,7 +4585,8 @@
    "sub": "PKD / Genetic",
    "cl": "Non-clinical / basic",
    "id": 11369475,
-   "foa": "PA-24-254"
+   "foa": "PA-24-254",
+   "pubs": 0
   },
   {
    "num": "5K01DK125614-05",
@@ -4413,7 +4609,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11013319,
-   "foa": "PAR-18-419"
+   "foa": "PAR-18-419",
+   "pubs": 0
   },
   {
    "num": "5K01DK135929-03",
@@ -4436,7 +4633,8 @@
    "sub": "CKD progression",
    "cl": "Non-clinical / basic",
    "id": 11294191,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 0
   },
   {
    "num": "5K24AG073615-05",
@@ -4459,7 +4657,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11380787,
-   "foa": "PA-20-186"
+   "foa": "PA-20-186",
+   "pubs": 27
   },
   {
    "num": "5K24HL177273-02",
@@ -4482,7 +4681,8 @@
    "sub": "Glomerular disease",
    "cl": "Observational / clinical",
    "id": 11251542,
-   "foa": "PA-20-186"
+   "foa": "PA-20-186",
+   "pubs": 11
   },
   {
    "num": "5K25DK138120-02",
@@ -4505,7 +4705,8 @@
    "sub": "Stones / Electrolytes",
    "cl": "Clinical trial",
    "id": 11172518,
-   "foa": "PA-20-199"
+   "foa": "PA-20-199",
+   "pubs": 0
   },
   {
    "num": "5K23ES034462-03",
@@ -4528,7 +4729,8 @@
    "sub": "Hypertension",
    "cl": "Observational / clinical",
    "id": 11170449,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 2
   },
   {
    "num": "1K99CA307136-01",
@@ -4551,7 +4753,8 @@
    "sub": "General nephrology",
    "cl": "Non-clinical / basic",
    "id": 11280965,
-   "foa": "PAR-25-135"
+   "foa": "PAR-25-135",
+   "pubs": 0
   },
   {
    "num": "1K24HL175495-01A1",
@@ -4574,7 +4777,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11144785,
-   "foa": "PA-24-187"
+   "foa": "PA-24-187",
+   "pubs": 0
   },
   {
    "num": "5K01DK128304-04",
@@ -4597,7 +4801,8 @@
    "sub": "Glomerular disease",
    "cl": "Non-clinical / basic",
    "id": 11289358,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 0
   },
   {
    "num": "5K01DK120790-05",
@@ -4620,7 +4825,8 @@
    "sub": "Stones / Electrolytes",
    "cl": "Non-clinical / basic",
    "id": 10794239,
-   "foa": "PAR-18-419"
+   "foa": "PAR-18-419",
+   "pubs": 0
   },
   {
    "num": "5K01DK132495-04",
@@ -4643,7 +4849,8 @@
    "sub": "Health services / Epi",
    "cl": "Observational / clinical",
    "id": 11178634,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 0
   },
   {
    "num": "5K23AI157893-05",
@@ -4666,7 +4873,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11124157,
-   "foa": "PA-20-205"
+   "foa": "PA-20-205",
+   "pubs": 52
   },
   {
    "num": "5K24HL171861-02",
@@ -4689,7 +4897,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11138633,
-   "foa": "PA-20-186"
+   "foa": "PA-20-186",
+   "pubs": 7
   },
   {
    "num": "5K01AG078486-05",
@@ -4712,7 +4921,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11374923,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 0
   },
   {
    "num": "5K01DK135924-04",
@@ -4735,7 +4945,8 @@
    "sub": "CKD progression",
    "cl": "Non-clinical / basic",
    "id": 11285391,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 0
   },
   {
    "num": "5K01DK133635-04",
@@ -4758,7 +4969,8 @@
    "sub": "Acute kidney injury",
    "cl": "Non-clinical / basic",
    "id": 11358363,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 0
   },
   {
    "num": "5K24HL155861-05",
@@ -4781,7 +4993,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 11055312,
-   "foa": "PA-19-122"
+   "foa": "PA-19-122",
+   "pubs": 65
   },
   {
    "num": "5K01HL155235-05",
@@ -4804,7 +5017,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11013827,
-   "foa": "RFA-HL-19-026"
+   "foa": "RFA-HL-19-026",
+   "pubs": 0
   },
   {
    "num": "5K24HL161414-04",
@@ -4827,7 +5041,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Clinical trial",
    "id": 11127683,
-   "foa": "PA-20-193"
+   "foa": "PA-20-193",
+   "pubs": 19
   },
   {
    "num": "5K24HL150235-05",
@@ -4850,7 +5065,8 @@
    "sub": "Stones / Electrolytes",
    "cl": "Clinical trial",
    "id": 10763779,
-   "foa": "PA-19-122"
+   "foa": "PA-19-122",
+   "pubs": 42
   },
   {
    "num": "5K01DK127002-04",
@@ -4873,7 +5089,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11003794,
-   "foa": "PA-20-190"
+   "foa": "PA-20-190",
+   "pubs": 0
   },
   {
    "num": "5K01AG070284-05",
@@ -4896,7 +5113,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11013913,
-   "foa": "PA-19-126"
+   "foa": "PA-19-126",
+   "pubs": 0
   },
   {
    "num": "5K38HL169660-02",
@@ -4919,7 +5137,8 @@
    "sub": "Glomerular disease",
    "cl": "Observational / clinical",
    "id": 10891713,
-   "foa": "RFA-HL-23-007"
+   "foa": "RFA-HL-23-007",
+   "pubs": 4
   },
   {
    "num": "1K08DK142013-01A1",
@@ -4942,7 +5161,8 @@
    "sub": "Hypertension",
    "cl": "Observational / clinical",
    "id": 11371696,
-   "foa": "PA-24-182"
+   "foa": "PA-24-182",
+   "pubs": 0
   },
   {
    "num": "5K43TW012586-04",
@@ -4965,7 +5185,8 @@
    "sub": "Acute kidney injury",
    "cl": "Observational / clinical",
    "id": 11325381,
-   "foa": "PAR-21-252"
+   "foa": "PAR-21-252",
+   "pubs": 2
   },
   {
    "num": "5K99DK138301-02",
@@ -4988,7 +5209,8 @@
    "sub": "Transplant",
    "cl": "Non-clinical / basic",
    "id": 11176355,
-   "foa": "PA-20-188"
+   "foa": "PA-20-188",
+   "pubs": 1
   },
   {
    "num": "1K99DK143296-01",
@@ -5011,7 +5233,8 @@
    "sub": "Stones / Electrolytes",
    "cl": "Non-clinical / basic",
    "id": 11115175,
-   "foa": "PA-24-194"
+   "foa": "PA-24-194",
+   "pubs": 1
   },
   {
    "num": "5K99DK139418-02",
@@ -5034,7 +5257,8 @@
    "sub": "Hypertension",
    "cl": "Non-clinical / basic",
    "id": 11144349,
-   "foa": "PA-20-188"
+   "foa": "PA-20-188",
+   "pubs": 0
   },
   {
    "num": "5K99HD109458-02",
@@ -5057,7 +5281,8 @@
    "sub": "Hypertension",
    "cl": "Non-clinical / basic",
    "id": 10887542,
-   "foa": "PA-20-188"
+   "foa": "PA-20-188",
+   "pubs": 4
   },
   {
    "num": "5K99DK138294-02",
@@ -5080,7 +5305,8 @@
    "sub": "Transplant",
    "cl": "Observational / clinical",
    "id": 11290791,
-   "foa": "PA-20-188"
+   "foa": "PA-20-188",
+   "pubs": 4
   },
   {
    "num": "5K23DK131316-02",
@@ -5103,7 +5329,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 10814226,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 7
   },
   {
    "num": "3K23DK127248-04S1",
@@ -5126,7 +5353,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Clinical trial",
    "id": 11258217,
-   "foa": "PA-20-272"
+   "foa": "PA-20-272",
+   "pubs": 13
   },
   {
    "num": "3K23HL150311-05S1",
@@ -5149,7 +5377,8 @@
    "sub": "Health services / Epi",
    "cl": "Clinical trial",
    "id": 11137217,
-   "foa": "PA-19-118"
+   "foa": "PA-19-118",
+   "pubs": 42
   },
   {
    "num": "3K23DK120811-05S1",
@@ -5172,7 +5401,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Clinical trial",
    "id": 11030505,
-   "foa": "PA-20-272"
+   "foa": "PA-20-272",
+   "pubs": 62
   },
   {
    "num": "3K08DK131259-03S1",
@@ -5195,7 +5425,32 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11030628,
-   "foa": "PA-20-272"
+   "foa": "PA-20-272",
+   "pubs": 8
+  },
+  {
+   "num": "3K23DK123413-05S1",
+   "core": "K23DK123413",
+   "ac": "K23",
+   "fy": 2024,
+   "amt": 75599,
+   "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+   "st": "MI",
+   "city": "ANN ARBOR",
+   "pi": "Andrea L Oliverio",
+   "pis": [
+    "Andrea L Oliverio"
+   ],
+   "po": [
+    "RAQUEL CHARLES GREER"
+   ],
+   "ic": "NIDDK",
+   "t": "Developing a decision aid for reproductive health for women with kidney disease",
+   "sub": "Hypertension",
+   "cl": "Clinical trial",
+   "id": 11030544,
+   "foa": "PA-20-272",
+   "pubs": 11
   },
   {
    "num": "5K23AR084608-02",
@@ -5218,7 +5473,8 @@
    "sub": "Glomerular disease",
    "cl": "Observational / clinical",
    "id": 11173800,
-   "foa": "PA-20-206"
+   "foa": "PA-20-206",
+   "pubs": 16
   },
   {
    "num": "1K99ES034800-01A1",
@@ -5241,7 +5497,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Observational / clinical",
    "id": 10736249,
-   "foa": "PA-20-188"
+   "foa": "PA-20-188",
+   "pubs": 0
   },
   {
    "num": "5K08DK131262-03",
@@ -5264,7 +5521,8 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 10909199,
-   "foa": "PA-20-203"
+   "foa": "PA-20-203",
+   "pubs": 0
   }
  ]
 }
