@@ -6,7 +6,7 @@
   "application_pdf_note": "NIH does not publish full grant applications publicly (FOIA-only); each award links to its NIH RePORTER record with the public abstract.",
   "universe_total_active": 203,
   "n_institutions": 75,
-  "total_current_year_award_usd": 32643146
+  "total_current_year_award_usd": 32764089
  },
  "stats": {
   "by_mechanism": {
@@ -965,6 +965,30 @@
    "pubs": 0
   },
   {
+   "num": "5K23DK123413-05",
+   "core": "K23DK123413",
+   "ac": "K23",
+   "fy": 2024,
+   "amt": 196542,
+   "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+   "st": "MI",
+   "city": "ANN ARBOR",
+   "pi": "Andrea L Oliverio",
+   "pis": [
+    "Andrea L Oliverio"
+   ],
+   "po": [
+    "RAQUEL CHARLES GREER"
+   ],
+   "ic": "NIDDK",
+   "t": "Developing a decision aid for reproductive health for women with kidney disease",
+   "sub": "Hypertension",
+   "cl": "Clinical trial",
+   "id": 10846602,
+   "foa": "PA-19-118",
+   "pubs": 0
+  },
+  {
    "num": "5K23DK128567-05",
    "core": "K23DK128567",
    "ac": "K23",
@@ -1034,7 +1058,7 @@
    "cl": "Clinical trial",
    "id": 11103263,
    "foa": "PA-20-206",
-   "pubs": 4
+   "pubs": 19
   },
   {
    "num": "5K23DK133677-04",
@@ -1586,7 +1610,7 @@
    "cl": "Observational / clinical",
    "id": 11256733,
    "foa": "PA-20-205",
-   "pubs": 0
+   "pubs": 2
   },
   {
    "num": "5K23DK144712-02",
@@ -2834,7 +2858,7 @@
    "cl": "Non-clinical / basic",
    "id": 10820408,
    "foa": "PA-19-117",
-   "pubs": 11
+   "pubs": 6
   },
   {
    "num": "5K08DK126847-05",
@@ -5018,7 +5042,7 @@
    "cl": "Non-clinical / basic",
    "id": 11013827,
    "foa": "RFA-HL-19-026",
-   "pubs": 0
+   "pubs": 6
   },
   {
    "num": "5K24HL161414-04",
@@ -5425,30 +5449,6 @@
    "sub": "ESKD / Dialysis",
    "cl": "Non-clinical / basic",
    "id": 11030628,
-   "foa": "PA-20-272",
-   "pubs": 8
-  },
-  {
-   "num": "3K23DK123413-05S1",
-   "core": "K23DK123413",
-   "ac": "K23",
-   "fy": 2024,
-   "amt": 75599,
-   "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
-   "st": "MI",
-   "city": "ANN ARBOR",
-   "pi": "Andrea L Oliverio",
-   "pis": [
-    "Andrea L Oliverio"
-   ],
-   "po": [
-    "RAQUEL CHARLES GREER"
-   ],
-   "ic": "NIDDK",
-   "t": "Developing a decision aid for reproductive health for women with kidney disease",
-   "sub": "Hypertension",
-   "cl": "Clinical trial",
-   "id": 11030544,
    "foa": "PA-20-272",
    "pubs": 11
   },
