@@ -215,7 +215,7 @@ def aggregate(grants):
         d = inst.setdefault(o, {"name": o, "state": g["st"], "total": 0, "clinical": 0, "nonclinical": 0})
         d["total"] += 1
         d["clinical" if is_clin(g) else "nonclinical"] += 1
-    institutions = sorted(inst.values(), key=lambda x: -x["total"])[:25]
+    institutions = sorted(inst.values(), key=lambda x: (-x["total"], x["name"]))  # all institutions
     states = {}
     for g in grants:
         if g["st"]:
@@ -261,14 +261,16 @@ def main():
         "meta": {
             "generated": time.strftime("%Y-%m-%d"),
             "source": ("NIH RePORTER API v2 (active K-series, " +
-                       ("looser abstract-level" if args.loose else "high-precision title/terms") +
-                       " nephrology filter)"),
-            "snapshot_note": ("Active career-development (K) awards matching a nephrology vocabulary. "
-                              "Subarea and clinical/non-clinical labels are first-pass algorithmic "
-                              "classifications intended for triage."),
+                       ("looser abstract-level" if args.loose else "kidney study-population") +
+                       " filter)"),
+            "snapshot_note": ("Active career-development (K) awards where kidney disease is the study focus "
+                              "or study population (comorbidity studies in CKD/dialysis/transplant cohorts are "
+                              "included; incidental kidney mentions and pure kidney-cancer/urology are excluded). "
+                              "Subarea and clinical/non-clinical labels are first-pass algorithmic classifications."),
             "application_pdf_note": ("NIH does not publish full grant applications publicly (FOIA-only); "
                                      "each award links to its NIH RePORTER record with the public abstract."),
             "universe_total_active": len(grants),
+            "n_institutions": len(agg["institutions"]),
             "total_current_year_award_usd": total_amt,
         },
         "stats": agg["stats"],
