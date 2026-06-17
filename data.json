@@ -4,18 +4,18 @@
   "source": "NIH RePORTER API v2 (active K-series, kidney study-population filter)",
   "snapshot_note": "Active career-development (K) awards where kidney disease is the study focus or study population (comorbidity studies in CKD/dialysis/transplant cohorts are included; incidental kidney mentions and pure kidney-cancer/urology are excluded). Subarea and clinical/non-clinical labels are first-pass algorithmic classifications.",
   "application_pdf_note": "NIH does not publish full grant applications publicly (FOIA-only); each award links to its NIH RePORTER record with the public abstract.",
-  "universe_total_active": 203,
-  "n_institutions": 75,
-  "total_current_year_award_usd": 32643146
+  "universe_total_active": 200,
+  "n_institutions": 73,
+  "total_current_year_award_usd": 32305358
  },
  "stats": {
   "by_mechanism": {
    "K23": 93,
-   "K08": 45,
+   "K08": 44,
    "K01": 43,
    "K24": 8,
-   "K99": 7,
-   "K25": 4,
+   "K99": 6,
+   "K25": 3,
    "K02": 1,
    "K38": 1,
    "K43": 1
@@ -26,18 +26,17 @@
    "Glomerular disease": 25,
    "Acute kidney injury": 24,
    "Hypertension": 13,
-   "Stones / Electrolytes": 12,
-   "Health services / Epi": 6,
+   "Stones / Electrolytes": 11,
+   "Health services / Epi": 5,
    "CKD progression": 5,
    "PKD / Genetic": 3,
-   "Pediatric nephrology": 2,
-   "General nephrology": 1
+   "Pediatric nephrology": 2
   },
   "by_clinical": {
    "Observational / clinical": 98,
-   "Non-clinical / basic": 61,
+   "Non-clinical / basic": 60,
    "Clinical trial": 41,
-   "Clinical (other)": 3
+   "Clinical (other)": 1
   },
   "by_institute": {
    "NIDDK": 146,
@@ -47,8 +46,7 @@
    "NIAMS": 3,
    "NINR": 3,
    "NIEHS": 3,
-   "AHRQ": 3,
-   "NCI": 2,
+   "AHRQ": 2,
    "NIMH": 1,
    "NIGMS": 1,
    "NIMHD": 1,
@@ -56,9 +54,9 @@
    "NICHD": 1
   },
   "by_fiscal_year": {
-   "2026": 89,
+   "2026": 87,
    "2025": 76,
-   "2024": 38
+   "2024": 37
   }
  },
  "institutions": [
@@ -175,13 +173,6 @@
    "nonclinical": 0
   },
   {
-   "name": "UNIV OF NORTH CAROLINA CHAPEL HILL",
-   "state": "NC",
-   "total": 4,
-   "clinical": 4,
-   "nonclinical": 0
-  },
-  {
    "name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
    "state": "CA",
    "total": 4,
@@ -243,6 +234,13 @@
    "total": 3,
    "clinical": 0,
    "nonclinical": 3
+  },
+  {
+   "name": "UNIV OF NORTH CAROLINA CHAPEL HILL",
+   "state": "NC",
+   "total": 3,
+   "clinical": 3,
+   "nonclinical": 0
   },
   {
    "name": "UNIVERSITY OF FLORIDA",
@@ -383,13 +381,6 @@
    "total": 1,
    "clinical": 0,
    "nonclinical": 1
-  },
-  {
-   "name": "DANA-FARBER CANCER INST",
-   "state": "MA",
-   "total": 1,
-   "clinical": 1,
-   "nonclinical": 0
   },
   {
    "name": "DARTMOUTH-HITCHCOCK CLINIC",
@@ -546,13 +537,6 @@
    "nonclinical": 0
   },
   {
-   "name": "UNIVERSITY OF TX MD ANDERSON CAN CTR",
-   "state": "TX",
-   "total": 1,
-   "clinical": 0,
-   "nonclinical": 1
-  },
-  {
    "name": "UT SOUTHWESTERN MEDICAL CENTER",
    "state": "TX",
    "total": 1,
@@ -590,18 +574,18 @@
  ],
  "states": {
   "NY": 29,
-  "MA": 22,
   "CA": 21,
+  "MA": 21,
   "PA": 16,
   "MD": 10,
   "OH": 10,
   "IL": 9,
-  "NC": 8,
   "WA": 8,
-  "TX": 7,
+  "NC": 7,
   "AL": 7,
   "MI": 6,
   "CO": 6,
+  "TX": 6,
   "FL": 6,
   "WI": 5,
   "CT": 4,
@@ -624,11 +608,6 @@
    "name": "McAdams-DeMarco MA",
    "count": 4,
    "subs": "Transplant"
-  },
-  {
-   "name": "Abdel-Rahman EM",
-   "count": 2,
-   "subs": "ESKD / Dialysis"
   },
   {
    "name": "CRIC Study Investigators",
@@ -965,6 +944,30 @@
    "pubs": 0
   },
   {
+   "num": "5K23DK123413-05",
+   "core": "K23DK123413",
+   "ac": "K23",
+   "fy": 2024,
+   "amt": 196542,
+   "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+   "st": "MI",
+   "city": "ANN ARBOR",
+   "pi": "Andrea L Oliverio",
+   "pis": [
+    "Andrea L Oliverio"
+   ],
+   "po": [
+    "RAQUEL CHARLES GREER"
+   ],
+   "ic": "NIDDK",
+   "t": "Developing a decision aid for reproductive health for women with kidney disease",
+   "sub": "Hypertension",
+   "cl": "Clinical trial",
+   "id": 10846602,
+   "foa": "PA-19-118",
+   "pubs": 0
+  },
+  {
    "num": "5K23DK128567-05",
    "core": "K23DK128567",
    "ac": "K23",
@@ -1034,7 +1037,7 @@
    "cl": "Clinical trial",
    "id": 11103263,
    "foa": "PA-20-206",
-   "pubs": 4
+   "pubs": 19
   },
   {
    "num": "5K23DK133677-04",
@@ -1586,7 +1589,7 @@
    "cl": "Observational / clinical",
    "id": 11256733,
    "foa": "PA-20-205",
-   "pubs": 0
+   "pubs": 2
   },
   {
    "num": "5K23DK144712-02",
@@ -2834,7 +2837,7 @@
    "cl": "Non-clinical / basic",
    "id": 10820408,
    "foa": "PA-19-117",
-   "pubs": 11
+   "pubs": 0
   },
   {
    "num": "5K08DK126847-05",
@@ -2882,31 +2885,7 @@
    "cl": "Non-clinical / basic",
    "id": 11058473,
    "foa": "PA-20-203",
-   "pubs": 15
-  },
-  {
-   "num": "5K25CA297149-02",
-   "core": "K25CA297149",
-   "ac": "K25",
-   "fy": 2026,
-   "amt": 167543,
-   "org": "DANA-FARBER CANCER INST",
-   "st": "MA",
-   "city": "BOSTON",
-   "pi": "Marouen  Ben Guebila",
-   "pis": [
-    "Marouen  Ben Guebila"
-   ],
-   "po": [
-    "SONIA B JAKOWLEW"
-   ],
-   "ic": "NCI",
-   "t": "Resolving phenotypic overlap in renal carcinoma subtypes using multi-tiered network methods",
-   "sub": "Stones / Electrolytes",
-   "cl": "Clinical (other)",
-   "id": 11328823,
-   "foa": "PA-20-199",
-   "pubs": 5
+   "pubs": 14
   },
   {
    "num": "5K08DK131346-04",
@@ -3605,30 +3584,6 @@
    "pubs": 0
   },
   {
-   "num": "1K08HS029562-01A1",
-   "core": "K08HS029562",
-   "ac": "K08",
-   "fy": 2024,
-   "amt": 159255,
-   "org": "UNIV OF NORTH CAROLINA CHAPEL HILL",
-   "st": "NC",
-   "city": "CHAPEL HILL",
-   "pi": "David  Friedlander",
-   "pis": [
-    "David  Friedlander"
-   ],
-   "po": [
-    "MARI  GRIFFIOEN"
-   ],
-   "ic": "AHRQ",
-   "t": "Using mixed methods to reduce disparities in renal colic care: a model for surgical value transformation",
-   "sub": "Health services / Epi",
-   "cl": "Clinical (other)",
-   "id": 10985581,
-   "foa": "PA-22-050",
-   "pubs": 1
-  },
-  {
    "num": "1K01DK146251-01",
    "core": "K01DK146251",
    "ac": "K01",
@@ -4274,7 +4229,7 @@
    "cl": "Observational / clinical",
    "id": 11358303,
    "foa": "PA-20-190",
-   "pubs": 0
+   "pubs": 15
   },
   {
    "num": "5K23MD016448-04",
@@ -4731,30 +4686,6 @@
    "id": 11170449,
    "foa": "PA-20-206",
    "pubs": 2
-  },
-  {
-   "num": "1K99CA307136-01",
-   "core": "K99CA307136",
-   "ac": "K99",
-   "fy": 2026,
-   "amt": 131933,
-   "org": "UNIVERSITY OF TX MD ANDERSON CAN CTR",
-   "st": "TX",
-   "city": "HOUSTON",
-   "pi": "Li  Zhang",
-   "pis": [
-    "Li  Zhang"
-   ],
-   "po": [
-    "CORINNE A BOULANGER-ESPEUT"
-   ],
-   "ic": "NCI",
-   "t": "Spatial and functional profiling tumor evolution trajectories and microenvironment interactions of VHL driven renal cancers",
-   "sub": "General nephrology",
-   "cl": "Non-clinical / basic",
-   "id": 11280965,
-   "foa": "PAR-25-135",
-   "pubs": 0
   },
   {
    "num": "1K24HL175495-01A1",
@@ -5426,31 +5357,7 @@
    "cl": "Non-clinical / basic",
    "id": 11030628,
    "foa": "PA-20-272",
-   "pubs": 8
-  },
-  {
-   "num": "3K23DK123413-05S1",
-   "core": "K23DK123413",
-   "ac": "K23",
-   "fy": 2024,
-   "amt": 75599,
-   "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
-   "st": "MI",
-   "city": "ANN ARBOR",
-   "pi": "Andrea L Oliverio",
-   "pis": [
-    "Andrea L Oliverio"
-   ],
-   "po": [
-    "RAQUEL CHARLES GREER"
-   ],
-   "ic": "NIDDK",
-   "t": "Developing a decision aid for reproductive health for women with kidney disease",
-   "sub": "Hypertension",
-   "cl": "Clinical trial",
-   "id": 11030544,
-   "foa": "PA-20-272",
-   "pubs": 11
+   "pubs": 3
   },
   {
    "num": "5K23AR084608-02",
