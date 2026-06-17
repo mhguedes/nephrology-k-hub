@@ -419,8 +419,17 @@ function buildPlaybook(){
   const byAc={}; g.forEach(x=>{(byAc[x.ac]=byAc[x.ac]||[]).push(x);});
   const order=['K23','K08','K01','K99','K24','K25','K38','K43','K02'];
   const acs=order.filter(a=>byAc[a]).concat(Object.keys(byAc).filter(a=>order.indexOf(a)<0));
+  // Onco-/uro- titles occasionally pass the kidney-disease filter (e.g. VHL renal cancer); keep them
+  // out of the showcased example so each mechanism's model award is a nephrology study.
+  const ONCO_URO=['renal cell','renal cancer','kidney cancer','nephroblastoma','wilms','clear cell renal',
+                  'renal tumor','renal mass','urothelial','carcinoma','oncolog','vhl','prostate','bladder cancer'];
+  const isOncoUro=t=>ONCO_URO.some(k=>(t||'').toLowerCase().includes(k));
+  const pickExample=list=>{
+    const clean=list.filter(x=>!isOncoUro(x.t)).sort((x,y)=>(y.amt||0)-(x.amt||0));
+    return clean[0] || list.slice().sort((x,y)=>(y.amt||0)-(x.amt||0))[0];
+  };
   document.getElementById('pb-mech').innerHTML = acs.map(a=>{
-    const ex=byAc[a].slice().sort((x,y)=>(y.amt||0)-(x.amt||0))[0];
+    const ex=pickExample(byAc[a]);
     const who=MECH_WHO[a]||'Career-development award';
     const hl=a==='K99'?' hl':'';
     const badge=a==='K99'?' <span class="pill" style="background:#e7f0fc;color:#1551a6;font-size:10px">best → R01</span>':'';
