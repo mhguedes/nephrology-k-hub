@@ -108,6 +108,9 @@
 <section class="view active" id="overview">
   <div class="kpis" id="kpis"></div>
   <div class="note" id="ov-note"></div>
+  <div class="card" id="new-card"><h3>New since last refresh <span class="sub" id="ov-new-sub">newly funded kidney K awards added since the previous weekly snapshot</span></h3>
+    <div id="ov-new"></div>
+  </div>
   <div class="grid2">
     <div class="card"><h3>Awards by nephrology subarea</h3><div id="ch-sub"></div></div>
     <div class="card"><h3>Awards by mechanism <span class="sub">K-series activity code</span></h3><div id="ch-mech"></div></div>
@@ -115,6 +118,11 @@
   <div class="grid2">
     <div class="card"><h3>Clinical vs. non-clinical research</h3><div id="ch-clin"></div></div>
     <div class="card"><h3>Active awards by fiscal year <span class="sub">most recent budget year</span></h3><div id="ch-fy"></div></div>
+  </div>
+  <div class="card"><h3>Funding trend <span class="sub">kidney K awards by project start year, split by subarea</span></h3>
+    <div class="legend" id="ov-trend-leg" style="flex-wrap:wrap"></div>
+    <div id="ov-trend"></div>
+    <p class="muted" style="font-size:12px;margin:10px 0 0">Awards <i>active in this snapshot</i>, grouped by project start year. Earlier years are partial (completed awards have rolled off), so read the most recent years as the signal of new K activity.</p>
   </div>
   <div class="card"><h3>Funding institute <span class="sub">administering IC</span></h3><div id="ch-ic"></div></div>
 </section>
@@ -185,6 +193,11 @@
   <div class="card"><h3>4 · NIH program officers on active nephrology K awards</h3>
     <div id="pb-po"></div>
     <p class="muted" style="font-size:12px;margin:10px 0 0">Program officers advise on fit and mechanism before you apply.</p>
+  </div>
+
+  <div class="card"><h3>5 · Where your application is reviewed <span class="sub">study sections that reviewed these funded awards</span></h3>
+    <div id="pb-ss"></div>
+    <p class="muted" style="font-size:12px;margin:10px 0 0">The scientific review group (study section) shapes how an application is scored. Use this to see where comparable kidney K awards were reviewed — you can suggest an assignment in your cover letter and confirm fit with your program officer.</p>
   </div>
 
   <div class="card"><h3>Resources</h3>
@@ -258,7 +271,72 @@ function init(d){
   const nInst = m.n_institutions || (d.institutions||[]).length;
   const set = (id,v)=>{ const el=document.getElementById(id); if(el) el.textContent=v; };
   set('lib-total', total); set('inst-total', total); set('inst-n', nInst);
-  buildKpis(); buildCharts(); buildLibrary(); buildPlaybook(); buildInstitutions(); buildMap();
+  buildKpis(); buildNew(); buildCharts(); buildTrend(); buildLibrary(); buildPlaybook(); buildStudySections(); buildInstitutions(); buildMap();
+}
+
+// ---- New since last refresh (uses pipeline-set g.new flag) ----
+function buildNew(){
+  const host=document.getElementById('ov-new'); if(!host) return;
+  const g=(DATA.grants||[]).filter(x=>x.new);
+  const prev=(DATA.meta||{}).prev_generated;
+  const sub=document.getElementById('ov-new-sub');
+  if(!g.length){
+    if(sub) sub.textContent = prev ? ('compared with the snapshot of '+prev) : '';
+    host.innerHTML=`<p class="muted" style="font-size:13px;margin:0">No newly funded awards detected since the last refresh${prev?(' ('+prev+')'):''}. New kidney K awards appear here automatically as NIH RePORTER adds them.</p>`;
+    return;
+  }
+  if(sub) sub.textContent = `${g.length} new${prev?(' since '+prev):''}`;
+  g.sort((a,b)=>(b.amt||0)-(a.amt||0));
+  host.innerHTML = g.slice(0,15).map(x=>{
+    const rep=`https://reporter.nih.gov/project-details/${x.id}`;
+    return `<div style="padding:8px 0;border-bottom:1px solid var(--line)"><a href="${rep}" target="_blank" rel="noopener" style="font-size:14px">${x.t}</a><div class="muted" style="font-size:12px">${x.pi} · ${shortOrg(x.org)} · <span class="pill mech">${x.ac}</span> · ${x.sub}${x.amt?' · '+fmtUsd(x.amt)+'/yr':''}</div></div>`;
+  }).join('') + (g.length>15?`<p class="muted" style="font-size:12px;margin:8px 0 0">+ ${g.length-15} more new this refresh</p>`:'');
+}
+
+// ---- Funding trend: awards by start year, stacked by subarea ----
+function buildTrend(){
+  const host=document.getElementById('ov-trend'); if(!host) return;
+  const card=host.closest('.card');
+  const g=(DATA.grants||[]).filter(x=>x.sy);
+  if(g.length<5){ if(card) card.style.display='none'; return; }
+  const ty=new Date().getFullYear();
+  const yrs=[...new Set(g.map(x=>x.sy))].filter(y=>y>=ty-5 && y<=ty+1).sort((a,b)=>a-b);
+  if(!yrs.length){ if(card) card.style.display='none'; return; }
+  const subCount={}; g.forEach(x=>subCount[x.sub]=(subCount[x.sub]||0)+1);
+  const topSubs=Object.entries(subCount).sort((a,b)=>b[1]-a[1]).slice(0,6).map(e=>e[0]);
+  const palette=['#1c6dd0','#0e9f6e','#7c3aed','#b45309','#d6336c','#0891b2'];
+  const OTHER='#94a3b8';
+  const colorOf=s=>{ const i=topSubs.indexOf(s); return i<0?OTHER:palette[i]; };
+  const order=[...topSubs,'Other'];
+  const byYear={}; yrs.forEach(y=>byYear[y]={});
+  g.forEach(x=>{ if(byYear[x.sy]===undefined) return; const key=topSubs.includes(x.sub)?x.sub:'Other'; byYear[x.sy][key]=(byYear[x.sy][key]||0)+1; });
+  const maxTotal=Math.max(...yrs.map(y=>Object.values(byYear[y]).reduce((a,b)=>a+b,0)),1);
+  host.innerHTML = yrs.map(y=>{
+    const segs=order.filter(s=>byYear[y][s]).map(s=>{
+      const v=byYear[y][s]; const w=v/maxTotal*100;
+      return `<div class="fill" style="width:${w}%;background:${colorOf(s)}" title="${s}: ${v}"></div>`;
+    }).join('');
+    const tot=Object.values(byYear[y]).reduce((a,b)=>a+b,0);
+    return `<div class="bar-row"><div class="lab">${y}</div><div class="track">${segs}</div><div class="val">${tot}</div></div>`;
+  }).join('');
+  const leg=document.getElementById('ov-trend-leg');
+  if(leg) leg.innerHTML=order.map(s=>`<span><i style="background:${colorOf(s)}"></i>${s}</span>`).join('');
+}
+
+// ---- Study-section guide (uses pipeline-set g.ss) ----
+function buildStudySections(){
+  const host=document.getElementById('pb-ss'); if(!host) return;
+  const g=(DATA.grants||[]).filter(x=>x.ss);
+  if(!g.length){ host.innerHTML='<p class="muted" style="font-size:13px">Study-section data appears in the live (served) dataset.</p>'; return; }
+  const by={}; g.forEach(x=>{(by[x.ss]=by[x.ss]||[]).push(x);});
+  const sections=Object.entries(by).sort((a,b)=>b[1].length-a[1].length).slice(0,8);
+  host.innerHTML = sections.map(([name,list])=>{
+    const ex=list.slice().sort((a,b)=>(b.amt||0)-(a.amt||0))[0];
+    const exLink=ex?`<a href="https://reporter.nih.gov/project-details/${ex.id}" target="_blank" rel="noopener">${ex.t}</a>`:'';
+    return `<div style="padding:9px 0;border-bottom:1px solid var(--line)">
+      <div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline"><span style="font-weight:600;font-size:13px">${name}</span><span class="muted" style="font-size:12px;white-space:nowrap">${list.length} award${list.length>1?'s':''}</span></div>
+      <div class="muted" style="font-size:12px;margin-top:3px">e.g. ${exLink}</div></div>`;
+  }).join('');
 }
 
 function fmtUsd(n){ if(n>=1e6) return '$'+(n/1e6).toFixed(1)+'M'; if(n>=1e3) return '$'+Math.round(n/1e3)+'k'; return '$'+n; }
