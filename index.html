@@ -103,7 +103,7 @@
 
 <!-- LIBRARY -->
 <section class="view" id="library">
-  <div class="note">Showing <span id="lib-count"></span> of the <b>159 active nephrology K awards</b> in the June 2026 snapshot. An award is included when kidney disease is the study focus <i>or study population</i> — so comorbidity studies that enroll patients with kidney disease (anemia, cardiovascular, metabolic, etc. in CKD/dialysis/transplant cohorts) are counted; incidental kidney mentions and pure kidney-cancer/urology are excluded. Run the included pipeline to populate the complete 159-award list. <b>Full record / proposal:</b> the <i>Abstract &amp; record ↗</i> link (and the project title) open each award's NIH RePORTER page — the complete public abstract, public-health-relevance statement, investigators, study section, and funding. NIH does not release the full application (Specific Aims / Research Strategy) publicly, so the RePORTER record is the authoritative public document for each award.</div>
+  <div class="note">Showing <span id="lib-count"></span> of the <b><span id="lib-total">—</span> active nephrology K awards</b> in this snapshot. An award is included when kidney disease is the study focus <i>or study population</i> — so comorbidity studies that enroll patients with kidney disease (anemia, cardiovascular, metabolic, etc. in CKD/dialysis/transplant cohorts) are counted; incidental kidney mentions and pure kidney-cancer/urology are excluded. <b>Full record / proposal:</b> the <i>Abstract &amp; record ↗</i> link (and the project title) open each award's NIH RePORTER page — the complete public abstract, public-health-relevance statement, investigators, study section, and funding. NIH does not release the full application (Specific Aims / Research Strategy) publicly, so the RePORTER record is the authoritative public document for each award.</div>
   <div class="controls">
     <input type="search" id="q" placeholder="Search title, PI, institution…">
     <select id="f-sub"><option value="">All subareas</option></select>
@@ -123,7 +123,7 @@
 
 <!-- INSTITUTIONS -->
 <section class="view" id="institutions">
-  <div class="note">Institutional counts and the map below reflect the full June 2026 snapshot of <b>159 active nephrology K awards across 68 institutions</b>. <b>Note on mentors (Goal 2):</b> NIH RePORTER does not publish K-award mentor/sponsor names, so a mentor ranking cannot be produced from the public data directly — see Methodology for the planned coauthorship-based approach.</div>
+  <div class="note">Institutional counts and the map below reflect the full snapshot of <b><span id="inst-total">—</span> active nephrology K awards across <span id="inst-n">—</span> institutions</b>. <b>Note on mentors (Goal 2):</b> NIH RePORTER does not publish K-award mentor/sponsor names, so a mentor ranking cannot be produced from the public data directly — see Methodology for the planned coauthorship-based approach.</div>
   <div class="card">
     <h3>Top institutions by active nephrology K awards <span class="sub">clinical vs. non-clinical split</span></h3>
     <div class="legend"><span><i style="background:var(--clin)"></i>Clinical</span><span><i style="background:var(--nonclin)"></i>Non-clinical / basic</span></div>
@@ -141,7 +141,7 @@
   <div class="card">
     <h3>How this hub is built</h3>
     <p><b>Source.</b> All data come from the <a href="https://reporter.nih.gov" target="_blank" rel="noopener">NIH RePORTER</a> database (API v2), the authoritative public record of NIH-funded awards. NIH refreshes RePORTER weekly.</p>
-    <p><b>Scope.</b> Active career-development (K) awards — K01, K08, K23, K99, K24, K25, K38, K43, K02 and related — funded by NIDDK and other institutes (NHLBI, NIA, NIAID, NICHD, and others). An award is included when <b>kidney disease is the study focus or the study population</b>: a kidney-disease term appears in the title, or the abstract names an explicit kidney-disease population ("patients on dialysis", "kidney transplant recipients", "adults with CKD", etc.). This deliberately keeps <b>comorbidity studies that enroll kidney-disease patients</b> (e.g., anemia, cardiovascular, or metabolic studies in CKD/dialysis/transplant cohorts), while excluding studies that only mention the kidney incidentally and pure kidney-cancer/urology. The result is 159 awards. The pipeline also offers a looser abstract-level mode for maximum recall.</p>
+    <p><b>Scope.</b> Active career-development (K) awards — K01, K08, K23, K99, K24, K25, K38, K43, K02 and related — funded by NIDDK and other institutes (NHLBI, NIA, NIAID, NICHD, and others). An award is included when <b>kidney disease is the study focus or the study population</b>: a kidney-disease term appears in the title, or the abstract names an explicit kidney-disease population ("patients on dialysis", "kidney transplant recipients", "adults with CKD", etc.). This deliberately keeps <b>comorbidity studies that enroll kidney-disease patients</b> (e.g., anemia, cardiovascular, or metabolic studies in CKD/dialysis/transplant cohorts), while excluding studies that only mention the kidney incidentally and pure kidney-cancer/urology. The pipeline also offers a looser abstract-level mode for maximum recall.</p>
     <h4>Full record &amp; proposal documents</h4>
     <p>Each award links to its <b>NIH RePORTER record</b>, which contains the complete public abstract, public-health-relevance statement, investigators, study section, project period, and funding. <b>NIH does not publish the full grant application</b> (Specific Aims, Research Strategy) — those are available only via FOIA — so there is no public proposal PDF to link. Where a funding opportunity (FOA/NOFO) number is available it is shown and linked. For funded science, the award's linked <i>publications</i> (a planned addition via the RePORTER publications endpoint → PubMed/PMC) are the closest thing to the proposal's results.</p>
     <h4>Clinical vs. non-clinical (Goal 1.1)</h4>
@@ -153,7 +153,7 @@
     <h4>Dynamic weekly updates (Goal 3)</h4>
     <p>The page reads <code>data.json</code>. A scheduled job (<code>pipeline/reporter_pull.py</code>, runnable weekly via the included GitHub Actions workflow) re-queries RePORTER, re-classifies, recomputes the aggregates, and rewrites <code>data.json</code>. Because the RePORTER API blocks direct in-browser calls (no CORS), the fetch must run server-side in the pipeline rather than from this page.</p>
     <h4>Caveats</h4>
-    <p>The text filter over-recalls (some non-kidney NIDDK/NCI/NIAID awards match generic terms like "transplant"); the snapshot here applies a tighter nephrology gate. Counts are a point-in-time snapshot (June 2026) of active awards, not a complete historical record — the pipeline can be configured to include past fiscal years.</p>
+    <p>The text filter over-recalls (some non-kidney NIDDK/NCI/NIAID awards match generic terms like "transplant"); the snapshot here applies a tighter nephrology gate. Counts are a point-in-time snapshot of active awards, not a complete historical record — the pipeline can be configured to include past fiscal years.</p>
   </div>
 </section>
 
@@ -176,6 +176,10 @@ function init(d){
     `Snapshot: ${m.generated||'—'} · ${m.universe_total_active||(d.grants||[]).length} active nephrology K awards · source: NIH RePORTER`;
   document.getElementById('genfoot').textContent = m.generated||'—';
   document.getElementById('ov-note').innerHTML = '<b>About this snapshot.</b> ' + (m.snapshot_note||'');
+  const total = m.universe_total_active || (d.grants||[]).length;
+  const nInst = m.n_institutions || (d.institutions||[]).length;
+  const set = (id,v)=>{ const el=document.getElementById(id); if(el) el.textContent=v; };
+  set('lib-total', total); set('inst-total', total); set('inst-n', nInst);
   buildKpis(); buildCharts(); buildLibrary(); buildInstitutions(); buildMap();
 }
 
