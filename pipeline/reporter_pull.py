@@ -83,6 +83,33 @@ def extract_foa(rec):
             return m.group(0) if m else str(v)
     return ""
 
+def extract_study_section(rec):
+    """Human-readable scientific review group (study section) name, if available."""
+    fss = rec.get("full_study_section")
+    if isinstance(fss, dict):
+        name = (fss.get("name") or "").strip()
+        if name:
+            return name
+        code = (fss.get("srg_code") or fss.get("group_code") or "").strip()
+        if code:
+            return code
+    elif isinstance(fss, str) and fss.strip():
+        return fss.strip()
+    for key in ("study_section_name", "study_section"):
+        v = rec.get(key)
+        if isinstance(v, str) and v.strip():
+            return v.strip()
+    return ""
+
+def start_year(rec):
+    """Project start fiscal/calendar year as int, from the ISO start date."""
+    d = str(rec.get("project_start_date") or "")
+    try:
+        y = int(d[:4])
+        return y if 1985 <= y <= 2100 else None
+    except (ValueError, TypeError):
+        return None
+
 # ---- subarea classifier --------------------------------------------------------
 def classify_subarea(text):
     t = text.lower()
@@ -230,7 +257,7 @@ def fetch_all(years):
     fields = ["ApplId","ProjectNum","CoreProjectNum","ActivityCode","FiscalYear","AwardAmount",
               "Organization","PrincipalInvestigators","ProgramOfficers","AgencyIcAdmin",
               "ProjectTitle","AbstractText","Terms","PhrText","ProjectStartDate","ProjectEndDate",
-              "OpportunityNumber","FullFoa"]
+              "OpportunityNumber","FullFoa","FullStudySection"]
     out, offset, LIMIT = [], 0, 500
     while True:
         body = {"criteria":{"activity_codes":ACTIVITY_CODES,"fiscal_years":years,
@@ -282,6 +309,7 @@ def transform(rows, loose=False):
             "t": r.get("project_title") or "",
             "sub": classify_subarea(full_text), "cl": classify_clinical(full_text, r.get("activity_code")),
             "id": r.get("appl_id"), "foa": extract_foa(r),
+            "ss": extract_study_section(r), "sy": start_year(r),
         })
     return grants
 
@@ -333,11 +361,34 @@ def main():
         args.years = default_years()
     sys.stderr.write(f"Fiscal years: {args.years}\n")
 
+    out = os.path.abspath(args.out)
+
+    # Read the PREVIOUS snapshot (the data.json about to be overwritten) so we can flag
+    # awards that are new this refresh. Identity is the stable core project number.
+    prev_cores, prev_generated = set(), None
+    try:
+        if os.path.exists(out):
+            with open(out) as f:
+                prev = json.load(f)
+            prev_cores = {g.get("core") for g in (prev.get("grants") or []) if g.get("core")}
+            prev_generated = (prev.get("meta") or {}).get("generated")
+    except Exception as e:
+        sys.stderr.write(f"  (no usable previous snapshot: {e})\n")
+
     sys.stderr.write("Querying NIH RePORTER…\n")
     raw = fetch_all(args.years)
     raw = keep_latest_per_core(raw)
     grants = transform(raw, loose=args.loose)
     grants.sort(key=lambda g: -(g["amt"] or 0))
+    # Mark awards whose core was absent from the prior snapshot (skip on first-ever run
+    # so we don't flag the entire dataset as "new").
+    n_new = 0
+    if prev_cores:
+        for g in grants:
+            if g.get("core") and g["core"] not in prev_cores:
+                g["new"] = True
+                n_new += 1
+    sys.stderr.write(f"  new-this-refresh awards: {n_new}\n")
     mentors = enrich(grants)   # attaches g["pubs"]; returns inferred mentors (best-effort)
     agg = aggregate(grants)
     total_amt = sum(g["amt"] or 0 for g in grants)
@@ -357,6 +408,8 @@ def main():
             "universe_total_active": len(grants),
             "n_institutions": len(agg["institutions"]),
             "total_current_year_award_usd": total_amt,
+            "prev_generated": prev_generated,
+            "n_new_this_refresh": n_new,
         },
         "stats": agg["stats"],
         "institutions": agg["institutions"],
@@ -364,7 +417,6 @@ def main():
         "mentors": mentors,
         "grants": grants,
     }
-    out = os.path.abspath(args.out)
     with open(out, "w") as f:
         json.dump(payload, f, indent=1)
     sys.stderr.write(f"Wrote {len(grants)} nephrology K awards to {out}\n")
