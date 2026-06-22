@@ -1,12 +1,12 @@
 {
  "meta": {
-  "generated": "2026-06-17",
+  "generated": "2026-06-22",
   "source": "NIH RePORTER API v2 (active K-series, kidney study-population filter)",
   "snapshot_note": "Active career-development (K) awards where kidney disease is the study focus or study population (comorbidity studies in CKD/dialysis/transplant cohorts are included; incidental kidney mentions and pure kidney-cancer/urology are excluded). Subarea and clinical/non-clinical labels are first-pass algorithmic classifications.",
   "application_pdf_note": "NIH does not publish full grant applications publicly (FOIA-only); each award links to its NIH RePORTER record with the public abstract.",
   "universe_total_active": 200,
   "n_institutions": 73,
-  "total_current_year_award_usd": 32305358,
+  "total_current_year_award_usd": 32220622,
   "prev_generated": "2026-06-17",
   "n_new_this_refresh": 0
  },
@@ -56,9 +56,9 @@
    "NICHD": 1
   },
   "by_fiscal_year": {
-   "2026": 87,
-   "2025": 76,
-   "2024": 37
+   "2026": 88,
+   "2025": 74,
+   "2024": 38
   }
  },
  "institutions": [
@@ -161,6 +161,13 @@
    "nonclinical": 2
   },
   {
+   "name": "YALE UNIVERSITY",
+   "state": "CT",
+   "total": 5,
+   "clinical": 4,
+   "nonclinical": 1
+  },
+  {
    "name": "ICAHN SCHOOL OF MEDICINE AT MOUNT SINAI",
    "state": "NY",
    "total": 4,
@@ -180,13 +187,6 @@
    "total": 4,
    "clinical": 4,
    "nonclinical": 0
-  },
-  {
-   "name": "YALE UNIVERSITY",
-   "state": "CT",
-   "total": 4,
-   "clinical": 3,
-   "nonclinical": 1
   },
   {
    "name": "ALBERT EINSTEIN COLLEGE OF MEDICINE",
@@ -264,13 +264,6 @@
    "total": 3,
    "clinical": 2,
    "nonclinical": 1
-  },
-  {
-   "name": "UNIVERSITY OF WISCONSIN-MADISON",
-   "state": "WI",
-   "total": 3,
-   "clinical": 3,
-   "nonclinical": 0
   },
   {
    "name": "BAYLOR COLLEGE OF MEDICINE",
@@ -362,6 +355,13 @@
    "total": 2,
    "clinical": 0,
    "nonclinical": 2
+  },
+  {
+   "name": "UNIVERSITY OF WISCONSIN-MADISON",
+   "state": "WI",
+   "total": 2,
+   "clinical": 2,
+   "nonclinical": 0
   },
   {
    "name": "UTAH STATE HIGHER EDUCATION SYSTEM--UNIVERSITY OF UTAH",
@@ -589,8 +589,8 @@
   "CO": 6,
   "TX": 6,
   "FL": 6,
-  "WI": 5,
-  "CT": 4,
+  "CT": 5,
+  "WI": 4,
   "IN": 4,
   "MN": 4,
   "TN": 4,
@@ -610,11 +610,6 @@
    "name": "McAdams-DeMarco MA",
    "count": 4,
    "subs": "Transplant"
-  },
-  {
-   "name": "Abdel-Rahman EM",
-   "count": 2,
-   "subs": "Acute kidney injury"
   },
   {
    "name": "CRIC Study Investigators",
@@ -691,11 +686,11 @@
    "pubs": 0
   },
   {
-   "num": "5K23MH128613-04",
+   "num": "5K23MH128613-03",
    "core": "K23MH128613",
    "ac": "K23",
-   "fy": 2025,
-   "amt": 202595,
+   "fy": 2024,
+   "amt": 202592,
    "org": "UNIV OF NORTH CAROLINA CHAPEL HILL",
    "st": "NC",
    "city": "CHAPEL HILL",
@@ -710,7 +705,7 @@
    "t": "Biopsychosocial Risk Factors for Psychiatric Disorders Following Kidney Transplantation",
    "sub": "Transplant",
    "cl": "Observational / clinical",
-   "id": 11143102,
+   "id": 10896476,
    "foa": "PA-20-205",
    "ss": "Behavioral Genetics and Epidemiology Study Section[BGES]",
    "sy": 2022,
@@ -977,32 +972,6 @@
    "pubs": 0
   },
   {
-   "num": "5K23DK123413-05",
-   "core": "K23DK123413",
-   "ac": "K23",
-   "fy": 2024,
-   "amt": 196542,
-   "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
-   "st": "MI",
-   "city": "ANN ARBOR",
-   "pi": "Andrea L Oliverio",
-   "pis": [
-    "Andrea L Oliverio"
-   ],
-   "po": [
-    "RAQUEL CHARLES GREER"
-   ],
-   "ic": "NIDDK",
-   "t": "Developing a decision aid for reproductive health for women with kidney disease",
-   "sub": "Hypertension",
-   "cl": "Clinical trial",
-   "id": 10846602,
-   "foa": "PA-19-118",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2020,
-   "pubs": 0
-  },
-  {
    "num": "5K23DK128567-05",
    "core": "K23DK128567",
    "ac": "K23",
@@ -1078,7 +1047,7 @@
    "foa": "PA-20-206",
    "ss": "ZDK1-GRB-G(M1)L",
    "sy": 2021,
-   "pubs": 19
+   "pubs": 3
   },
   {
    "num": "5K23DK133677-04",
@@ -1182,7 +1151,7 @@
    "foa": "PA-20-205",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(JA)]",
    "sy": 2021,
-   "pubs": 30
+   "pubs": 31
   },
   {
    "num": "1K23DK146149-01",
@@ -1676,7 +1645,7 @@
    "foa": "PA-20-205",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
-   "pubs": 2
+   "pubs": 0
   },
   {
    "num": "5K23DK144712-02",
@@ -2693,10 +2662,10 @@
    "pubs": 1
   },
   {
-   "num": "5K08DK134762-03",
+   "num": "5K08DK134762-04",
    "core": "K08DK134762",
    "ac": "K08",
-   "fy": 2025,
+   "fy": 2026,
    "amt": 173880,
    "org": "JOHNS HOPKINS UNIVERSITY",
    "st": "MD",
@@ -2712,7 +2681,7 @@
    "t": "Implementation of Eplet Mismatch Analysis in Pediatric Kidney Transplantation",
    "sub": "Transplant",
    "cl": "Observational / clinical",
-   "id": 11092334,
+   "id": 11332261,
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
@@ -2768,7 +2737,7 @@
    "foa": "PA-19-117",
    "ss": "ZDK1-GRB-G(J2)",
    "sy": 2020,
-   "pubs": 0
+   "pubs": 3
   },
   {
    "num": "1K08AR086331-01A1",
@@ -3028,7 +2997,7 @@
    "foa": "PA-19-117",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "pubs": 0
+   "pubs": 12
   },
   {
    "num": "5K08DK126847-05",
@@ -3080,7 +3049,7 @@
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 14
+   "pubs": 15
   },
   {
    "num": "5K08DK131346-04",
@@ -4250,7 +4219,7 @@
    "foa": "PA-17-232",
    "ss": "Healthcare Research Training [HCRT]",
    "sy": 2022,
-   "pubs": 16
+   "pubs": 18
   },
   {
    "num": "7K01DK126792-05",
@@ -4822,7 +4791,7 @@
    "foa": "PA-17-232",
    "ss": "Healthcare Research Training [HCRT]",
    "sy": 2022,
-   "pubs": 18
+   "pubs": 15
   },
   {
    "num": "5K01DK128379-05",
@@ -5449,6 +5418,32 @@
    "pubs": 4
   },
   {
+   "num": "7K23AR084608-03",
+   "core": "K23AR084608",
+   "ac": "K23",
+   "fy": 2025,
+   "amt": 101682,
+   "org": "YALE UNIVERSITY",
+   "st": "CT",
+   "city": "NEW HAVEN",
+   "pi": "SHIVANI  GARG",
+   "pis": [
+    "SHIVANI  GARG"
+   ],
+   "po": [
+    "YAN Z WANG"
+   ],
+   "ic": "NIAMS",
+   "t": "Early and Personalized Cardiovascular Disease Preventive Care in Lupus Nephritis (EPiC-LN)",
+   "sub": "Glomerular disease",
+   "cl": "Observational / clinical",
+   "id": 11508377,
+   "foa": "PA-24-254",
+   "ss": "Arthritis and Musculoskeletal and Skin Diseases Special Grants Study Section[AMS]",
+   "sy": 2024,
+   "pubs": 16
+  },
+  {
    "num": "1K08DK142013-01A1",
    "core": "K08DK142013",
    "ac": "K08",
@@ -5758,33 +5753,33 @@
    "foa": "PA-20-272",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2022,
-   "pubs": 3
+   "pubs": 0
   },
   {
-   "num": "5K23AR084608-02",
-   "core": "K23AR084608",
+   "num": "3K23DK123413-05S1",
+   "core": "K23DK123413",
    "ac": "K23",
-   "fy": 2025,
-   "amt": 65472,
-   "org": "UNIVERSITY OF WISCONSIN-MADISON",
-   "st": "WI",
-   "city": "MADISON",
-   "pi": "SHIVANI  GARG",
+   "fy": 2024,
+   "amt": 75599,
+   "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+   "st": "MI",
+   "city": "ANN ARBOR",
+   "pi": "Andrea L Oliverio",
    "pis": [
-    "SHIVANI  GARG"
+    "Andrea L Oliverio"
    ],
    "po": [
-    "YAN Z WANG"
+    "RAQUEL CHARLES GREER"
    ],
-   "ic": "NIAMS",
-   "t": "Early and Personalized Cardiovascular Disease Preventive Care in Lupus Nephritis (EPiC-LN)",
-   "sub": "Glomerular disease",
-   "cl": "Observational / clinical",
-   "id": 11173800,
-   "foa": "PA-20-206",
-   "ss": "Arthritis and Musculoskeletal and Skin Diseases Special Grants Study Section[AMS]",
-   "sy": 2024,
-   "pubs": 16
+   "ic": "NIDDK",
+   "t": "Developing a decision aid for reproductive health for women with kidney disease",
+   "sub": "Hypertension",
+   "cl": "Clinical trial",
+   "id": 11030544,
+   "foa": "PA-20-272",
+   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
+   "sy": 2020,
+   "pubs": 11
   },
   {
    "num": "1K99ES034800-01A1",
