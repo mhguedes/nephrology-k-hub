@@ -1,20 +1,20 @@
 {
  "meta": {
-  "generated": "2026-06-22",
+  "generated": "2026-06-29",
   "source": "NIH RePORTER API v2 (active K-series, kidney study-population filter)",
   "snapshot_note": "Active career-development (K) awards where kidney disease is the study focus or study population (comorbidity studies in CKD/dialysis/transplant cohorts are included; incidental kidney mentions and pure kidney-cancer/urology are excluded). Subarea and clinical/non-clinical labels are first-pass algorithmic classifications.",
   "application_pdf_note": "NIH does not publish full grant applications publicly (FOIA-only); each award links to its NIH RePORTER record with the public abstract.",
-  "universe_total_active": 200,
-  "n_institutions": 73,
-  "total_current_year_award_usd": 32220622,
-  "prev_generated": "2026-06-17",
+  "universe_total_active": 198,
+  "n_institutions": 71,
+  "total_current_year_award_usd": 31892965,
+  "prev_generated": "2026-06-22",
   "n_new_this_refresh": 0
  },
  "stats": {
   "by_mechanism": {
    "K23": 93,
-   "K08": 44,
    "K01": 43,
+   "K08": 42,
    "K24": 8,
    "K99": 6,
    "K25": 3,
@@ -23,7 +23,7 @@
    "K43": 1
   },
   "by_subarea": {
-   "CKD progression": 40,
+   "CKD progression": 38,
    "Acute kidney injury": 37,
    "Transplant": 31,
    "Glomerular disease": 24,
@@ -35,13 +35,13 @@
    "Stones / Electrolytes": 8
   },
   "by_clinical": {
-   "Observational / clinical": 98,
-   "Non-clinical / basic": 60,
+   "Observational / clinical": 97,
+   "Non-clinical / basic": 59,
    "Clinical trial": 41,
    "Clinical (other)": 1
   },
   "by_institute": {
-   "NIDDK": 146,
+   "NIDDK": 144,
    "NHLBI": 25,
    "NIAID": 7,
    "NIA": 6,
@@ -58,7 +58,7 @@
   "by_fiscal_year": {
    "2026": 88,
    "2025": 74,
-   "2024": 38
+   "2024": 36
   }
  },
  "institutions": [
@@ -427,13 +427,6 @@
    "nonclinical": 0
   },
   {
-   "name": "OHIO STATE UNIVERSITY",
-   "state": "OH",
-   "total": 1,
-   "clinical": 0,
-   "nonclinical": 1
-  },
-  {
    "name": "STATE UNIVERSITY OF NEW YORK AT BUFFALO",
    "state": "NY",
    "total": 1,
@@ -485,13 +478,6 @@
   {
    "name": "UNIVERSITY OF CINCINNATI",
    "state": "OH",
-   "total": 1,
-   "clinical": 1,
-   "nonclinical": 0
-  },
-  {
-   "name": "UNIVERSITY OF KANSAS MEDICAL CENTER",
-   "state": "KS",
    "total": 1,
    "clinical": 1,
    "nonclinical": 0
@@ -580,7 +566,7 @@
   "MA": 21,
   "PA": 16,
   "MD": 10,
-  "OH": 10,
+  "OH": 9,
   "IL": 9,
   "WA": 8,
   "NC": 7,
@@ -598,7 +584,6 @@
   "GA": 3,
   "UT": 2,
   "VA": 2,
-  "KS": 1,
   "OK": 1,
   "NH": 1,
   "AZ": 1,
@@ -686,11 +671,11 @@
    "pubs": 0
   },
   {
-   "num": "5K23MH128613-03",
+   "num": "5K23MH128613-04",
    "core": "K23MH128613",
    "ac": "K23",
-   "fy": 2024,
-   "amt": 202592,
+   "fy": 2025,
+   "amt": 202595,
    "org": "UNIV OF NORTH CAROLINA CHAPEL HILL",
    "st": "NC",
    "city": "CHAPEL HILL",
@@ -705,7 +690,7 @@
    "t": "Biopsychosocial Risk Factors for Psychiatric Disorders Following Kidney Transplantation",
    "sub": "Transplant",
    "cl": "Observational / clinical",
-   "id": 10896476,
+   "id": 11143102,
    "foa": "PA-20-205",
    "ss": "Behavioral Genetics and Epidemiology Study Section[BGES]",
    "sy": 2022,
@@ -2737,7 +2722,7 @@
    "foa": "PA-19-117",
    "ss": "ZDK1-GRB-G(J2)",
    "sy": 2020,
-   "pubs": 3
+   "pubs": 1
   },
   {
    "num": "1K08AR086331-01A1",
@@ -3206,32 +3191,6 @@
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
    "pubs": 12
-  },
-  {
-   "num": "1K08DK143343-01",
-   "core": "K08DK143343",
-   "ac": "K08",
-   "fy": 2025,
-   "amt": 166740,
-   "org": "UNIVERSITY OF KANSAS MEDICAL CENTER",
-   "st": "KS",
-   "city": "KANSAS CITY",
-   "pi": "Kyle Patrick Jansson",
-   "pis": [
-    "Kyle Patrick Jansson"
-   ],
-   "po": [
-    "TRACY L RANKIN"
-   ],
-   "ic": "NIDDK",
-   "t": "Contribution of Urinary Phosphate to CKD Progression",
-   "sub": "CKD progression",
-   "cl": "Observational / clinical",
-   "id": 11114613,
-   "foa": "PA-24-182",
-   "ss": "Fellowships in Kidney, Urology, and Hematology[DDK-G]",
-   "sy": 2025,
-   "pubs": 1
   },
   {
    "num": "5K08DK138280-02",
@@ -3752,32 +3711,6 @@
    "ss": "Special Emphasis Panel[ZRG1 F12B-G (20)]",
    "sy": 2026,
    "pubs": 0
-  },
-  {
-   "num": "5K08DK123411-05",
-   "core": "K08DK123411",
-   "ac": "K08",
-   "fy": 2024,
-   "amt": 160920,
-   "org": "OHIO STATE UNIVERSITY",
-   "st": "OH",
-   "city": "Columbus",
-   "pi": "Sethu Madhavan Madhavan",
-   "pis": [
-    "Sethu Madhavan Madhavan"
-   ],
-   "po": [
-    "TRACY L RANKIN"
-   ],
-   "ic": "NIDDK",
-   "t": "Apolipoprotein L1 Interaction with SNARE Proteins in the Pathogenesis of Chronic Kidney Disease",
-   "sub": "CKD progression",
-   "cl": "Non-clinical / basic",
-   "id": 10830348,
-   "foa": "PA-19-117",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2020,
-   "pubs": 10
   },
   {
    "num": "1K01DK144648-01",
@@ -4557,7 +4490,7 @@
    "foa": "PA-24-176",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2025,
-   "pubs": 0
+   "pubs": 2
   },
   {
    "num": "1K01DK147652-01",
