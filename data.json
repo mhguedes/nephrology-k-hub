@@ -1,20 +1,20 @@
 {
  "meta": {
-  "generated": "2026-07-06",
+  "generated": "2026-07-13",
   "source": "NIH RePORTER API v2 (active K-series, kidney study-population filter)",
   "snapshot_note": "Active career-development (K) awards where kidney disease is the study focus or study population (comorbidity studies in CKD/dialysis/transplant cohorts are included; incidental kidney mentions and pure kidney-cancer/urology are excluded). Subarea and clinical/non-clinical labels are first-pass algorithmic classifications.",
   "application_pdf_note": "NIH does not publish full grant applications publicly (FOIA-only); each award links to its NIH RePORTER record with the public abstract.",
-  "universe_total_active": 202,
-  "n_institutions": 74,
-  "total_current_year_award_usd": 32642919,
-  "prev_generated": "2026-06-29",
-  "n_new_this_refresh": 4
+  "universe_total_active": 199,
+  "n_institutions": 73,
+  "total_current_year_award_usd": 32214478,
+  "prev_generated": "2026-07-06",
+  "n_new_this_refresh": 0
  },
  "stats": {
   "by_mechanism": {
-   "K23": 94,
-   "K08": 44,
+   "K23": 92,
    "K01": 44,
+   "K08": 43,
    "K24": 8,
    "K99": 6,
    "K25": 3,
@@ -23,25 +23,25 @@
    "K43": 1
   },
   "by_subarea": {
-   "CKD progression": 41,
+   "CKD progression": 39,
    "Acute kidney injury": 38,
    "Transplant": 31,
    "Glomerular disease": 24,
    "Hypertension": 15,
    "Pediatric nephrology": 13,
-   "ESKD / Dialysis": 13,
+   "ESKD / Dialysis": 12,
    "PKD / Genetic": 10,
    "Health services / Epi": 9,
    "Stones / Electrolytes": 8
   },
   "by_clinical": {
-   "Observational / clinical": 99,
-   "Non-clinical / basic": 61,
-   "Clinical trial": 41,
+   "Observational / clinical": 98,
+   "Non-clinical / basic": 60,
+   "Clinical trial": 40,
    "Clinical (other)": 1
   },
   "by_institute": {
-   "NIDDK": 147,
+   "NIDDK": 144,
    "NHLBI": 26,
    "NIAID": 7,
    "NIA": 6,
@@ -56,9 +56,9 @@
    "NICHD": 1
   },
   "by_fiscal_year": {
-   "2026": 94,
+   "2026": 95,
    "2025": 70,
-   "2024": 38
+   "2024": 34
   }
  },
  "institutions": [
@@ -91,25 +91,25 @@
    "nonclinical": 3
   },
   {
-   "name": "UNIVERSITY OF ALABAMA AT BIRMINGHAM",
-   "state": "AL",
-   "total": 7,
-   "clinical": 3,
-   "nonclinical": 4
-  },
-  {
-   "name": "UNIVERSITY OF CALIFORNIA, SAN FRANCISCO",
-   "state": "CA",
-   "total": 7,
-   "clinical": 6,
-   "nonclinical": 1
-  },
-  {
    "name": "UNIVERSITY OF WASHINGTON",
    "state": "WA",
    "total": 7,
    "clinical": 7,
    "nonclinical": 0
+  },
+  {
+   "name": "UNIVERSITY OF ALABAMA AT BIRMINGHAM",
+   "state": "AL",
+   "total": 6,
+   "clinical": 2,
+   "nonclinical": 4
+  },
+  {
+   "name": "UNIVERSITY OF CALIFORNIA, SAN FRANCISCO",
+   "state": "CA",
+   "total": 6,
+   "clinical": 5,
+   "nonclinical": 1
   },
   {
    "name": "UNIVERSITY OF COLORADO DENVER",
@@ -427,13 +427,6 @@
    "nonclinical": 0
   },
   {
-   "name": "OHIO STATE UNIVERSITY",
-   "state": "OH",
-   "total": 1,
-   "clinical": 0,
-   "nonclinical": 1
-  },
-  {
    "name": "PURDUE UNIVERSITY",
    "state": "IN",
    "total": 1,
@@ -583,18 +576,18 @@
  ],
  "states": {
   "NY": 29,
-  "CA": 21,
   "MA": 21,
+  "CA": 20,
   "PA": 16,
   "MD": 10,
-  "OH": 10,
+  "OH": 9,
   "WA": 9,
   "IL": 9,
   "NC": 7,
-  "AL": 7,
   "MI": 6,
   "CO": 6,
   "TX": 6,
+  "AL": 6,
   "FL": 6,
   "CT": 5,
   "IN": 5,
@@ -632,11 +625,6 @@
    "name": "de Boer IH",
    "count": 2,
    "subs": "CKD progression"
-  },
-  {
-   "name": "CKiD Study Investigators",
-   "count": 2,
-   "subs": "Pediatric nephrology"
   },
   {
    "name": "Navaneethan SD",
@@ -1405,6 +1393,32 @@
    "pubs": 0
   },
   {
+   "num": "5K23GM151444-04",
+   "core": "K23GM151444",
+   "ac": "K23",
+   "fy": 2026,
+   "amt": 192348,
+   "org": "CINCINNATI CHILDRENS HOSP MED CTR",
+   "st": "OH",
+   "city": "CINCINNATI",
+   "pi": "Natalja L. Stanski",
+   "pis": [
+    "Natalja L. Stanski"
+   ],
+   "po": [
+    "SYDELLA ANNE BLATCH"
+   ],
+   "ic": "NIGMS",
+   "t": "Developing a Precision Medicine Approach to Pediatric Sepsis-Associated Acute Kidney Injury: Identification of Unique Subphenotypes and Strategies for Bedside Implementation",
+   "sub": "Acute kidney injury",
+   "cl": "Observational / clinical",
+   "id": 11378342,
+   "foa": "PA-20-205",
+   "ss": "Surgery, Anesthesiology and Trauma Study Section[SAT]",
+   "sy": 2023,
+   "pubs": 33
+  },
+  {
    "num": "5K23DK142042-02",
    "core": "K23DK142042",
    "ac": "K23",
@@ -1533,32 +1547,6 @@
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2022,
    "pubs": 0
-  },
-  {
-   "num": "5K23GM151444-03",
-   "core": "K23GM151444",
-   "ac": "K23",
-   "fy": 2025,
-   "amt": 191948,
-   "org": "CINCINNATI CHILDRENS HOSP MED CTR",
-   "st": "OH",
-   "city": "CINCINNATI",
-   "pi": "Natalja L. Stanski",
-   "pis": [
-    "Natalja L. Stanski"
-   ],
-   "po": [
-    "SYDELLA ANNE BLATCH"
-   ],
-   "ic": "NIGMS",
-   "t": "Developing a Precision Medicine Approach to Pediatric Sepsis-Associated Acute Kidney Injury: Identification of Unique Subphenotypes and Strategies for Bedside Implementation",
-   "sub": "Acute kidney injury",
-   "cl": "Observational / clinical",
-   "id": 11121792,
-   "foa": "PA-20-205",
-   "ss": "Surgery, Anesthesiology and Trauma Study Section[SAT]",
-   "sy": 2023,
-   "pubs": 33
   },
   {
    "num": "5K23DK140602-03",
@@ -2026,7 +2014,6 @@
    "foa": "PA-24-184",
    "ss": "Special Emphasis Panel[ZRG1 F12B-G (20)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -2444,32 +2431,6 @@
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(MA)]",
    "sy": 2021,
    "pubs": 30
-  },
-  {
-   "num": "5K23DK123319-05",
-   "core": "K23DK123319",
-   "ac": "K23",
-   "fy": 2024,
-   "amt": 182184,
-   "org": "UNIVERSITY OF ALABAMA AT BIRMINGHAM",
-   "st": "AL",
-   "city": "BIRMINGHAM",
-   "pi": "Alian  Al-Balas",
-   "pis": [
-    "Alian  Al-Balas"
-   ],
-   "po": [
-    "RAQUEL CHARLES GREER"
-   ],
-   "ic": "NIDDK",
-   "t": "Endovascular vs. Surgical Arteriovenous Fistula Outcomes",
-   "sub": "ESKD / Dialysis",
-   "cl": "Clinical trial",
-   "id": 10839297,
-   "foa": "PA-19-118",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2020,
-   "pubs": 9
   },
   {
    "num": "5K23DK134847-03",
@@ -3067,7 +3028,7 @@
    "foa": "PA-19-117",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "pubs": 0
+   "pubs": 6
   },
   {
    "num": "5K08DK126847-05",
@@ -3119,7 +3080,7 @@
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 13
+   "pubs": 15
   },
   {
    "num": "5K08DK131346-04",
@@ -3275,7 +3236,6 @@
    "foa": "PA-24-182",
    "ss": "Fellowships in Kidney, Urology, and Hematology[DDK-G]",
    "sy": 2025,
-   "new": true,
    "pubs": 1
   },
   {
@@ -3383,10 +3343,10 @@
    "pubs": 1
   },
   {
-   "num": "5K08DK132509-02",
+   "num": "5K08DK132509-03",
    "core": "K08DK132509",
    "ac": "K08",
-   "fy": 2024,
+   "fy": 2025,
    "amt": 165996,
    "org": "STANFORD UNIVERSITY",
    "st": "CA",
@@ -3402,7 +3362,7 @@
    "t": "Patient-Derived Kidney Organoids For Modeling Kidney Injury",
    "sub": "Transplant",
    "cl": "Non-clinical / basic",
-   "id": 10795903,
+   "id": 11042822,
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
@@ -3588,7 +3548,7 @@
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
-   "pubs": 4
+   "pubs": 5
   },
   {
    "num": "5K23DK123410-05",
@@ -3692,7 +3652,7 @@
    "foa": "PA-24-175",
    "ss": "NHLBI Mentored Clinical and Basic Science Study Section[MCBS (JA)]",
    "sy": 2025,
-   "pubs": 0
+   "pubs": 1
   },
   {
    "num": "5K08DK118180-05",
@@ -3825,33 +3785,6 @@
    "pubs": 0
   },
   {
-   "num": "5K08DK123411-05",
-   "core": "K08DK123411",
-   "ac": "K08",
-   "fy": 2024,
-   "amt": 160920,
-   "org": "OHIO STATE UNIVERSITY",
-   "st": "OH",
-   "city": "Columbus",
-   "pi": "Sethu Madhavan Madhavan",
-   "pis": [
-    "Sethu Madhavan Madhavan"
-   ],
-   "po": [
-    "TRACY L RANKIN"
-   ],
-   "ic": "NIDDK",
-   "t": "Apolipoprotein L1 Interaction with SNARE Proteins in the Pathogenesis of Chronic Kidney Disease",
-   "sub": "CKD progression",
-   "cl": "Non-clinical / basic",
-   "id": 10830348,
-   "foa": "PA-19-117",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2020,
-   "new": true,
-   "pubs": 10
-  },
-  {
    "num": "5K01DK144648-02",
    "core": "K01DK144648",
    "ac": "K01",
@@ -3979,7 +3912,7 @@
    "foa": "PA-19-117",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 14
+   "pubs": 15
   },
   {
    "num": "1K08DK147651-01",
@@ -4577,7 +4510,7 @@
    "foa": "PA-20-190",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
-   "pubs": 0
+   "pubs": 15
   },
   {
    "num": "5K23MD016448-04",
@@ -5279,7 +5212,6 @@
    "foa": "PA-24-176",
    "ss": "Special Emphasis Panel[ZRG1 BBBT-A (59)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -5358,7 +5290,7 @@
    "foa": "PA-19-122",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(OA)]",
    "sy": 2021,
-   "pubs": 65
+   "pubs": 66
   },
   {
    "num": "5K01HL155235-05",
@@ -5384,7 +5316,7 @@
    "foa": "RFA-HL-19-026",
    "ss": "ZHL1-CSR-Z(O1)",
    "sy": 2021,
-   "pubs": 0
+   "pubs": 3
   },
   {
    "num": "5K24HL161414-04",
@@ -5725,32 +5657,6 @@
    "pubs": 4
   },
   {
-   "num": "5K23DK131316-02",
-   "core": "K23DK131316",
-   "ac": "K23",
-   "fy": 2024,
-   "amt": 85737,
-   "org": "UNIVERSITY OF CALIFORNIA, SAN FRANCISCO",
-   "st": "CA",
-   "city": "SAN FRANCISCO",
-   "pi": "Chi  Chu",
-   "pis": [
-    "Chi  Chu"
-   ],
-   "po": [
-    "RAQUEL CHARLES GREER"
-   ],
-   "ic": "NIDDK",
-   "t": "Targeted Automated Nephrology e-Consultation for Diabetic Kidney Disease",
-   "sub": "CKD progression",
-   "cl": "Observational / clinical",
-   "id": 10814226,
-   "foa": "PA-20-206",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2023,
-   "pubs": 7
-  },
-  {
    "num": "3K23HL150311-05S1",
    "core": "K23HL150311",
    "ac": "K23",
@@ -5826,7 +5732,7 @@
    "foa": "PA-20-272",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2022,
-   "pubs": 3
+   "pubs": 11
   },
   {
    "num": "3K23DK123413-05S1",
