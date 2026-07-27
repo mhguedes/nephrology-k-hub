@@ -1,14 +1,14 @@
 {
  "meta": {
-  "generated": "2026-07-20",
+  "generated": "2026-07-27",
   "source": "NIH RePORTER API v2 (active K-series, kidney study-population filter)",
   "snapshot_note": "Active career-development (K) awards where kidney disease is the study focus or study population (comorbidity studies in CKD/dialysis/transplant cohorts are included; incidental kidney mentions and pure kidney-cancer/urology are excluded). Subarea and clinical/non-clinical labels are first-pass algorithmic classifications.",
   "application_pdf_note": "NIH does not publish full grant applications publicly (FOIA-only); each award links to its NIH RePORTER record with the public abstract.",
   "universe_total_active": 203,
   "n_institutions": 74,
-  "total_current_year_award_usd": 32876445,
-  "prev_generated": "2026-07-13",
-  "n_new_this_refresh": 4
+  "total_current_year_award_usd": 32904735,
+  "prev_generated": "2026-07-20",
+  "n_new_this_refresh": 0
  },
  "stats": {
   "by_mechanism": {
@@ -57,8 +57,8 @@
   },
   "by_fiscal_year": {
    "2026": 96,
-   "2025": 68,
-   "2024": 39
+   "2025": 65,
+   "2024": 42
   }
  },
  "institutions": [
@@ -593,8 +593,8 @@
   "NC": 7,
   "AL": 7,
   "MI": 6,
-  "CO": 6,
   "TX": 6,
+  "CO": 6,
   "FL": 6,
   "CT": 5,
   "IN": 5,
@@ -627,6 +627,11 @@
    "name": "de Boer IH",
    "count": 2,
    "subs": "CKD progression"
+  },
+  {
+   "name": "CKiD Study Investigators",
+   "count": 2,
+   "subs": "Pediatric nephrology"
   },
   {
    "name": "Navaneethan SD",
@@ -768,7 +773,7 @@
    "foa": "PA-20-206",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2022,
-   "pubs": 0
+   "pubs": 6
   },
   {
    "num": "1K23DK141365-01A1",
@@ -797,32 +802,6 @@
    "pubs": 0
   },
   {
-   "num": "5K23DK131289-02",
-   "core": "K23DK131289",
-   "ac": "K23",
-   "fy": 2024,
-   "amt": 200718,
-   "org": "UNIV OF NORTH CAROLINA CHAPEL HILL",
-   "st": "NC",
-   "city": "CHAPEL HILL",
-   "pi": "Keia  Sanderson",
-   "pis": [
-    "Keia  Sanderson"
-   ],
-   "po": [
-    "RAQUEL CHARLES GREER"
-   ],
-   "ic": "NIDDK",
-   "t": "Machine Learning Risk Prediction of Kidney Disease After Extremely Preterm Birth",
-   "sub": "Pediatric nephrology",
-   "cl": "Observational / clinical",
-   "id": 10815855,
-   "foa": "PA-20-205",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2023,
-   "pubs": 15
-  },
-  {
    "num": "5K23AI177939-02",
    "core": "K23AI177939",
    "ac": "K23",
@@ -847,6 +826,32 @@
    "ss": "Microbiology and Infectious Diseases Advisory Committee[MID]",
    "sy": 2024,
    "pubs": 0
+  },
+  {
+   "num": "5K23DK131289-03",
+   "core": "K23DK131289",
+   "ac": "K23",
+   "fy": 2025,
+   "amt": 199450,
+   "org": "UNIV OF NORTH CAROLINA CHAPEL HILL",
+   "st": "NC",
+   "city": "CHAPEL HILL",
+   "pi": "Keia  Sanderson",
+   "pis": [
+    "Keia  Sanderson"
+   ],
+   "po": [
+    "RAQUEL CHARLES GREER"
+   ],
+   "ic": "NIDDK",
+   "t": "Machine Learning Risk Prediction of Kidney Disease After Extremely Preterm Birth",
+   "sub": "Pediatric nephrology",
+   "cl": "Observational / clinical",
+   "id": 11081722,
+   "foa": "PA-20-205",
+   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
+   "sy": 2023,
+   "pubs": 15
   },
   {
    "num": "5K23DK135855-03",
@@ -979,6 +984,32 @@
    "pubs": 0
   },
   {
+   "num": "5K23DK123413-05",
+   "core": "K23DK123413",
+   "ac": "K23",
+   "fy": 2024,
+   "amt": 196542,
+   "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+   "st": "MI",
+   "city": "ANN ARBOR",
+   "pi": "Andrea L Oliverio",
+   "pis": [
+    "Andrea L Oliverio"
+   ],
+   "po": [
+    "RAQUEL CHARLES GREER"
+   ],
+   "ic": "NIDDK",
+   "t": "Developing a decision aid for reproductive health for women with kidney disease",
+   "sub": "Hypertension",
+   "cl": "Clinical trial",
+   "id": 10846602,
+   "foa": "PA-19-118",
+   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
+   "sy": 2020,
+   "pubs": 0
+  },
+  {
    "num": "5K23DK128567-05",
    "core": "K23DK128567",
    "ac": "K23",
@@ -1054,7 +1085,7 @@
    "foa": "PA-20-206",
    "ss": "ZDK1-GRB-G(M1)L",
    "sy": 2021,
-   "pubs": 18
+   "pubs": 19
   },
   {
    "num": "5K23DK133677-04",
@@ -1132,6 +1163,32 @@
    "foa": "PA-24-185",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(JA)]",
    "sy": 2025,
+   "pubs": 0
+  },
+  {
+   "num": "5K23DK127153-04",
+   "core": "K23DK127153",
+   "ac": "K23",
+   "fy": 2024,
+   "amt": 194315,
+   "org": "UNIVERSITY OF TEXAS AT AUSTIN",
+   "st": "TX",
+   "city": "AUSTIN",
+   "pi": "Tessa  Novick",
+   "pis": [
+    "Tessa  Novick"
+   ],
+   "po": [
+    "RAQUEL CHARLES GREER"
+   ],
+   "ic": "NIDDK",
+   "t": "Impact of Health-related Social Needs on Dialysis Outcomes",
+   "sub": "ESKD / Dialysis",
+   "cl": "Observational / clinical",
+   "id": 10846839,
+   "foa": "PA-20-206",
+   "ss": "ZDK1-GRB-G(M1)L",
+   "sy": 2021,
    "pubs": 0
   },
   {
@@ -1369,32 +1426,6 @@
    "pubs": 9
   },
   {
-   "num": "5K23DK127153-05",
-   "core": "K23DK127153",
-   "ac": "K23",
-   "fy": 2025,
-   "amt": 192587,
-   "org": "UNIVERSITY OF TEXAS AT AUSTIN",
-   "st": "TX",
-   "city": "AUSTIN",
-   "pi": "Tessa  Novick",
-   "pis": [
-    "Tessa  Novick"
-   ],
-   "po": [
-    "RAQUEL CHARLES GREER"
-   ],
-   "ic": "NIDDK",
-   "t": "Impact of Health-related Social Needs on Dialysis Outcomes",
-   "sub": "ESKD / Dialysis",
-   "cl": "Observational / clinical",
-   "id": 11111280,
-   "foa": "PA-20-206",
-   "ss": "ZDK1-GRB-G(M1)L",
-   "sy": 2021,
-   "pubs": 0
-  },
-  {
    "num": "5K23GM151444-04",
    "core": "K23GM151444",
    "ac": "K23",
@@ -1418,7 +1449,7 @@
    "foa": "PA-20-205",
    "ss": "Surgery, Anesthesiology and Trauma Study Section[SAT]",
    "sy": 2023,
-   "pubs": 33
+   "pubs": 34
   },
   {
    "num": "5K23DK142042-02",
@@ -1678,7 +1709,7 @@
    "foa": "PA-20-205",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
-   "pubs": 0
+   "pubs": 9
   },
   {
    "num": "5K23DK144712-02",
@@ -2458,7 +2489,6 @@
    "foa": "PA-19-118",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "new": true,
    "pubs": 9
   },
   {
@@ -2670,32 +2700,6 @@
    "pubs": 1
   },
   {
-   "num": "5K23DK128573-04",
-   "core": "K23DK128573",
-   "ac": "K23",
-   "fy": 2024,
-   "amt": 175489,
-   "org": "JOHNS HOPKINS UNIVERSITY",
-   "st": "MD",
-   "city": "BALTIMORE",
-   "pi": "Cyd Kumiko Eaton",
-   "pis": [
-    "Cyd Kumiko Eaton"
-   ],
-   "po": [
-    "TRACY L RANKIN"
-   ],
-   "ic": "NIDDK",
-   "t": "Leveraging Technology to Improve Medication Adherence in Adolescent and Young Adult Kidney or Liver Transplant Recipients",
-   "sub": "Transplant",
-   "cl": "Clinical trial",
-   "id": 10843270,
-   "foa": "PA-20-206",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2021,
-   "pubs": 2
-  },
-  {
    "num": "5K23DK132487-04",
    "core": "K23DK132487",
    "ac": "K23",
@@ -2904,6 +2908,32 @@
    "pubs": 0
   },
   {
+   "num": "5K23DK128573-05",
+   "core": "K23DK128573",
+   "ac": "K23",
+   "fy": 2025,
+   "amt": 171056,
+   "org": "JOHNS HOPKINS UNIVERSITY",
+   "st": "MD",
+   "city": "BALTIMORE",
+   "pi": "Cyd Kumiko Eaton",
+   "pis": [
+    "Cyd Kumiko Eaton"
+   ],
+   "po": [
+    "TRACY L RANKIN"
+   ],
+   "ic": "NIDDK",
+   "t": "Leveraging Technology to Improve Medication Adherence in Adolescent and Young Adult Kidney or Liver Transplant Recipients",
+   "sub": "Transplant",
+   "cl": "Clinical trial",
+   "id": 11103311,
+   "foa": "PA-20-206",
+   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
+   "sy": 2021,
+   "pubs": 2
+  },
+  {
    "num": "5K08DK132411-05",
    "core": "K08DK132411",
    "ac": "K08",
@@ -3109,7 +3139,7 @@
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 13
+   "pubs": 8
   },
   {
    "num": "5K08DK131346-04",
@@ -3424,32 +3454,6 @@
    "pubs": 0
   },
   {
-   "num": "5K08DK131259-03",
-   "core": "K08DK131259",
-   "ac": "K08",
-   "fy": 2024,
-   "amt": 165780,
-   "org": "CINCINNATI CHILDRENS HOSP MED CTR",
-   "st": "OH",
-   "city": "CINCINNATI",
-   "pi": "Meredith  Schuh",
-   "pis": [
-    "Meredith  Schuh"
-   ],
-   "po": [
-    "TRACY L RANKIN"
-   ],
-   "ic": "NIDDK",
-   "t": "Bridging the gap of late gestation human nephrogenesis using a non-human primate model",
-   "sub": "Pediatric nephrology",
-   "cl": "Non-clinical / basic",
-   "id": 10909239,
-   "foa": "PA-20-203",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2022,
-   "pubs": 11
-  },
-  {
    "num": "5K08DK132519-04",
    "core": "K08DK132519",
    "ac": "K08",
@@ -3762,10 +3766,10 @@
    "pubs": 34
   },
   {
-   "num": "5K01HL159047-05",
+   "num": "5K01HL159047-04",
    "core": "K01HL159047",
    "ac": "K01",
-   "fy": 2025,
+   "fy": 2024,
    "amt": 161689,
    "org": "UNIVERSITY OF ALABAMA AT BIRMINGHAM",
    "st": "AL",
@@ -3781,7 +3785,7 @@
    "t": "Renal Sensory Nerve Contribution to Hypertension",
    "sub": "Hypertension",
    "cl": "Non-clinical / basic",
-   "id": 11144946,
+   "id": 10898588,
    "foa": "RFA-HL-19-026",
    "ss": "ZHL1-CSR-M(M1)",
    "sy": 2021,
@@ -3863,7 +3867,6 @@
    "foa": "PA-19-117",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "new": true,
    "pubs": 10
   },
   {
@@ -4335,10 +4338,10 @@
    "pubs": 16
   },
   {
-   "num": "5K01DK124443-05",
+   "num": "5K01DK124443-04",
    "core": "K01DK124443",
    "ac": "K01",
-   "fy": 2025,
+   "fy": 2024,
    "amt": 153846,
    "org": "BOSTON CHILDREN'S HOSPITAL",
    "st": "MA",
@@ -4354,7 +4357,7 @@
    "t": "Blocking Latent TGF-\u03b22 Activation as a Therapeutic Strategy for Renal Fibrosis",
    "sub": "CKD progression",
    "cl": "Non-clinical / basic",
-   "id": 11059948,
+   "id": 10814788,
    "foa": "PAR-18-419",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
@@ -4930,7 +4933,7 @@
    "foa": "PA-24-254",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2024,
-   "pubs": 3
+   "pubs": 1
   },
   {
    "num": "5K01DK125614-05",
@@ -5034,7 +5037,6 @@
    "foa": "PA-24-176",
    "ss": "Special Emphasis Panel[ZRG1 AN-G (81)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -5399,7 +5401,7 @@
    "foa": "PA-19-122",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(OA)]",
    "sy": 2021,
-   "pubs": 66
+   "pubs": 67
   },
   {
    "num": "5K01HL155235-05",
@@ -5633,33 +5635,33 @@
    "foa": "PAR-21-252",
    "ss": "Special Emphasis Panel[ZRG1-ICP-J(55)R]",
    "sy": 2023,
-   "pubs": 2
+   "pubs": 3
   },
   {
-   "num": "5K99DK138301-02",
-   "core": "K99DK138301",
+   "num": "1K99DK139418-01",
+   "core": "K99DK139418",
    "ac": "K99",
-   "fy": 2025,
-   "amt": 90000,
-   "org": "UNIVERSITY OF COLORADO DENVER",
-   "st": "CO",
-   "city": "Aurora",
-   "pi": "Felix  Poppelaars",
+   "fy": 2024,
+   "amt": 91260,
+   "org": "MASSACHUSETTS INSTITUTE OF TECHNOLOGY",
+   "st": "MA",
+   "city": "CAMBRIDGE",
+   "pi": "Gary  Liu",
    "pis": [
-    "Felix  Poppelaars"
+    "Gary  Liu"
    ],
    "po": [
     "TRACY L RANKIN"
    ],
    "ic": "NIDDK",
-   "t": "Noninvasive molecular imaging of complement biomarkers in kidney disease",
-   "sub": "Transplant",
+   "t": "New siRNA therapeutics to halt diabetic kidney disease",
+   "sub": "CKD progression",
    "cl": "Non-clinical / basic",
-   "id": 11176355,
+   "id": 10865338,
    "foa": "PA-20-188",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2024,
-   "pubs": 1
+   "pubs": 0
   },
   {
    "num": "1K99DK143296-01",
@@ -5688,30 +5690,30 @@
    "pubs": 2
   },
   {
-   "num": "5K99DK139418-02",
-   "core": "K99DK139418",
+   "num": "1K99DK138301-01A1",
+   "core": "K99DK138301",
    "ac": "K99",
-   "fy": 2025,
-   "amt": 89760,
-   "org": "MASSACHUSETTS INSTITUTE OF TECHNOLOGY",
-   "st": "MA",
-   "city": "CAMBRIDGE",
-   "pi": "Gary  Liu",
+   "fy": 2024,
+   "amt": 90000,
+   "org": "UNIVERSITY OF COLORADO DENVER",
+   "st": "CO",
+   "city": "Aurora",
+   "pi": "Felix  Poppelaars",
    "pis": [
-    "Gary  Liu"
+    "Felix  Poppelaars"
    ],
    "po": [
     "TRACY L RANKIN"
    ],
    "ic": "NIDDK",
-   "t": "New siRNA therapeutics to halt diabetic kidney disease",
-   "sub": "CKD progression",
+   "t": "Noninvasive molecular imaging of complement biomarkers in kidney disease",
+   "sub": "Transplant",
    "cl": "Non-clinical / basic",
-   "id": 11144349,
+   "id": 10984320,
    "foa": "PA-20-188",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2024,
-   "pubs": 0
+   "pubs": 1
   },
   {
    "num": "5K99HD109458-02",
@@ -5789,7 +5791,6 @@
    "foa": "PA-20-206",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
-   "new": true,
    "pubs": 7
   },
   {
@@ -5845,29 +5846,29 @@
    "pubs": 62
   },
   {
-   "num": "3K23DK123413-05S1",
-   "core": "K23DK123413",
-   "ac": "K23",
+   "num": "3K08DK131259-03S1",
+   "core": "K08DK131259",
+   "ac": "K08",
    "fy": 2024,
-   "amt": 75599,
-   "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
-   "st": "MI",
-   "city": "ANN ARBOR",
-   "pi": "Andrea L Oliverio",
+   "amt": 75600,
+   "org": "CINCINNATI CHILDRENS HOSP MED CTR",
+   "st": "OH",
+   "city": "CINCINNATI",
+   "pi": "Meredith  Schuh",
    "pis": [
-    "Andrea L Oliverio"
+    "Meredith  Schuh"
    ],
    "po": [
-    "RAQUEL CHARLES GREER"
+    "TRACY L RANKIN"
    ],
    "ic": "NIDDK",
-   "t": "Developing a decision aid for reproductive health for women with kidney disease",
-   "sub": "Hypertension",
-   "cl": "Clinical trial",
-   "id": 11030544,
+   "t": "Bridging the gap of late gestation human nephrogenesis using a non-human primate model",
+   "sub": "Pediatric nephrology",
+   "cl": "Non-clinical / basic",
+   "id": 11030628,
    "foa": "PA-20-272",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2020,
+   "sy": 2022,
    "pubs": 11
   },
   {
