@@ -1,19 +1,19 @@
 {
  "meta": {
-  "generated": "2026-08-03",
+  "generated": "2026-08-10",
   "source": "NIH RePORTER API v2 (active K-series, kidney study-population filter)",
   "snapshot_note": "Active career-development (K) awards where kidney disease is the study focus or study population (comorbidity studies in CKD/dialysis/transplant cohorts are included; incidental kidney mentions and pure kidney-cancer/urology are excluded). Subarea and clinical/non-clinical labels are first-pass algorithmic classifications.",
   "application_pdf_note": "NIH does not publish full grant applications publicly (FOIA-only); each award links to its NIH RePORTER record with the public abstract.",
-  "universe_total_active": 208,
+  "universe_total_active": 207,
   "n_institutions": 76,
-  "total_current_year_award_usd": 33657817,
-  "prev_generated": "2026-07-27",
-  "n_new_this_refresh": 5
+  "total_current_year_award_usd": 33778435,
+  "prev_generated": "2026-08-03",
+  "n_new_this_refresh": 0
  },
  "stats": {
   "by_mechanism": {
    "K23": 97,
-   "K08": 46,
+   "K08": 45,
    "K01": 45,
    "K24": 8,
    "K99": 6,
@@ -30,18 +30,18 @@
    "Hypertension": 15,
    "ESKD / Dialysis": 15,
    "Pediatric nephrology": 13,
-   "PKD / Genetic": 12,
+   "PKD / Genetic": 11,
    "Health services / Epi": 9,
    "Stones / Electrolytes": 8
   },
   "by_clinical": {
    "Observational / clinical": 102,
-   "Non-clinical / basic": 63,
+   "Non-clinical / basic": 62,
    "Clinical trial": 42,
    "Clinical (other)": 1
   },
   "by_institute": {
-   "NIDDK": 152,
+   "NIDDK": 151,
    "NHLBI": 26,
    "NIAID": 7,
    "NIA": 7,
@@ -56,9 +56,9 @@
    "NICHD": 1
   },
   "by_fiscal_year": {
-   "2026": 109,
-   "2025": 62,
-   "2024": 37
+   "2026": 111,
+   "2025": 60,
+   "2024": 36
   }
  },
  "institutions": [
@@ -280,13 +280,6 @@
    "nonclinical": 0
   },
   {
-   "name": "BETH ISRAEL DEACONESS MEDICAL CENTER",
-   "state": "MA",
-   "total": 2,
-   "clinical": 1,
-   "nonclinical": 1
-  },
-  {
    "name": "BOSTON CHILDREN'S HOSPITAL",
    "state": "MA",
    "total": 2,
@@ -376,6 +369,13 @@
    "total": 2,
    "clinical": 0,
    "nonclinical": 2
+  },
+  {
+   "name": "BETH ISRAEL DEACONESS MEDICAL CENTER",
+   "state": "MA",
+   "total": 1,
+   "clinical": 1,
+   "nonclinical": 0
   },
   {
    "name": "CASE WESTERN RESERVE UNIVERSITY",
@@ -598,7 +598,7 @@
  "states": {
   "NY": 30,
   "CA": 21,
-  "MA": 21,
+  "MA": 20,
   "PA": 16,
   "MD": 10,
   "OH": 10,
@@ -634,9 +634,14 @@
    "subs": "Transplant"
   },
   {
-   "name": "Estrella MM",
+   "name": "Abdel-Rahman EM",
    "count": 2,
    "subs": "Acute kidney injury"
+  },
+  {
+   "name": "Avasare RS",
+   "count": 2,
+   "subs": "Glomerular disease"
   },
   {
    "name": "CRIC Study Investigators",
@@ -788,7 +793,7 @@
    "foa": "PA-20-206",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2022,
-   "pubs": 6
+   "pubs": 5
   },
   {
    "num": "1K23DK141365-01A1",
@@ -996,6 +1001,32 @@
    "foa": "PA-24-184",
    "ss": "Special Emphasis Panel[ZRG1 F12B-G (20)]",
    "sy": 2026,
+   "pubs": 1
+  },
+  {
+   "num": "5K23DK123413-05",
+   "core": "K23DK123413",
+   "ac": "K23",
+   "fy": 2024,
+   "amt": 196542,
+   "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+   "st": "MI",
+   "city": "ANN ARBOR",
+   "pi": "Andrea L Oliverio",
+   "pis": [
+    "Andrea L Oliverio"
+   ],
+   "po": [
+    "RAQUEL CHARLES GREER"
+   ],
+   "ic": "NIDDK",
+   "t": "Developing a decision aid for reproductive health for women with kidney disease",
+   "sub": "Hypertension",
+   "cl": "Clinical trial",
+   "id": 10846602,
+   "foa": "PA-19-118",
+   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
+   "sy": 2020,
    "pubs": 0
   },
   {
@@ -1724,7 +1755,6 @@
    "foa": "PA-24-184",
    "ss": "Special Emphasis Panel[ZRG1 CCHI-B (22)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -1803,7 +1833,6 @@
    "foa": "PA-24-185",
    "ss": "Special Emphasis Panel[ZRG1 SCIL-A (20)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -1960,7 +1989,7 @@
    "foa": "PA-19-118",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "pubs": 0
+   "pubs": 19
   },
   {
    "num": "5K23DK128604-05",
@@ -2038,7 +2067,7 @@
    "foa": "PA-20-206",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(MA)]",
    "sy": 2021,
-   "pubs": 17
+   "pubs": 27
   },
   {
    "num": "5K23AG073534-05",
@@ -2324,7 +2353,7 @@
    "foa": "PA-19-119",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "pubs": 15
+   "pubs": 17
   },
   {
    "num": "5K23DK129777-05",
@@ -2350,7 +2379,7 @@
    "foa": "PA-20-205",
    "ss": "ZDK1-GRB-G(J1)L",
    "sy": 2022,
-   "pubs": 23
+   "pubs": 24
   },
   {
    "num": "5K23DK138313-03",
@@ -2480,7 +2509,7 @@
    "foa": "PA-20-205",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(OA)]",
    "sy": 2023,
-   "pubs": 18
+   "pubs": 19
   },
   {
    "num": "5K23HL159292-06",
@@ -2610,7 +2639,6 @@
    "foa": "PA-24-185",
    "ss": "Special Emphasis Panel[ZRG1 T12B-D (20)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -2845,7 +2873,7 @@
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
-   "pubs": 10
+   "pubs": 11
   },
   {
    "num": "1K08DK143346-01A1",
@@ -3079,7 +3107,7 @@
    "foa": "PA-19-117",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "pubs": 10
+   "pubs": 0
   },
   {
    "num": "5K08DK124449-05",
@@ -3183,7 +3211,7 @@
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
-   "pubs": 17
+   "pubs": 0
   },
   {
    "num": "5K08DK125768-05",
@@ -3209,7 +3237,7 @@
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 4
+   "pubs": 0
   },
   {
    "num": "5K08DK131346-04",
@@ -3235,7 +3263,7 @@
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2022,
-   "pubs": 16
+   "pubs": 15
   },
   {
    "num": "5K08DK138291-02",
@@ -3417,7 +3445,6 @@
    "foa": "PA-24-182",
    "ss": "Special Emphasis Panel[ZRG1 T12B-D (20)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -3574,7 +3601,7 @@
    "foa": "PA-24-182",
    "ss": "Fellowships in Kidney, Urology, and Hematology[DDK-G]",
    "sy": 2025,
-   "pubs": 1
+   "pubs": 2
   },
   {
    "num": "5K08DK132463-04",
@@ -4172,7 +4199,6 @@
    "foa": "PA-24-182",
    "ss": "Special Emphasis Panel[ZRG1 T12B-D (20)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -4563,7 +4589,7 @@
    "foa": "PAR-18-419",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "pubs": 3
+   "pubs": 0
   },
   {
    "num": "5K01DK136973-02",
@@ -4615,7 +4641,7 @@
    "foa": "PA-20-190",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2024,
-   "pubs": 2
+   "pubs": 3
   },
   {
    "num": "5K02AG076883-04",
@@ -4995,7 +5021,7 @@
     "Joel Thomas Adler"
    ],
    "po": [
-    "TAMARA  WILLIS"
+    "KEVIN  CHANEY"
    ],
    "ic": "AHRQ",
    "t": "Evaluating the role of telehealth in patients with end stage kidney disease (ESKD)",
@@ -5031,7 +5057,7 @@
    "foa": "PAR-18-419",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 5
+   "pubs": 4
   },
   {
    "num": "7K01DK140605-02",
@@ -5187,7 +5213,7 @@
    "foa": "PA-20-186",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(OA)]",
    "sy": 2024,
-   "pubs": 11
+   "pubs": 12
   },
   {
    "num": "5K25DK138120-02",
@@ -5372,10 +5398,10 @@
    "pubs": 52
   },
   {
-   "num": "5K24HL171861-02",
+   "num": "5K24HL171861-03",
    "core": "K24HL171861",
    "ac": "K24",
-   "fy": 2025,
+   "fy": 2026,
    "amt": 126099,
    "org": "UNIVERSITY OF CALIFORNIA, SAN FRANCISCO",
    "st": "CA",
@@ -5391,11 +5417,11 @@
    "t": "Cardiovascular risk reduction in adolescents and young adults with kidney disease",
    "sub": "Pediatric nephrology",
    "cl": "Observational / clinical",
-   "id": 11138633,
+   "id": 11362511,
    "foa": "PA-20-186",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR-G(MA)]",
    "sy": 2024,
-   "pubs": 8
+   "pubs": 9
   },
   {
    "num": "5K01AG078486-05",
@@ -5525,7 +5551,7 @@
    "foa": "PA-19-122",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(OA)]",
    "sy": 2021,
-   "pubs": 67
+   "pubs": 68
   },
   {
    "num": "5K01HL155235-05",
@@ -5554,11 +5580,11 @@
    "pubs": 6
   },
   {
-   "num": "5K24HL161414-04",
+   "num": "5K24HL161414-05",
    "core": "K24HL161414",
    "ac": "K24",
-   "fy": 2025,
-   "amt": 117491,
+   "fy": 2026,
+   "amt": 117167,
    "org": "BAYLOR COLLEGE OF MEDICINE",
    "st": "TX",
    "city": "HOUSTON",
@@ -5573,7 +5599,7 @@
    "t": "MENTORED PATIENT-ORIENTED RESEARCH TOWARDS OPTIMIZING CARDIOVASCULAR OUTCOMES IN CHRONIC KIDNEY DISEASE",
    "sub": "CKD progression",
    "cl": "Clinical trial",
-   "id": 11127683,
+   "id": 11384876,
    "foa": "PA-20-193",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(MA)]",
    "sy": 2022,
@@ -5707,7 +5733,7 @@
    "foa": "PA-24-254",
    "ss": "Arthritis and Musculoskeletal and Skin Diseases Special Grants Study Section[AMS]",
    "sy": 2024,
-   "pubs": 16
+   "pubs": 17
   },
   {
    "num": "1K08DK142013-01A1",
@@ -5967,7 +5993,7 @@
    "foa": "PA-20-272",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "pubs": 62
+   "pubs": 61
   },
   {
    "num": "3K08DK131259-03S1",
@@ -5996,32 +6022,6 @@
    "pubs": 11
   },
   {
-   "num": "3K23DK123413-05S1",
-   "core": "K23DK123413",
-   "ac": "K23",
-   "fy": 2024,
-   "amt": 75599,
-   "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
-   "st": "MI",
-   "city": "ANN ARBOR",
-   "pi": "Andrea L Oliverio",
-   "pis": [
-    "Andrea L Oliverio"
-   ],
-   "po": [
-    "RAQUEL CHARLES GREER"
-   ],
-   "ic": "NIDDK",
-   "t": "Developing a decision aid for reproductive health for women with kidney disease",
-   "sub": "Hypertension",
-   "cl": "Clinical trial",
-   "id": 11030544,
-   "foa": "PA-20-272",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2020,
-   "pubs": 12
-  },
-  {
    "num": "1K99ES034800-01A1",
    "core": "K99ES034800",
    "ac": "K99",
@@ -6045,32 +6045,6 @@
    "foa": "PA-20-188",
    "ss": "Special Emphasis Panel[ZES1 ARL-D (C9)]",
    "sy": 2024,
-   "pubs": 0
-  },
-  {
-   "num": "5K08DK131262-03",
-   "core": "K08DK131262",
-   "ac": "K08",
-   "fy": 2024,
-   "amt": 1,
-   "org": "BETH ISRAEL DEACONESS MEDICAL CENTER",
-   "st": "MA",
-   "city": "BOSTON",
-   "pi": "Joshua Samuel Waitzman",
-   "pis": [
-    "Joshua Samuel Waitzman"
-   ],
-   "po": [
-    "TRACY L RANKIN"
-   ],
-   "ic": "NIDDK",
-   "t": "Structure and mechanism of the kidney disease-causing protein APOL1",
-   "sub": "PKD / Genetic",
-   "cl": "Non-clinical / basic",
-   "id": 10909199,
-   "foa": "PA-20-203",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK(M1)-1-D]",
-   "sy": 2022,
    "pubs": 0
   }
  ]
