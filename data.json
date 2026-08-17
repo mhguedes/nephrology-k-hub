@@ -1,48 +1,47 @@
 {
  "meta": {
-  "generated": "2026-08-10",
+  "generated": "2026-08-17",
   "source": "NIH RePORTER API v2 (active K-series, kidney study-population filter)",
   "snapshot_note": "Active career-development (K) awards where kidney disease is the study focus or study population (comorbidity studies in CKD/dialysis/transplant cohorts are included; incidental kidney mentions and pure kidney-cancer/urology are excluded). Subarea and clinical/non-clinical labels are first-pass algorithmic classifications.",
   "application_pdf_note": "NIH does not publish full grant applications publicly (FOIA-only); each award links to its NIH RePORTER record with the public abstract.",
-  "universe_total_active": 207,
+  "universe_total_active": 208,
   "n_institutions": 76,
-  "total_current_year_award_usd": 33778435,
-  "prev_generated": "2026-08-03",
-  "n_new_this_refresh": 0
+  "total_current_year_award_usd": 33848257,
+  "prev_generated": "2026-08-10",
+  "n_new_this_refresh": 2
  },
  "stats": {
   "by_mechanism": {
    "K23": 97,
-   "K08": 45,
-   "K01": 45,
+   "K08": 46,
+   "K01": 46,
    "K24": 8,
    "K99": 6,
    "K25": 3,
    "K02": 1,
-   "K38": 1,
    "K43": 1
   },
   "by_subarea": {
-   "CKD progression": 41,
+   "CKD progression": 42,
    "Acute kidney injury": 38,
    "Transplant": 32,
    "Glomerular disease": 25,
    "Hypertension": 15,
    "ESKD / Dialysis": 15,
-   "Pediatric nephrology": 13,
-   "PKD / Genetic": 11,
+   "Pediatric nephrology": 12,
+   "PKD / Genetic": 12,
    "Health services / Epi": 9,
    "Stones / Electrolytes": 8
   },
   "by_clinical": {
-   "Observational / clinical": 102,
-   "Non-clinical / basic": 62,
+   "Observational / clinical": 101,
+   "Non-clinical / basic": 64,
    "Clinical trial": 42,
    "Clinical (other)": 1
   },
   "by_institute": {
-   "NIDDK": 151,
-   "NHLBI": 26,
+   "NIDDK": 153,
+   "NHLBI": 25,
    "NIAID": 7,
    "NIA": 7,
    "NIAMS": 3,
@@ -56,8 +55,8 @@
    "NICHD": 1
   },
   "by_fiscal_year": {
-   "2026": 111,
-   "2025": 60,
+   "2026": 114,
+   "2025": 58,
    "2024": 36
   }
  },
@@ -133,13 +132,6 @@
    "nonclinical": 5
   },
   {
-   "name": "CHILDREN'S HOSP OF PHILADELPHIA",
-   "state": "PA",
-   "total": 5,
-   "clinical": 5,
-   "nonclinical": 0
-  },
-  {
    "name": "MASSACHUSETTS GENERAL HOSPITAL",
    "state": "MA",
    "total": 5,
@@ -166,6 +158,20 @@
    "total": 5,
    "clinical": 4,
    "nonclinical": 1
+  },
+  {
+   "name": "BOSTON MEDICAL CENTER",
+   "state": "MA",
+   "total": 4,
+   "clinical": 3,
+   "nonclinical": 1
+  },
+  {
+   "name": "CHILDREN'S HOSP OF PHILADELPHIA",
+   "state": "PA",
+   "total": 4,
+   "clinical": 4,
+   "nonclinical": 0
   },
   {
    "name": "DUKE UNIVERSITY",
@@ -205,13 +211,6 @@
   {
    "name": "BAYLOR COLLEGE OF MEDICINE",
    "state": "TX",
-   "total": 3,
-   "clinical": 3,
-   "nonclinical": 0
-  },
-  {
-   "name": "BOSTON MEDICAL CENTER",
-   "state": "MA",
    "total": 3,
    "clinical": 3,
    "nonclinical": 0
@@ -278,6 +277,13 @@
    "total": 3,
    "clinical": 3,
    "nonclinical": 0
+  },
+  {
+   "name": "BETH ISRAEL DEACONESS MEDICAL CENTER",
+   "state": "MA",
+   "total": 2,
+   "clinical": 1,
+   "nonclinical": 1
   },
   {
    "name": "BOSTON CHILDREN'S HOSPITAL",
@@ -369,13 +375,6 @@
    "total": 2,
    "clinical": 0,
    "nonclinical": 2
-  },
-  {
-   "name": "BETH ISRAEL DEACONESS MEDICAL CENTER",
-   "state": "MA",
-   "total": 1,
-   "clinical": 1,
-   "nonclinical": 0
   },
   {
    "name": "CASE WESTERN RESERVE UNIVERSITY",
@@ -597,9 +596,9 @@
  ],
  "states": {
   "NY": 30,
+  "MA": 22,
   "CA": 21,
-  "MA": 20,
-  "PA": 16,
+  "PA": 15,
   "MD": 10,
   "OH": 10,
   "WA": 9,
@@ -634,14 +633,9 @@
    "subs": "Transplant"
   },
   {
-   "name": "Abdel-Rahman EM",
+   "name": "Flythe JE",
    "count": 2,
-   "subs": "Acute kidney injury"
-  },
-  {
-   "name": "Avasare RS",
-   "count": 2,
-   "subs": "Glomerular disease"
+   "subs": "Transplant"
   },
   {
    "name": "CRIC Study Investigators",
@@ -793,7 +787,7 @@
    "foa": "PA-20-206",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2022,
-   "pubs": 5
+   "pubs": 4
   },
   {
    "num": "1K23DK141365-01A1",
@@ -871,7 +865,7 @@
    "foa": "PA-20-205",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
-   "pubs": 15
+   "pubs": 16
   },
   {
    "num": "5K23DK135855-03",
@@ -1238,10 +1232,10 @@
    "pubs": 0
   },
   {
-   "num": "1K23HL171893-01A1",
+   "num": "5K23HL171893-02",
    "core": "K23HL171893",
    "ac": "K23",
-   "fy": 2025,
+   "fy": 2026,
    "amt": 193984,
    "org": "BRIGHAM AND WOMEN'S HOSPITAL",
    "st": "MA",
@@ -1257,9 +1251,9 @@
    "t": "Interplay of Inflammation, Angiogenesis, and Coronary Microvascular Perfusion in Advanced Kidney Disease",
    "sub": "Transplant",
    "cl": "Observational / clinical",
-   "id": 11229969,
+   "id": 11393100,
    "foa": "PA-24-185",
-   "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR (MA)]",
+   "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(MA)]",
    "sy": 2025,
    "pubs": 5
   },
@@ -2717,7 +2711,7 @@
    "foa": "PA-19-118",
    "ss": "Diabetes, Endocrinology and Metabolic Diseases B Study Section[DDK-B]",
    "sy": 2020,
-   "pubs": 58
+   "pubs": 59
   },
   {
    "num": "1K23AR085758-01A1",
@@ -3263,7 +3257,7 @@
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2022,
-   "pubs": 15
+   "pubs": 14
   },
   {
    "num": "5K08DK138291-02",
@@ -3471,7 +3465,7 @@
    "foa": "PA-24-254",
    "ss": "NHLBI Mentored Clinical and Basic Science Study Section[MCBS(JA)]",
    "sy": 2026,
-   "pubs": 9
+   "pubs": 10
   },
   {
    "num": "5K08DK133496-04",
@@ -4566,6 +4560,33 @@
    "pubs": 1
   },
   {
+   "num": "1K01DK146245-01",
+   "core": "K01DK146245",
+   "ac": "K01",
+   "fy": 2026,
+   "amt": 152777,
+   "org": "BOSTON MEDICAL CENTER",
+   "st": "MA",
+   "city": "BOSTON",
+   "pi": "Saran  Lotfollahzadeh",
+   "pis": [
+    "Saran  Lotfollahzadeh"
+   ],
+   "po": [
+    "TRACY L RANKIN"
+   ],
+   "ic": "NIDDK",
+   "t": "Uremic Toxins, a consequence of CKD, as key mediators of CKM-associated PAD",
+   "sub": "CKD progression",
+   "cl": "Non-clinical / basic",
+   "id": 11282777,
+   "foa": "PA-24-176",
+   "ss": "Special Emphasis Panel[ZRG1 F12B-G (20)]",
+   "sy": 2026,
+   "new": true,
+   "pubs": 0
+  },
+  {
    "num": "5K01DK123497-05",
    "core": "K01DK123497",
    "ac": "K01",
@@ -4615,7 +4636,7 @@
    "foa": "PA-20-190",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2024,
-   "pubs": 4
+   "pubs": 5
   },
   {
    "num": "5K01DK135917-02",
@@ -5057,7 +5078,7 @@
    "foa": "PAR-18-419",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 4
+   "pubs": 7
   },
   {
    "num": "7K01DK140605-02",
@@ -5084,6 +5105,32 @@
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2024,
    "pubs": 3
+  },
+  {
+   "num": "2K24HL155861-06",
+   "core": "K24HL155861",
+   "ac": "K24",
+   "fy": 2026,
+   "amt": 141081,
+   "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+   "st": "NY",
+   "city": "NEW YORK",
+   "pi": "Morgan Erika Grams",
+   "pis": [
+    "Morgan Erika Grams"
+   ],
+   "po": [
+    "SEAN  COADY"
+   ],
+   "ic": "NHLBI",
+   "t": "Prevention and Treatment of Cardiovascular Disease in Patients with Chronic Kidney Disease: Patient-Oriented Research and Mentoring - Renewal",
+   "sub": "CKD progression",
+   "cl": "Observational / clinical",
+   "id": 11369404,
+   "foa": "PA-24-188",
+   "ss": "Special Emphasis Panel[ZRG1 EPH-T (90)]",
+   "sy": 2021,
+   "pubs": 68
   },
   {
    "num": "5K01DK125614-05",
@@ -5528,32 +5575,6 @@
    "pubs": 5
   },
   {
-   "num": "5K24HL155861-05",
-   "core": "K24HL155861",
-   "ac": "K24",
-   "fy": 2025,
-   "amt": 118170,
-   "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
-   "st": "NY",
-   "city": "NEW YORK",
-   "pi": "Morgan Erika Grams",
-   "pis": [
-    "Morgan Erika Grams"
-   ],
-   "po": [
-    "SEAN  COADY"
-   ],
-   "ic": "NHLBI",
-   "t": "Prevention and Treatment of Cardiovascular Disease in Patients with Chronic Kidney Disease: Patient-Oriented Research and Mentoring",
-   "sub": "CKD progression",
-   "cl": "Observational / clinical",
-   "id": 11055312,
-   "foa": "PA-19-122",
-   "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(OA)]",
-   "sy": 2021,
-   "pubs": 68
-  },
-  {
    "num": "5K01HL155235-05",
    "core": "K01HL155235",
    "ac": "K01",
@@ -5682,32 +5703,6 @@
    "ss": "Behavior and Social Science of Aging Study Section[NIA-S]",
    "sy": 2021,
    "pubs": 0
-  },
-  {
-   "num": "5K38HL169660-02",
-   "core": "K38HL169660",
-   "ac": "K38",
-   "fy": 2024,
-   "amt": 105867,
-   "org": "CHILDREN'S HOSP OF PHILADELPHIA",
-   "st": "PA",
-   "city": "PHILADELPHIA",
-   "pi": "Arthur M Lee",
-   "pis": [
-    "Arthur M Lee"
-   ],
-   "po": [
-    "WAYNE C WANG"
-   ],
-   "ic": "NHLBI",
-   "t": "Identifying genetic drivers of circulating metabolites associated with cardiac risk in pediatric chronic kidney disease",
-   "sub": "Pediatric nephrology",
-   "cl": "Observational / clinical",
-   "id": 10891713,
-   "foa": "RFA-HL-23-007",
-   "ss": "ZHL1-CSR-I(M1)",
-   "sy": 2023,
-   "pubs": 4
   },
   {
    "num": "7K23AR084608-03",
@@ -5967,7 +5962,7 @@
    "foa": "PA-19-118",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(MA)]",
    "sy": 2020,
-   "pubs": 42
+   "pubs": 43
   },
   {
    "num": "3K23DK120811-05S1",
@@ -6045,6 +6040,33 @@
    "foa": "PA-20-188",
    "ss": "Special Emphasis Panel[ZES1 ARL-D (C9)]",
    "sy": 2024,
+   "pubs": 0
+  },
+  {
+   "num": "5K08DK131262-03",
+   "core": "K08DK131262",
+   "ac": "K08",
+   "fy": 2024,
+   "amt": 1,
+   "org": "BETH ISRAEL DEACONESS MEDICAL CENTER",
+   "st": "MA",
+   "city": "BOSTON",
+   "pi": "Joshua Samuel Waitzman",
+   "pis": [
+    "Joshua Samuel Waitzman"
+   ],
+   "po": [
+    "TRACY L RANKIN"
+   ],
+   "ic": "NIDDK",
+   "t": "Structure and mechanism of the kidney disease-causing protein APOL1",
+   "sub": "PKD / Genetic",
+   "cl": "Non-clinical / basic",
+   "id": 10909199,
+   "foa": "PA-20-203",
+   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK(M1)-1-D]",
+   "sy": 2022,
+   "new": true,
    "pubs": 0
   }
  ]
