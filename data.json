@@ -1,54 +1,55 @@
 {
  "meta": {
-  "generated": "2026-08-31",
+  "generated": "2026-09-07",
   "source": "NIH RePORTER API v2 (active K-series, kidney study-population filter)",
   "snapshot_note": "Active career-development (K) awards where kidney disease is the study focus or study population (comorbidity studies in CKD/dialysis/transplant cohorts are included; incidental kidney mentions and pure kidney-cancer/urology are excluded). Subarea and clinical/non-clinical labels are first-pass algorithmic classifications.",
   "application_pdf_note": "NIH does not publish full grant applications publicly (FOIA-only); each award links to its NIH RePORTER record with the public abstract.",
-  "universe_total_active": 210,
-  "n_institutions": 76,
-  "total_current_year_award_usd": 33987076,
-  "prev_generated": "2026-08-24",
-  "n_new_this_refresh": 2
+  "universe_total_active": 219,
+  "n_institutions": 77,
+  "total_current_year_award_usd": 35534565,
+  "prev_generated": "2026-08-31",
+  "n_new_this_refresh": 9
  },
  "stats": {
   "by_mechanism": {
-   "K23": 97,
-   "K01": 47,
-   "K08": 46,
+   "K23": 99,
+   "K08": 51,
+   "K01": 48,
    "K24": 8,
-   "K99": 6,
+   "K99": 7,
    "K25": 3,
    "K02": 1,
    "K38": 1,
    "K43": 1
   },
   "by_subarea": {
-   "CKD progression": 43,
-   "Acute kidney injury": 38,
-   "Transplant": 32,
-   "Glomerular disease": 25,
+   "CKD progression": 46,
+   "Acute kidney injury": 39,
+   "Transplant": 34,
+   "Glomerular disease": 26,
+   "ESKD / Dialysis": 16,
    "Hypertension": 15,
-   "ESKD / Dialysis": 15,
-   "Pediatric nephrology": 13,
+   "Pediatric nephrology": 14,
    "PKD / Genetic": 12,
    "Health services / Epi": 9,
    "Stones / Electrolytes": 8
   },
   "by_clinical": {
-   "Observational / clinical": 103,
-   "Non-clinical / basic": 65,
-   "Clinical trial": 41,
-   "Clinical (other)": 1
+   "Observational / clinical": 105,
+   "Non-clinical / basic": 69,
+   "Clinical trial": 43,
+   "Clinical (other)": 2
   },
   "by_institute": {
-   "NIDDK": 154,
-   "NHLBI": 26,
-   "NIAID": 7,
+   "NIDDK": 160,
+   "NHLBI": 27,
+   "NIAID": 8,
    "NIA": 7,
    "NIAMS": 3,
    "NINR": 3,
    "NIEHS": 3,
    "AHRQ": 2,
+   "NCI": 1,
    "NIMH": 1,
    "NIGMS": 1,
    "NIMHD": 1,
@@ -56,32 +57,25 @@
    "NICHD": 1
   },
   "by_fiscal_year": {
-   "2026": 116,
-   "2025": 54,
-   "2024": 40
+   "2026": 139,
+   "2025": 43,
+   "2024": 37
   }
  },
  "institutions": [
   {
    "name": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
    "state": "NY",
-   "total": 10,
-   "clinical": 10,
+   "total": 11,
+   "clinical": 11,
    "nonclinical": 0
-  },
-  {
-   "name": "COLUMBIA UNIVERSITY HEALTH SCIENCES",
-   "state": "NY",
-   "total": 8,
-   "clinical": 5,
-   "nonclinical": 3
   },
   {
    "name": "JOHNS HOPKINS UNIVERSITY",
    "state": "MD",
-   "total": 8,
+   "total": 9,
    "clinical": 8,
-   "nonclinical": 0
+   "nonclinical": 1
   },
   {
    "name": "BRIGHAM AND WOMEN'S HOSPITAL",
@@ -89,6 +83,13 @@
    "total": 7,
    "clinical": 6,
    "nonclinical": 1
+  },
+  {
+   "name": "COLUMBIA UNIVERSITY HEALTH SCIENCES",
+   "state": "NY",
+   "total": 7,
+   "clinical": 4,
+   "nonclinical": 3
   },
   {
    "name": "UNIVERSITY OF ALABAMA AT BIRMINGHAM",
@@ -119,6 +120,20 @@
    "nonclinical": 0
   },
   {
+   "name": "MASSACHUSETTS GENERAL HOSPITAL",
+   "state": "MA",
+   "total": 6,
+   "clinical": 4,
+   "nonclinical": 2
+  },
+  {
+   "name": "STANFORD UNIVERSITY",
+   "state": "CA",
+   "total": 6,
+   "clinical": 5,
+   "nonclinical": 1
+  },
+  {
    "name": "UNIVERSITY OF COLORADO DENVER",
    "state": "CO",
    "total": 6,
@@ -140,18 +155,25 @@
    "nonclinical": 0
   },
   {
-   "name": "MASSACHUSETTS GENERAL HOSPITAL",
-   "state": "MA",
-   "total": 5,
-   "clinical": 3,
-   "nonclinical": 2
-  },
-  {
-   "name": "STANFORD UNIVERSITY",
-   "state": "CA",
+   "name": "DUKE UNIVERSITY",
+   "state": "NC",
    "total": 5,
    "clinical": 4,
    "nonclinical": 1
+  },
+  {
+   "name": "INDIANA UNIVERSITY INDIANAPOLIS",
+   "state": "IN",
+   "total": 5,
+   "clinical": 5,
+   "nonclinical": 0
+  },
+  {
+   "name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
+   "state": "CA",
+   "total": 5,
+   "clinical": 5,
+   "nonclinical": 0
   },
   {
    "name": "UNIVERSITY OF PENNSYLVANIA",
@@ -175,13 +197,6 @@
    "nonclinical": 1
   },
   {
-   "name": "DUKE UNIVERSITY",
-   "state": "NC",
-   "total": 4,
-   "clinical": 3,
-   "nonclinical": 1
-  },
-  {
    "name": "ICAHN SCHOOL OF MEDICINE AT MOUNT SINAI",
    "state": "NY",
    "total": 4,
@@ -189,18 +204,18 @@
    "nonclinical": 2
   },
   {
-   "name": "INDIANA UNIVERSITY INDIANAPOLIS",
-   "state": "IN",
+   "name": "LURIE CHILDREN'S HOSPITAL OF CHICAGO",
+   "state": "IL",
    "total": 4,
-   "clinical": 4,
-   "nonclinical": 0
+   "clinical": 2,
+   "nonclinical": 2
   },
   {
-   "name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
-   "state": "CA",
+   "name": "UNIV OF NORTH CAROLINA CHAPEL HILL",
+   "state": "NC",
    "total": 4,
-   "clinical": 4,
-   "nonclinical": 0
+   "clinical": 3,
+   "nonclinical": 1
   },
   {
    "name": "ALBERT EINSTEIN COLLEGE OF MEDICINE",
@@ -224,13 +239,6 @@
    "nonclinical": 1
   },
   {
-   "name": "LURIE CHILDREN'S HOSPITAL OF CHICAGO",
-   "state": "IL",
-   "total": 3,
-   "clinical": 2,
-   "nonclinical": 1
-  },
-  {
    "name": "OREGON HEALTH & SCIENCE UNIVERSITY",
    "state": "OR",
    "total": 3,
@@ -243,13 +251,6 @@
    "total": 3,
    "clinical": 0,
    "nonclinical": 3
-  },
-  {
-   "name": "UNIV OF NORTH CAROLINA CHAPEL HILL",
-   "state": "NC",
-   "total": 3,
-   "clinical": 3,
-   "nonclinical": 0
   },
   {
    "name": "UNIVERSITY OF FLORIDA",
@@ -434,6 +435,13 @@
    "nonclinical": 0
   },
   {
+   "name": "NEW MEXICO STATE UNIVERSITY LAS CRUCES",
+   "state": "NM",
+   "total": 1,
+   "clinical": 0,
+   "nonclinical": 1
+  },
+  {
    "name": "OHIO STATE UNIVERSITY",
    "state": "OH",
    "total": 1,
@@ -597,22 +605,22 @@
  ],
  "states": {
   "NY": 30,
-  "MA": 22,
-  "CA": 21,
+  "CA": 23,
+  "MA": 23,
   "PA": 17,
-  "MD": 10,
+  "MD": 11,
+  "NC": 10,
   "OH": 10,
+  "IL": 10,
   "WA": 9,
-  "IL": 9,
-  "NC": 8,
   "TX": 7,
   "AL": 7,
   "MI": 6,
   "CO": 6,
+  "IN": 6,
   "FL": 6,
   "CT": 5,
   "WI": 5,
-  "IN": 5,
   "MN": 4,
   "TN": 4,
   "OR": 3,
@@ -622,9 +630,10 @@
   "KS": 1,
   "OK": 1,
   "DC": 1,
-  "NH": 1,
   "AZ": 1,
+  "NH": 1,
   "MO": 1,
+  "NM": 1,
   "KY": 1
  },
  "mentors": [
@@ -639,6 +648,11 @@
    "subs": "Transplant"
   },
   {
+   "name": "Al Ammary F",
+   "count": 2,
+   "subs": "Transplant"
+  },
+  {
    "name": "CRIC Study Investigators",
    "count": 2,
    "subs": "CKD progression"
@@ -649,17 +663,69 @@
    "subs": "CKD progression"
   },
   {
+   "name": "CKiD Study Investigators",
+   "count": 2,
+   "subs": "Pediatric nephrology"
+  },
+  {
    "name": "Navaneethan SD",
    "count": 2,
    "subs": "Transplant"
   },
   {
+   "name": "Bjornstad P",
+   "count": 2,
+   "subs": "Pediatric nephrology"
+  },
+  {
    "name": "Saraf SL",
    "count": 2,
    "subs": "Glomerular disease"
+  },
+  {
+   "name": "Arroyo JP",
+   "count": 2,
+   "subs": "Glomerular disease"
+  },
+  {
+   "name": "Staruschenko A",
+   "count": 2,
+   "subs": "Hypertension"
+  },
+  {
+   "name": "Becknell B",
+   "count": 2,
+   "subs": "Pediatric nephrology"
   }
  ],
  "grants": [
+  {
+   "num": "1K08CA308867-01",
+   "core": "K08CA308867",
+   "ac": "K08",
+   "fy": 2026,
+   "amt": 257502,
+   "org": "JOHNS HOPKINS UNIVERSITY",
+   "st": "MD",
+   "city": "BALTIMORE",
+   "pi": "Roy  Elias",
+   "pis": [
+    "Roy  Elias"
+   ],
+   "po": [
+    "YANSONG  BIAN"
+   ],
+   "ic": "NCI",
+   "t": "Defining and targeting epigenomic drivers of consensus transcriptomic programs in clear cell renal cancer",
+   "sub": "Transplant",
+   "cl": "Non-clinical / basic",
+   "id": 11282705,
+   "foa": "PA-24-182",
+   "ss": "Special Emphasis Panel[ZRG1 CTH-K (83)]",
+   "sy": 2026,
+   "new": true,
+   "pubs": 0
+  },
   {
    "num": "5K23DK139462-02",
    "core": "K23DK139462",
@@ -684,7 +750,7 @@
    "foa": "PA-20-206",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2025,
-   "pubs": 3
+   "pubs": 4
   },
   {
    "num": "1K23DK146153-01",
@@ -788,7 +854,7 @@
    "foa": "PA-20-206",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2022,
-   "pubs": 3
+   "pubs": 0
   },
   {
    "num": "1K23DK141365-01A1",
@@ -1074,7 +1140,7 @@
    "foa": "PA-20-206",
    "ss": "ZDK1-GRB-G(M1)L",
    "sy": 2021,
-   "pubs": 19
+   "pubs": 20
   },
   {
    "num": "5K23DK133677-04",
@@ -1126,7 +1192,7 @@
    "foa": "PA-24-185",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2025,
-   "pubs": 0
+   "pubs": 1
   },
   {
    "num": "5K23HL173650-02",
@@ -1386,7 +1452,7 @@
    "foa": "PA-20-206",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(MA)]",
    "sy": 2021,
-   "pubs": 9
+   "pubs": 10
   },
   {
    "num": "5K23DK127153-05",
@@ -1438,7 +1504,7 @@
    "foa": "PA-20-205",
    "ss": "Surgery, Anesthesiology and Trauma Study Section[SAT]",
    "sy": 2023,
-   "pubs": 34
+   "pubs": 35
   },
   {
    "num": "5K23DK142042-02",
@@ -1646,7 +1712,7 @@
    "foa": "PA-24-185",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2025,
-   "pubs": 5
+   "pubs": 6
   },
   {
    "num": "5K24AI144954-11",
@@ -1672,7 +1738,7 @@
    "foa": "PA-19-122",
    "ss": "Allergy, Immunology, and Transplantation Research Committee[AITC]",
    "sy": 2022,
-   "pubs": 299
+   "pubs": 300
   },
   {
    "num": "5K23DK128657-04",
@@ -1698,7 +1764,7 @@
    "foa": "PA-20-205",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
-   "pubs": 9
+   "pubs": 5
   },
   {
    "num": "1K23DK146164-01A1",
@@ -1958,7 +2024,7 @@
    "foa": "PA-19-118",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "pubs": 0
+   "pubs": 20
   },
   {
    "num": "5K23DK128604-05",
@@ -2169,6 +2235,32 @@
    "pubs": 7
   },
   {
+   "num": "5K23DK129770-05",
+   "core": "K23DK129770",
+   "ac": "K23",
+   "fy": 2025,
+   "amt": 187565,
+   "org": "UNIVERSITY OF PENNSYLVANIA",
+   "st": "PA",
+   "city": "PHILADELPHIA",
+   "pi": "Christina Hao Wang Brotman",
+   "pis": [
+    "Christina Hao Wang Brotman"
+   ],
+   "po": [
+    "RAQUEL CHARLES GREER"
+   ],
+   "ic": "NIDDK",
+   "t": "Macrovascular and Microvascular Response to Fluid Removal during Hemodialysis for Acute Kidney Injury",
+   "sub": "Acute kidney injury",
+   "cl": "Observational / clinical",
+   "id": 11088708,
+   "foa": "PA-20-205",
+   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
+   "sy": 2021,
+   "pubs": 2
+  },
+  {
    "num": "5K23DK138299-03",
    "core": "K23DK138299",
    "ac": "K23",
@@ -2221,32 +2313,6 @@
    "pubs": 4
   },
   {
-   "num": "5K23DK129770-04",
-   "core": "K23DK129770",
-   "ac": "K23",
-   "fy": 2024,
-   "amt": 186506,
-   "org": "UNIVERSITY OF PENNSYLVANIA",
-   "st": "PA",
-   "city": "PHILADELPHIA",
-   "pi": "Christina Hao Wang Brotman",
-   "pis": [
-    "Christina Hao Wang Brotman"
-   ],
-   "po": [
-    "RAQUEL CHARLES GREER"
-   ],
-   "ic": "NIDDK",
-   "t": "Macrovascular and Microvascular Response to Fluid Removal during Hemodialysis for Acute Kidney Injury",
-   "sub": "Acute kidney injury",
-   "cl": "Observational / clinical",
-   "id": 10846746,
-   "foa": "PA-20-205",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2021,
-   "pubs": 2
-  },
-  {
    "num": "5K23DK127252-04",
    "core": "K23DK127252",
    "ac": "K23",
@@ -2270,7 +2336,7 @@
    "foa": "PA-20-206",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2022,
-   "pubs": 12
+   "pubs": 13
   },
   {
    "num": "5K23HL155734-05",
@@ -2559,6 +2625,32 @@
    "pubs": 1
   },
   {
+   "num": "7K23DK133729-04",
+   "core": "K23DK133729",
+   "ac": "K23",
+   "fy": 2025,
+   "amt": 181332,
+   "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+   "st": "NY",
+   "city": "NEW YORK",
+   "pi": "Syed Ali Husain",
+   "pis": [
+    "Syed Ali Husain"
+   ],
+   "po": [
+    "TRACY L RANKIN"
+   ],
+   "ic": "NIDDK",
+   "t": "Optimizing Deceased Donor Kidney Allocation Using Decision Science",
+   "sub": "Transplant",
+   "cl": "Observational / clinical",
+   "id": 11363029,
+   "foa": "PA-24-254",
+   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK(M1)-1-D]",
+   "sy": 2022,
+   "pubs": 56
+  },
+  {
    "num": "1K23DK146155-01A1",
    "core": "K23DK146155",
    "ac": "K23",
@@ -2611,6 +2703,33 @@
    "pubs": 8
   },
   {
+   "num": "1K23DK149459-01",
+   "core": "K23DK149459",
+   "ac": "K23",
+   "fy": 2026,
+   "amt": 180900,
+   "org": "INDIANA UNIVERSITY INDIANAPOLIS",
+   "st": "IN",
+   "city": "INDIANAPOLIS",
+   "pi": "Cara Lynne Slagle",
+   "pis": [
+    "Cara Lynne Slagle"
+   ],
+   "po": [
+    "RAQUEL CHARLES GREER"
+   ],
+   "ic": "NIDDK",
+   "t": "Biomarker-Guided Early Risk Stratification for Fluid Imbalance and Kidney Injury in Neonates",
+   "sub": "Pediatric nephrology",
+   "cl": "Clinical trial",
+   "id": 11436991,
+   "foa": "PA-24-185",
+   "ss": "Special Emphasis Panel[ZRG1 EPH-M (20)]",
+   "sy": 2026,
+   "new": true,
+   "pubs": 0
+  },
+  {
    "num": "5K23DK131331-05",
    "core": "K23DK131331",
    "ac": "K23",
@@ -2660,7 +2779,34 @@
    "foa": "PA-19-118",
    "ss": "Diabetes, Endocrinology and Metabolic Diseases B Study Section[DDK-B]",
    "sy": 2020,
-   "pubs": 59
+   "pubs": 60
+  },
+  {
+   "num": "1K23DK146170-01A1",
+   "core": "K23DK146170",
+   "ac": "K23",
+   "fy": 2026,
+   "amt": 179250,
+   "org": "DUKE UNIVERSITY",
+   "st": "NC",
+   "city": "DURHAM",
+   "pi": "Matthew  Sinclair",
+   "pis": [
+    "Matthew  Sinclair"
+   ],
+   "po": [
+    "RAQUEL CHARLES GREER"
+   ],
+   "ic": "NIDDK",
+   "t": "Promoting Evidence-Based Chronic Kidney Disease Care among Hispanics/Latinos with Type 2 Diabetes",
+   "sub": "CKD progression",
+   "cl": "Clinical trial",
+   "id": 11452364,
+   "foa": "PA-24-184",
+   "ss": "Special Emphasis Panel[ZRG1 SCIL-A (20)]",
+   "sy": 2026,
+   "new": true,
+   "pubs": 0
   },
   {
    "num": "1K23AR085758-01A1",
@@ -2816,7 +2962,7 @@
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
-   "pubs": 11
+   "pubs": 12
   },
   {
    "num": "1K08DK143346-01A1",
@@ -2868,7 +3014,7 @@
    "foa": "PA-19-117",
    "ss": "ZDK1-GRB-G(J2)",
    "sy": 2020,
-   "pubs": 0
+   "pubs": 12
   },
   {
    "num": "1K08AR086331-01A1",
@@ -2894,6 +3040,33 @@
    "foa": "PA-24-182",
    "ss": "Special Emphasis Panel[ZRG1 F12B-G (20)]",
    "sy": 2026,
+   "pubs": 0
+  },
+  {
+   "num": "1K08AI202270-01",
+   "core": "K08AI202270",
+   "ac": "K08",
+   "fy": 2026,
+   "amt": 171796,
+   "org": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
+   "st": "CA",
+   "city": "LA JOLLA",
+   "pi": "Clarkson  Crane",
+   "pis": [
+    "Clarkson  Crane"
+   ],
+   "po": [
+    "TIMOTHY A GONDRE-LEWIS"
+   ],
+   "ic": "NIAID",
+   "t": "Understanding the link between infection and rejection in kidney transplant recipients: Defining mechanisms of BK Polyomavirus reactivation and heterologous immunity",
+   "sub": "Transplant",
+   "cl": "Observational / clinical",
+   "id": 11436797,
+   "foa": "PA-24-182",
+   "ss": "Special Emphasis Panel[ZRG1 T12B-D (20)]",
+   "sy": 2026,
+   "new": true,
    "pubs": 0
   },
   {
@@ -2946,7 +3119,7 @@
    "foa": "PA-19-117",
    "ss": "ZAG1-ZIJ-7(O1)",
    "sy": 2020,
-   "pubs": 0
+   "pubs": 4
   },
   {
    "num": "5K23DK128573-05",
@@ -2999,6 +3172,60 @@
    "ss": "Arthritis and Musculoskeletal and Skin Diseases Special Grants Study Section[AMS]",
    "sy": 2024,
    "pubs": 17
+  },
+  {
+   "num": "1K08HL179467-01A1",
+   "core": "K08HL179467",
+   "ac": "K08",
+   "fy": 2026,
+   "amt": 170640,
+   "org": "MASSACHUSETTS GENERAL HOSPITAL",
+   "st": "MA",
+   "city": "BOSTON",
+   "pi": "Amanda Leigh Elliott",
+   "pis": [
+    "Amanda Leigh Elliott"
+   ],
+   "po": [
+    "KAZUYO  KEGAN"
+   ],
+   "ic": "NHLBI",
+   "t": "Deep learning to assess the role of early renal fibrosis on cardiac remodeling",
+   "sub": "CKD progression",
+   "cl": "Observational / clinical",
+   "id": 11451951,
+   "foa": "PA-24-182",
+   "ss": "Special Emphasis Panel[ZRG1 EPH-M (20)]",
+   "sy": 2026,
+   "new": true,
+   "pubs": 0
+  },
+  {
+   "num": "1K08DK147769-01",
+   "core": "K08DK147769",
+   "ac": "K08",
+   "fy": 2026,
+   "amt": 169991,
+   "org": "STANFORD UNIVERSITY",
+   "st": "CA",
+   "city": "STANFORD",
+   "pi": "Jillian Scott Caldwell",
+   "pis": [
+    "Jillian Scott Caldwell"
+   ],
+   "po": [
+    "TRACY L RANKIN"
+   ],
+   "ic": "NIDDK",
+   "t": "A quasi-experimental evaluation of Medicare Advantage enrollment on dialysis care and outcomes",
+   "sub": "ESKD / Dialysis",
+   "cl": "Clinical (other)",
+   "id": 11353001,
+   "foa": "PA-24-182",
+   "ss": "Special Emphasis Panel[ZRG1 HSS-M (90)]",
+   "sy": 2026,
+   "new": true,
+   "pubs": 0
   },
   {
    "num": "5K08DK132411-05",
@@ -3076,7 +3303,6 @@
    "foa": "PA-19-117",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "new": true,
    "pubs": 11
   },
   {
@@ -3103,7 +3329,7 @@
    "foa": "PA-19-117",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "pubs": 0
+   "pubs": 6
   },
   {
    "num": "5K25DK128563-05",
@@ -3129,7 +3355,7 @@
    "foa": "PA-20-199",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 34
+   "pubs": 36
   },
   {
    "num": "5K08DK124685-05",
@@ -3155,7 +3381,7 @@
    "foa": "PA-19-117",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "pubs": 11
+   "pubs": 12
   },
   {
    "num": "5K08DK126847-05",
@@ -3181,7 +3407,7 @@
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
-   "pubs": 17
+   "pubs": 18
   },
   {
    "num": "5K08DK125768-05",
@@ -3210,10 +3436,10 @@
    "pubs": 15
   },
   {
-   "num": "5K08DK131346-04",
+   "num": "5K08DK131346-05",
    "core": "K08DK131346",
    "ac": "K08",
-   "fy": 2025,
+   "fy": 2026,
    "amt": 167400,
    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
    "st": "MI",
@@ -3229,7 +3455,7 @@
    "t": "Predicting Postoperative Acute Kidney Injury through Integration of Genetics and Electronic Health Records",
    "sub": "Acute kidney injury",
    "cl": "Observational / clinical",
-   "id": 11168758,
+   "id": 11384726,
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2022,
@@ -3337,13 +3563,13 @@
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 12
+   "pubs": 13
   },
   {
-   "num": "5K08DK138280-02",
+   "num": "5K08DK138280-03",
    "core": "K08DK138280",
    "ac": "K08",
-   "fy": 2025,
+   "fy": 2026,
    "amt": 166644,
    "org": "COLUMBIA UNIVERSITY HEALTH SCIENCES",
    "st": "NY",
@@ -3359,7 +3585,7 @@
    "t": "Digital Tools for Precision Nephrology",
    "sub": "PKD / Genetic",
    "cl": "Observational / clinical",
-   "id": 11176923,
+   "id": 11386633,
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2024,
@@ -3441,13 +3667,13 @@
    "foa": "PA-24-254",
    "ss": "NHLBI Mentored Clinical and Basic Science Study Section[MCBS(JA)]",
    "sy": 2026,
-   "pubs": 10
+   "pubs": 11
   },
   {
-   "num": "5K08DK133496-04",
+   "num": "5K08DK133496-05",
    "core": "K08DK133496",
    "ac": "K08",
-   "fy": 2025,
+   "fy": 2026,
    "amt": 166104,
    "org": "YALE UNIVERSITY",
    "st": "CT",
@@ -3463,11 +3689,11 @@
    "t": "The Effect of Sodium (Na+) on Kidney B cells in Lupus Nephritis",
    "sub": "Glomerular disease",
    "cl": "Non-clinical / basic",
-   "id": 11169026,
+   "id": 11385489,
    "foa": "PA-20-203",
    "ss": "ZDK1-GRB-G(M1)1",
    "sy": 2022,
-   "pubs": 1
+   "pubs": 2
   },
   {
    "num": "5K08DK132509-03",
@@ -3520,32 +3746,6 @@
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
    "pubs": 1
-  },
-  {
-   "num": "5K23DK133729-03",
-   "core": "K23DK133729",
-   "ac": "K23",
-   "fy": 2024,
-   "amt": 165456,
-   "org": "COLUMBIA UNIVERSITY HEALTH SCIENCES",
-   "st": "NY",
-   "city": "NEW YORK",
-   "pi": "Syed Ali Husain",
-   "pis": [
-    "Syed Ali Husain"
-   ],
-   "po": [
-    "TRACY L RANKIN"
-   ],
-   "ic": "NIDDK",
-   "t": "Using Decision Making Science to Optimize Deceased Donor Kidney Allocation",
-   "sub": "Transplant",
-   "cl": "Observational / clinical",
-   "id": 10827972,
-   "foa": "PA-20-205",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK(M1)-1-D]",
-   "sy": 2022,
-   "pubs": 56
   },
   {
    "num": "5K23DK144716-02",
@@ -3678,6 +3878,33 @@
    "pubs": 0
   },
   {
+   "num": "1K08DK147611-01",
+   "core": "K08DK147611",
+   "ac": "K08",
+   "fy": 2026,
+   "amt": 164580,
+   "org": "LURIE CHILDREN'S HOSPITAL OF CHICAGO",
+   "st": "IL",
+   "city": "CHICAGO",
+   "pi": "Vidhi  Dalal",
+   "pis": [
+    "Vidhi  Dalal"
+   ],
+   "po": [
+    "TRACY L RANKIN"
+   ],
+   "ic": "NIDDK",
+   "t": "Immune mediated mechanisms of tubulointerstitial injury in childhood nephrotic syndrome",
+   "sub": "Glomerular disease",
+   "cl": "Non-clinical / basic",
+   "id": 11352792,
+   "foa": "PA-24-182",
+   "ss": "Special Emphasis Panel[ZRG1 F12B-G (20)]",
+   "sy": 2026,
+   "new": true,
+   "pubs": 0
+  },
+  {
    "num": "5K08DK132501-04",
    "core": "K08DK132501",
    "ac": "K08",
@@ -3782,32 +4009,6 @@
    "pubs": 1
   },
   {
-   "num": "1K01HL179491-01",
-   "core": "K01HL179491",
-   "ac": "K01",
-   "fy": 2025,
-   "amt": 162384,
-   "org": "UNIVERSITY OF COLORADO DENVER",
-   "st": "CO",
-   "city": "Aurora",
-   "pi": "Ester Soo Jung Oh",
-   "pis": [
-    "Ester Soo Jung Oh"
-   ],
-   "po": [
-    "CANDICE  PRICE"
-   ],
-   "ic": "NHLBI",
-   "t": "Equol Supplementation for Improving Vascular Function in Postmenopausal Women with CKD: Efficacy and Mechanistic Role of GPER",
-   "sub": "CKD progression",
-   "cl": "Non-clinical / basic",
-   "id": 11113106,
-   "foa": "PA-24-175",
-   "ss": "NHLBI Mentored Clinical and Basic Science Study Section[MCBS (JA)]",
-   "sy": 2025,
-   "pubs": 1
-  },
-  {
    "num": "5K08DK118180-05",
    "core": "K08DK118180",
    "ac": "K08",
@@ -3857,7 +4058,33 @@
    "foa": "PA-20-205",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK(M1)-1-D]",
    "sy": 2022,
-   "pubs": 35
+   "pubs": 36
+  },
+  {
+   "num": "5K01HL179491-02",
+   "core": "K01HL179491",
+   "ac": "K01",
+   "fy": 2026,
+   "amt": 161974,
+   "org": "UNIVERSITY OF COLORADO DENVER",
+   "st": "CO",
+   "city": "Aurora",
+   "pi": "Ester Soo Jung Oh",
+   "pis": [
+    "Ester Soo Jung Oh"
+   ],
+   "po": [
+    "CANDICE  PRICE"
+   ],
+   "ic": "NHLBI",
+   "t": "Equol Supplementation for Improving Vascular Function in Postmenopausal Women with CKD: Efficacy and Mechanistic Role of GPER",
+   "sub": "CKD progression",
+   "cl": "Non-clinical / basic",
+   "id": 11378712,
+   "foa": "PA-24-175",
+   "ss": "NHLBI Mentored Clinical and Basic Science Study Section[MCBS(JA)]",
+   "sy": 2025,
+   "pubs": 2
   },
   {
    "num": "5K01HL159047-05",
@@ -3987,7 +4214,7 @@
    "foa": "PA-19-117",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "pubs": 10
+   "pubs": 11
   },
   {
    "num": "5K01DK144648-02",
@@ -4065,7 +4292,7 @@
    "foa": "PA-20-203",
    "ss": "ZDK1-GRB-G(M1)",
    "sy": 2023,
-   "pubs": 16
+   "pubs": 17
   },
   {
    "num": "5K08DK135931-04",
@@ -4091,13 +4318,13 @@
    "foa": "PA-20-203",
    "ss": "ZDK1-GRB-G(J1)",
    "sy": 2023,
-   "pubs": 12
+   "pubs": 13
   },
   {
-   "num": "5K08DK124658-04",
+   "num": "5K08DK124658-05",
    "core": "K08DK124658",
    "ac": "K08",
-   "fy": 2024,
+   "fy": 2025,
    "amt": 157956,
    "org": "UNIVERSITY OF PENNSYLVANIA",
    "st": "PA",
@@ -4113,7 +4340,7 @@
    "t": "Drug-drug interactions and kidney disease in hospitalized patients",
    "sub": "Acute kidney injury",
    "cl": "Observational / clinical",
-   "id": 10745643,
+   "id": 10986978,
    "foa": "PA-19-117",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
@@ -4169,7 +4396,6 @@
    "foa": "PA-21-268",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "new": true,
    "pubs": 13
   },
   {
@@ -4222,7 +4448,7 @@
    "foa": "PA-19-119",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(MA)]",
    "sy": 2020,
-   "pubs": 82
+   "pubs": 83
   },
   {
    "num": "5K01DK125616-04",
@@ -4272,32 +4498,6 @@
    "cl": "Observational / clinical",
    "id": 11289455,
    "foa": "PA-20-203",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2024,
-   "pubs": 2
-  },
-  {
-   "num": "5K01DK137620-02",
-   "core": "K01DK137620",
-   "ac": "K01",
-   "fy": 2025,
-   "amt": 155163,
-   "org": "EMORY UNIVERSITY",
-   "st": "GA",
-   "city": "ATLANTA",
-   "pi": "Jinhee  Jeong",
-   "pis": [
-    "Jinhee  Jeong"
-   ],
-   "po": [
-    "TRACY L RANKIN"
-   ],
-   "ic": "NIDDK",
-   "t": "Neurovascular Mechanisms of Kidney Disease Progression in Older Adults",
-   "sub": "CKD progression",
-   "cl": "Observational / clinical",
-   "id": 11172412,
-   "foa": "PA-20-190",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2024,
    "pubs": 2
@@ -4355,6 +4555,32 @@
    "pubs": 1
   },
   {
+   "num": "5K01DK137620-03",
+   "core": "K01DK137620",
+   "ac": "K01",
+   "fy": 2026,
+   "amt": 154923,
+   "org": "EMORY UNIVERSITY",
+   "st": "GA",
+   "city": "ATLANTA",
+   "pi": "Jinhee  Jeong",
+   "pis": [
+    "Jinhee  Jeong"
+   ],
+   "po": [
+    "TRACY L RANKIN"
+   ],
+   "ic": "NIDDK",
+   "t": "Neurovascular Mechanisms of Kidney Disease Progression in Older Adults",
+   "sub": "CKD progression",
+   "cl": "Observational / clinical",
+   "id": 11396252,
+   "foa": "PA-20-190",
+   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
+   "sy": 2024,
+   "pubs": 2
+  },
+  {
    "num": "5K01DK139420-03",
    "core": "K01DK139420",
    "ac": "K01",
@@ -4378,7 +4604,7 @@
    "foa": "PA-20-190",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2024,
-   "pubs": 14
+   "pubs": 15
   },
   {
    "num": "5K01DK132490-04",
@@ -4405,32 +4631,6 @@
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
    "pubs": 11
-  },
-  {
-   "num": "5K01DK139400-02",
-   "core": "K01DK139400",
-   "ac": "K01",
-   "fy": 2025,
-   "amt": 154246,
-   "org": "DARTMOUTH-HITCHCOCK CLINIC",
-   "st": "NH",
-   "city": "LEBANON",
-   "pi": "Catherine H Saunders",
-   "pis": [
-    "Catherine H Saunders"
-   ],
-   "po": [
-    "TRACY L RANKIN"
-   ],
-   "ic": "NIDDK",
-   "t": "Setting the Agenda: Empowering people with CKD in rural America through participatory research to develop, implement and trial a clinical visit agenda-setting intervention",
-   "sub": "CKD progression",
-   "cl": "Clinical trial",
-   "id": 11170426,
-   "foa": "PA-20-176",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2024,
-   "pubs": 4
   },
   {
    "num": "5K08HS028684-03",
@@ -4482,7 +4682,7 @@
    "foa": "PA-24-254",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2025,
-   "pubs": 16
+   "pubs": 1
   },
   {
    "num": "5K01DK124443-05",
@@ -4508,7 +4708,33 @@
    "foa": "PAR-18-419",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 3
+   "pubs": 0
+  },
+  {
+   "num": "5K01DK139400-03",
+   "core": "K01DK139400",
+   "ac": "K01",
+   "fy": 2026,
+   "amt": 153714,
+   "org": "DARTMOUTH-HITCHCOCK CLINIC",
+   "st": "NH",
+   "city": "LEBANON",
+   "pi": "Catherine H Saunders",
+   "pis": [
+    "Catherine H Saunders"
+   ],
+   "po": [
+    "TRACY L RANKIN"
+   ],
+   "ic": "NIDDK",
+   "t": "Setting the Agenda: Empowering people with CKD in rural America through participatory research to develop, implement and trial a clinical visit agenda-setting intervention",
+   "sub": "CKD progression",
+   "cl": "Clinical trial",
+   "id": 11420330,
+   "foa": "PA-20-176",
+   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
+   "sy": 2024,
+   "pubs": 4
   },
   {
    "num": "5K08DK134761-03",
@@ -4615,36 +4841,10 @@
    "pubs": 0
   },
   {
-   "num": "5K01DK136973-02",
-   "core": "K01DK136973",
-   "ac": "K01",
-   "fy": 2025,
-   "amt": 152273,
-   "org": "BOSTON MEDICAL CENTER",
-   "st": "MA",
-   "city": "BOSTON",
-   "pi": "Insa Marie  Schmidt",
-   "pis": [
-    "Insa Marie  Schmidt"
-   ],
-   "po": [
-    "TRACY L RANKIN"
-   ],
-   "ic": "NIDDK",
-   "t": "Deep learning approach for the assessment of arterial and arteriolar lesions in kidney biopsies and prediction of cardiovascular risk",
-   "sub": "CKD progression",
-   "cl": "Observational / clinical",
-   "id": 11172613,
-   "foa": "PA-20-190",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2024,
-   "pubs": 5
-  },
-  {
-   "num": "5K01DK135917-02",
+   "num": "5K01DK135917-03",
    "core": "K01DK135917",
    "ac": "K01",
-   "fy": 2025,
+   "fy": 2026,
    "amt": 152040,
    "org": "COLUMBIA UNIVERSITY HEALTH SCIENCES",
    "st": "NY",
@@ -4660,11 +4860,37 @@
    "t": "Human Genetic Approach for UTI Points to Novel Immune Defense Cells of the Kidney Epithelia",
    "sub": "CKD progression",
    "cl": "Non-clinical / basic",
-   "id": 11172515,
+   "id": 11396372,
    "foa": "PA-20-190",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2024,
-   "pubs": 4
+   "pubs": 6
+  },
+  {
+   "num": "5K01DK136973-03",
+   "core": "K01DK136973",
+   "ac": "K01",
+   "fy": 2026,
+   "amt": 151780,
+   "org": "BOSTON MEDICAL CENTER",
+   "st": "MA",
+   "city": "BOSTON",
+   "pi": "Insa Marie  Schmidt",
+   "pis": [
+    "Insa Marie  Schmidt"
+   ],
+   "po": [
+    "TRACY L RANKIN"
+   ],
+   "ic": "NIDDK",
+   "t": "Deep learning approach for the assessment of arterial and arteriolar lesions in kidney biopsies and prediction of cardiovascular risk",
+   "sub": "CKD progression",
+   "cl": "Observational / clinical",
+   "id": 11396395,
+   "foa": "PA-20-190",
+   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
+   "sy": 2024,
+   "pubs": 5
   },
   {
    "num": "5K02AG076883-04",
@@ -4716,7 +4942,7 @@
    "foa": "PA-19-117",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2020,
-   "pubs": 2
+   "pubs": 3
   },
   {
    "num": "5K01DK133643-04",
@@ -4976,7 +5202,34 @@
    "foa": "PA-24-254",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 15
+   "pubs": 16
+  },
+  {
+   "num": "1K01DK144651-01A1",
+   "core": "K01DK144651",
+   "ac": "K01",
+   "fy": 2026,
+   "amt": 146070,
+   "org": "NEW MEXICO STATE UNIVERSITY LAS CRUCES",
+   "st": "NM",
+   "city": "LAS CRUCES",
+   "pi": "Filipe Fernandes Stoyell-Conti",
+   "pis": [
+    "Filipe Fernandes Stoyell-Conti"
+   ],
+   "po": [
+    "TRACY L RANKIN"
+   ],
+   "ic": "NIDDK",
+   "t": "Unraveling the Role of Fibroblast-Derived Lysyl Oxidase in AVF Maturation Failure",
+   "sub": "CKD progression",
+   "cl": "Non-clinical / basic",
+   "id": 11452137,
+   "foa": "PA-24-176",
+   "ss": "Special Emphasis Panel[ZRG1 T12B-D (20)]",
+   "sy": 2026,
+   "new": true,
+   "pubs": 0
   },
   {
    "num": "1K01HL169309-01A1",
@@ -5028,7 +5281,33 @@
    "foa": "PAR-18-419",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 2
+   "pubs": 7
+  },
+  {
+   "num": "5K08HS028476-05",
+   "core": "K08HS028476",
+   "ac": "K08",
+   "fy": 2026,
+   "amt": 144612,
+   "org": "UNIVERSITY OF TEXAS AT AUSTIN",
+   "st": "TX",
+   "city": "AUSTIN",
+   "pi": "Joel Thomas Adler",
+   "pis": [
+    "Joel Thomas Adler"
+   ],
+   "po": [
+    "KEVIN  CHANEY"
+   ],
+   "ic": "AHRQ",
+   "t": "Evaluating the role of telehealth in patients with end stage kidney disease (ESKD)",
+   "sub": "ESKD / Dialysis",
+   "cl": "Observational / clinical",
+   "id": 11415422,
+   "foa": "PA-17-232",
+   "ss": "Healthcare Research Training [HCRT]",
+   "sy": 2022,
+   "pubs": 18
   },
   {
    "num": "5K23HL161428-05",
@@ -5057,32 +5336,6 @@
    "pubs": 3
   },
   {
-   "num": "5K08HS028476-04",
-   "core": "K08HS028476",
-   "ac": "K08",
-   "fy": 2025,
-   "amt": 144572,
-   "org": "UNIVERSITY OF TEXAS AT AUSTIN",
-   "st": "TX",
-   "city": "AUSTIN",
-   "pi": "Joel Thomas Adler",
-   "pis": [
-    "Joel Thomas Adler"
-   ],
-   "po": [
-    "KEVIN  CHANEY"
-   ],
-   "ic": "AHRQ",
-   "t": "Evaluating the role of telehealth in patients with end stage kidney disease (ESKD)",
-   "sub": "ESKD / Dialysis",
-   "cl": "Observational / clinical",
-   "id": 11169694,
-   "foa": "PA-17-232",
-   "ss": "Healthcare Research Training [HCRT]",
-   "sy": 2022,
-   "pubs": 18
-  },
-  {
    "num": "5K01DK128379-05",
    "core": "K01DK128379",
    "ac": "K01",
@@ -5109,10 +5362,10 @@
    "pubs": 9
   },
   {
-   "num": "7K01DK140605-02",
+   "num": "5K01DK140605-03",
    "core": "K01DK140605",
    "ac": "K01",
-   "fy": 2025,
+   "fy": 2026,
    "amt": 141402,
    "org": "UNIVERSITY OF ALABAMA AT BIRMINGHAM",
    "st": "AL",
@@ -5128,11 +5381,11 @@
    "t": "Unraveling the Ciliary Driver of Polycystic Kidney Disease",
    "sub": "PKD / Genetic",
    "cl": "Non-clinical / basic",
-   "id": 11369475,
-   "foa": "PA-24-254",
+   "id": 11172604,
+   "foa": "PA-20-190",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2024,
-   "pubs": 3
+   "pubs": 4
   },
   {
    "num": "2K24HL155861-06",
@@ -5158,7 +5411,7 @@
    "foa": "PA-24-188",
    "ss": "Special Emphasis Panel[ZRG1 EPH-T (90)]",
    "sy": 2021,
-   "pubs": 68
+   "pubs": 71
   },
   {
    "num": "5K01DK125614-05",
@@ -5288,13 +5541,13 @@
    "foa": "PA-20-186",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(OA)]",
    "sy": 2024,
-   "pubs": 12
+   "pubs": 13
   },
   {
-   "num": "5K25DK138120-02",
+   "num": "5K25DK138120-03",
    "core": "K25DK138120",
    "ac": "K25",
-   "fy": 2025,
+   "fy": 2026,
    "amt": 134754,
    "org": "CLEVELAND CLINIC LERNER COM-CWRU",
    "st": "OH",
@@ -5310,17 +5563,17 @@
    "t": "Use of gold-based photothermal nanomaterials for the comminution of kidney stones",
    "sub": "Stones / Electrolytes",
    "cl": "Clinical trial",
-   "id": 11172518,
+   "id": 11396419,
    "foa": "PA-20-199",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2024,
    "pubs": 0
   },
   {
-   "num": "5K23ES034462-03",
+   "num": "5K23ES034462-04",
    "core": "K23ES034462",
    "ac": "K23",
-   "fy": 2025,
+   "fy": 2026,
    "amt": 132283,
    "org": "UNIVERSITY OF KENTUCKY",
    "st": "KY",
@@ -5336,7 +5589,7 @@
    "t": "Household Air Pollution, Adiposity, and Cardiorenal Disease Risk in Children",
    "sub": "Acute kidney injury",
    "cl": "Observational / clinical",
-   "id": 11170449,
+   "id": 11397739,
    "foa": "PA-20-206",
    "ss": "ZES1-BWD-S(KS)1",
    "sy": 2023,
@@ -5421,11 +5674,11 @@
    "pubs": 0
   },
   {
-   "num": "5K01DK132495-04",
+   "num": "5K01DK132495-05",
    "core": "K01DK132495",
    "ac": "K01",
-   "fy": 2025,
-   "amt": 129566,
+   "fy": 2026,
+   "amt": 129646,
    "org": "COLUMBIA UNIVERSITY HEALTH SCIENCES",
    "st": "NY",
    "city": "NEW YORK",
@@ -5440,11 +5693,11 @@
    "t": "Advancing broad implementation of genomic medicine in nephrology",
    "sub": "Health services / Epi",
    "cl": "Observational / clinical",
-   "id": 11178634,
+   "id": 11420311,
    "foa": "PA-20-190",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2022,
-   "pubs": 13
+   "pubs": 14
   },
   {
    "num": "5K23AI157893-05",
@@ -5470,7 +5723,7 @@
    "foa": "PA-20-205",
    "ss": "Acquired Immunodeficiency Syndrome Research Study Section[AIDS]",
    "sy": 2021,
-   "pubs": 52
+   "pubs": 54
   },
   {
    "num": "5K24HL171861-03",
@@ -5730,7 +5983,7 @@
    "foa": "PA-19-126",
    "ss": "Behavior and Social Science of Aging Study Section[NIA-S]",
    "sy": 2021,
-   "pubs": 0
+   "pubs": 14
   },
   {
    "num": "5K38HL169660-02",
@@ -5811,6 +6064,59 @@
    "pubs": 3
   },
   {
+   "num": "1K99DK146140-01A1",
+   "core": "K99DK146140",
+   "ac": "K99",
+   "fy": 2026,
+   "amt": 91380,
+   "org": "UNIV OF NORTH CAROLINA CHAPEL HILL",
+   "st": "NC",
+   "city": "CHAPEL HILL",
+   "pi": "Sarah Ray McLarnon",
+   "pis": [
+    "Sarah Ray McLarnon"
+   ],
+   "po": [
+    "TRACY L RANKIN"
+   ],
+   "ic": "NIDDK",
+   "t": "Investigating the implications of vascular patterning and maturation for kidney injury and repair",
+   "sub": "Acute kidney injury",
+   "cl": "Non-clinical / basic",
+   "id": 11451961,
+   "foa": "PA-24-194",
+   "ss": "Special Emphasis Panel[ZRG1 T12B-D (20)]",
+   "sy": 2026,
+   "new": true,
+   "pubs": 0
+  },
+  {
+   "num": "5K99DK143296-02",
+   "core": "K99DK143296",
+   "ac": "K99",
+   "fy": 2026,
+   "amt": 90000,
+   "org": "UNIVERSITY OF SOUTH FLORIDA",
+   "st": "FL",
+   "city": "TAMPA",
+   "pi": "Biyang  Xu",
+   "pis": [
+    "Biyang  Xu"
+   ],
+   "po": [
+    "TRACY L RANKIN"
+   ],
+   "ic": "NIDDK",
+   "t": "Molecular insights into the role of basolateral Kir channels in controlling acid-base balance in salt-sensitive hypertension",
+   "sub": "Stones / Electrolytes",
+   "cl": "Non-clinical / basic",
+   "id": 11403913,
+   "foa": "PA-24-194",
+   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
+   "sy": 2025,
+   "pubs": 2
+  },
+  {
    "num": "5K99DK138301-02",
    "core": "K99DK138301",
    "ac": "K99",
@@ -5835,32 +6141,6 @@
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2024,
    "pubs": 1
-  },
-  {
-   "num": "1K99DK143296-01",
-   "core": "K99DK143296",
-   "ac": "K99",
-   "fy": 2025,
-   "amt": 90000,
-   "org": "UNIVERSITY OF SOUTH FLORIDA",
-   "st": "FL",
-   "city": "TAMPA",
-   "pi": "Biyang  Xu",
-   "pis": [
-    "Biyang  Xu"
-   ],
-   "po": [
-    "TRACY L RANKIN"
-   ],
-   "ic": "NIDDK",
-   "t": "Molecular insights into the role of basolateral Kir channels in controlling acid-base balance in salt-sensitive hypertension",
-   "sub": "Stones / Electrolytes",
-   "cl": "Non-clinical / basic",
-   "id": 11115175,
-   "foa": "PA-24-194",
-   "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
-   "sy": 2025,
-   "pubs": 2
   },
   {
    "num": "5K99DK139418-02",
@@ -6068,7 +6348,7 @@
    "foa": "PA-19-118",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(MA)]",
    "sy": 2020,
-   "pubs": 43
+   "pubs": 44
   },
   {
    "num": "1K99ES034800-01A1",
@@ -6094,7 +6374,7 @@
    "foa": "PA-20-188",
    "ss": "Special Emphasis Panel[ZES1 ARL-D (C9)]",
    "sy": 2024,
-   "pubs": 0
+   "pubs": 1
   },
   {
    "num": "5K08DK131262-03",
