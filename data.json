@@ -1,32 +1,32 @@
 {
  "meta": {
-  "generated": "2026-09-07",
+  "generated": "2026-09-14",
   "source": "NIH RePORTER API v2 (active K-series, kidney study-population filter)",
   "snapshot_note": "Active career-development (K) awards where kidney disease is the study focus or study population (comorbidity studies in CKD/dialysis/transplant cohorts are included; incidental kidney mentions and pure kidney-cancer/urology are excluded). Subarea and clinical/non-clinical labels are first-pass algorithmic classifications.",
   "application_pdf_note": "NIH does not publish full grant applications publicly (FOIA-only); each award links to its NIH RePORTER record with the public abstract.",
   "universe_total_active": 219,
-  "n_institutions": 77,
-  "total_current_year_award_usd": 35534565,
-  "prev_generated": "2026-08-31",
-  "n_new_this_refresh": 9
+  "n_institutions": 78,
+  "total_current_year_award_usd": 36009848,
+  "prev_generated": "2026-09-07",
+  "n_new_this_refresh": 3
  },
  "stats": {
   "by_mechanism": {
    "K23": 99,
-   "K08": 51,
-   "K01": 48,
-   "K24": 8,
-   "K99": 7,
+   "K08": 50,
+   "K01": 49,
+   "K99": 8,
+   "K24": 7,
    "K25": 3,
    "K02": 1,
    "K38": 1,
    "K43": 1
   },
   "by_subarea": {
-   "CKD progression": 46,
-   "Acute kidney injury": 39,
+   "CKD progression": 45,
+   "Acute kidney injury": 38,
    "Transplant": 34,
-   "Glomerular disease": 26,
+   "Glomerular disease": 28,
    "ESKD / Dialysis": 16,
    "Hypertension": 15,
    "Pediatric nephrology": 14,
@@ -35,31 +35,31 @@
    "Stones / Electrolytes": 8
   },
   "by_clinical": {
-   "Observational / clinical": 105,
-   "Non-clinical / basic": 69,
-   "Clinical trial": 43,
-   "Clinical (other)": 2
+   "Observational / clinical": 104,
+   "Non-clinical / basic": 70,
+   "Clinical trial": 42,
+   "Clinical (other)": 3
   },
   "by_institute": {
-   "NIDDK": 160,
-   "NHLBI": 27,
+   "NIDDK": 158,
+   "NHLBI": 26,
+   "NIA": 9,
    "NIAID": 8,
-   "NIA": 7,
    "NIAMS": 3,
    "NINR": 3,
    "NIEHS": 3,
+   "NICHD": 2,
    "AHRQ": 2,
    "NCI": 1,
    "NIMH": 1,
    "NIGMS": 1,
    "NIMHD": 1,
-   "FIC": 1,
-   "NICHD": 1
+   "FIC": 1
   },
   "by_fiscal_year": {
-   "2026": 139,
+   "2026": 142,
    "2025": 43,
-   "2024": 37
+   "2024": 34
   }
  },
  "institutions": [
@@ -120,13 +120,6 @@
    "nonclinical": 0
   },
   {
-   "name": "MASSACHUSETTS GENERAL HOSPITAL",
-   "state": "MA",
-   "total": 6,
-   "clinical": 4,
-   "nonclinical": 2
-  },
-  {
    "name": "STANFORD UNIVERSITY",
    "state": "CA",
    "total": 6,
@@ -167,6 +160,13 @@
    "total": 5,
    "clinical": 5,
    "nonclinical": 0
+  },
+  {
+   "name": "MASSACHUSETTS GENERAL HOSPITAL",
+   "state": "MA",
+   "total": 5,
+   "clinical": 4,
+   "nonclinical": 1
   },
   {
    "name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
@@ -281,6 +281,13 @@
    "nonclinical": 0
   },
   {
+   "name": "UTAH STATE HIGHER EDUCATION SYSTEM--UNIVERSITY OF UTAH",
+   "state": "UT",
+   "total": 3,
+   "clinical": 2,
+   "nonclinical": 1
+  },
+  {
    "name": "BETH ISRAEL DEACONESS MEDICAL CENTER",
    "state": "MA",
    "total": 2,
@@ -316,13 +323,6 @@
    "nonclinical": 0
   },
   {
-   "name": "NORTHWESTERN UNIVERSITY",
-   "state": "IL",
-   "total": 2,
-   "clinical": 2,
-   "nonclinical": 0
-  },
-  {
    "name": "SEATTLE CHILDREN'S HOSPITAL",
    "state": "WA",
    "total": 2,
@@ -330,11 +330,11 @@
    "nonclinical": 1
   },
   {
-   "name": "UNIVERSITY OF MIAMI SCHOOL OF MEDICINE",
-   "state": "FL",
+   "name": "UNIVERSITY OF CALIFORNIA LOS ANGELES",
+   "state": "CA",
    "total": 2,
-   "clinical": 1,
-   "nonclinical": 1
+   "clinical": 0,
+   "nonclinical": 2
   },
   {
    "name": "UNIVERSITY OF ROCHESTER",
@@ -363,13 +363,6 @@
    "total": 2,
    "clinical": 0,
    "nonclinical": 2
-  },
-  {
-   "name": "UTAH STATE HIGHER EDUCATION SYSTEM--UNIVERSITY OF UTAH",
-   "state": "UT",
-   "total": 2,
-   "clinical": 1,
-   "nonclinical": 1
   },
   {
    "name": "VANDERBILT UNIVERSITY MEDICAL CENTER",
@@ -442,6 +435,13 @@
    "nonclinical": 1
   },
   {
+   "name": "NORTHWESTERN UNIVERSITY",
+   "state": "IL",
+   "total": 1,
+   "clinical": 1,
+   "nonclinical": 0
+  },
+  {
    "name": "OHIO STATE UNIVERSITY",
    "state": "OH",
    "total": 1,
@@ -477,18 +477,18 @@
    "nonclinical": 1
   },
   {
+   "name": "UNIVERSITY OF ARKANSAS AT FAYETTEVILLE",
+   "state": "AR",
+   "total": 1,
+   "clinical": 0,
+   "nonclinical": 1
+  },
+  {
    "name": "UNIVERSITY OF CALIFORNIA AT DAVIS",
    "state": "CA",
    "total": 1,
    "clinical": 1,
    "nonclinical": 0
-  },
-  {
-   "name": "UNIVERSITY OF CALIFORNIA LOS ANGELES",
-   "state": "CA",
-   "total": 1,
-   "clinical": 0,
-   "nonclinical": 1
   },
   {
    "name": "UNIVERSITY OF CALIFORNIA-IRVINE",
@@ -531,6 +531,13 @@
    "total": 1,
    "clinical": 1,
    "nonclinical": 0
+  },
+  {
+   "name": "UNIVERSITY OF MIAMI SCHOOL OF MEDICINE",
+   "state": "FL",
+   "total": 1,
+   "clinical": 0,
+   "nonclinical": 1
   },
   {
    "name": "UNIVERSITY OF OKLAHOMA HLTH SCIENCES CTR",
@@ -605,28 +612,28 @@
  ],
  "states": {
   "NY": 30,
-  "CA": 23,
-  "MA": 23,
+  "CA": 24,
+  "MA": 22,
   "PA": 17,
   "MD": 11,
   "NC": 10,
   "OH": 10,
-  "IL": 10,
   "WA": 9,
+  "IL": 9,
   "TX": 7,
   "AL": 7,
   "MI": 6,
   "CO": 6,
   "IN": 6,
-  "FL": 6,
   "CT": 5,
   "WI": 5,
+  "FL": 5,
   "MN": 4,
   "TN": 4,
+  "UT": 3,
   "OR": 3,
   "VA": 3,
   "GA": 3,
-  "UT": 2,
   "KS": 1,
   "OK": 1,
   "DC": 1,
@@ -634,13 +641,19 @@
   "NH": 1,
   "MO": 1,
   "NM": 1,
-  "KY": 1
+  "KY": 1,
+  "AR": 1
  },
  "mentors": [
   {
    "name": "McAdams-DeMarco MA",
    "count": 4,
    "subs": "Transplant"
+  },
+  {
+   "name": "Charytan DM",
+   "count": 2,
+   "subs": "CKD progression"
   },
   {
    "name": "Flythe JE",
@@ -663,11 +676,6 @@
    "subs": "CKD progression"
   },
   {
-   "name": "CKiD Study Investigators",
-   "count": 2,
-   "subs": "Pediatric nephrology"
-  },
-  {
    "name": "Navaneethan SD",
    "count": 2,
    "subs": "Transplant"
@@ -688,17 +696,39 @@
    "subs": "Glomerular disease"
   },
   {
-   "name": "Staruschenko A",
-   "count": 2,
-   "subs": "Hypertension"
-  },
-  {
    "name": "Becknell B",
    "count": 2,
    "subs": "Pediatric nephrology"
   }
  ],
  "grants": [
+  {
+   "num": "1K23HD118284-01A1",
+   "core": "K23HD118284",
+   "ac": "K23",
+   "fy": 2026,
+   "amt": 699840,
+   "org": "UTAH STATE HIGHER EDUCATION SYSTEM--UNIVERSITY OF UTAH",
+   "st": "UT",
+   "city": "SALT LAKE CITY",
+   "pi": "Gideon  Stitt",
+   "pis": [
+    "Gideon  Stitt"
+   ],
+   "po": [
+    "LESLY  SAMEDY BATES"
+   ],
+   "ic": "NICHD",
+   "t": "Physiologically Based Pharmacokinetics in Critically Ill Children on Dialysis",
+   "sub": "ESKD / Dialysis",
+   "cl": "Clinical (other)",
+   "id": 11302571,
+   "foa": "PA-24-185",
+   "ss": "Special Emphasis Panel[ZRG1 F12C-C (20)]",
+   "sy": 2026,
+   "new": true,
+   "pubs": 0
+  },
   {
    "num": "1K08CA308867-01",
    "core": "K08CA308867",
@@ -723,7 +753,6 @@
    "foa": "PA-24-182",
    "ss": "Special Emphasis Panel[ZRG1 CTH-K (83)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -880,7 +909,7 @@
    "foa": "PA-24-185",
    "ss": "Special Emphasis Panel[ZRG1 IIDA-R (83)]",
    "sy": 2026,
-   "pubs": 0
+   "pubs": 2
   },
   {
    "num": "5K23AI177939-03",
@@ -1166,7 +1195,7 @@
    "foa": "PA-20-206",
    "ss": "ZDK1-GRB-G(J1)",
    "sy": 2023,
-   "pubs": 12
+   "pubs": 13
   },
   {
    "num": "5K23DK140535-02",
@@ -1738,7 +1767,7 @@
    "foa": "PA-19-122",
    "ss": "Allergy, Immunology, and Transplantation Research Committee[AITC]",
    "sy": 2022,
-   "pubs": 300
+   "pubs": 301
   },
   {
    "num": "5K23DK128657-04",
@@ -2076,7 +2105,7 @@
    "foa": "PA-20-206",
    "ss": "ZDK1-GRB-G(M1)L",
    "sy": 2021,
-   "pubs": 17
+   "pubs": 18
   },
   {
    "num": "5K23HL150236-05",
@@ -2183,10 +2212,10 @@
    "pubs": 7
   },
   {
-   "num": "5K23DK125672-05",
+   "num": "5K23DK125672-04",
    "core": "K23DK125672",
    "ac": "K23",
-   "fy": 2026,
+   "fy": 2025,
    "amt": 188266,
    "org": "BRIGHAM AND WOMEN'S HOSPITAL",
    "st": "MA",
@@ -2202,7 +2231,7 @@
    "t": "Novel Pathways and Therapeutic Targets for Cisplatin-Associated Acute Kidney Injury",
    "sub": "Acute kidney injury",
    "cl": "Clinical trial",
-   "id": 11237074,
+   "id": 10992679,
    "foa": "PA-20-206",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2022,
@@ -2726,7 +2755,6 @@
    "foa": "PA-24-185",
    "ss": "Special Emphasis Panel[ZRG1 EPH-M (20)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -2756,32 +2784,6 @@
    "pubs": 14
   },
   {
-   "num": "5K23DK123384-06",
-   "core": "K23DK123384",
-   "ac": "K23",
-   "fy": 2024,
-   "amt": 180005,
-   "org": "UNIVERSITY OF MIAMI SCHOOL OF MEDICINE",
-   "st": "FL",
-   "city": "CORAL GABLES",
-   "pi": "Rodolfo  Galindo",
-   "pis": [
-    "Rodolfo  Galindo"
-   ],
-   "po": [
-    "GUILLERMO  ARREAZA-RUBIN"
-   ],
-   "ic": "NIDDK",
-   "t": "Use of Continuous Glucose Monitoring (CGM) in End-Stage Renal Disease(ESRD) Patients with Type 2 Diabetes",
-   "sub": "ESKD / Dialysis",
-   "cl": "Observational / clinical",
-   "id": 10749909,
-   "foa": "PA-19-118",
-   "ss": "Diabetes, Endocrinology and Metabolic Diseases B Study Section[DDK-B]",
-   "sy": 2020,
-   "pubs": 60
-  },
-  {
    "num": "1K23DK146170-01A1",
    "core": "K23DK146170",
    "ac": "K23",
@@ -2805,7 +2807,6 @@
    "foa": "PA-24-184",
    "ss": "Special Emphasis Panel[ZRG1 SCIL-A (20)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -2991,32 +2992,6 @@
    "pubs": 0
   },
   {
-   "num": "5K08DK124568-05",
-   "core": "K08DK124568",
-   "ac": "K08",
-   "fy": 2024,
-   "amt": 172800,
-   "org": "MASSACHUSETTS GENERAL HOSPITAL",
-   "st": "MA",
-   "city": "BOSTON",
-   "pi": "Petra  Simic",
-   "pis": [
-    "Petra  Simic"
-   ],
-   "po": [
-    "TRACY L RANKIN"
-   ],
-   "ic": "NIDDK",
-   "t": "Lysophosphatidic acid (LPA) is a novel FGF23 regulator in acute kidney injury.",
-   "sub": "Acute kidney injury",
-   "cl": "Non-clinical / basic",
-   "id": 10755684,
-   "foa": "PA-19-117",
-   "ss": "ZDK1-GRB-G(J2)",
-   "sy": 2020,
-   "pubs": 12
-  },
-  {
    "num": "1K08AR086331-01A1",
    "core": "K08AR086331",
    "ac": "K08",
@@ -3066,7 +3041,6 @@
    "foa": "PA-24-182",
    "ss": "Special Emphasis Panel[ZRG1 T12B-D (20)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -3119,7 +3093,7 @@
    "foa": "PA-19-117",
    "ss": "ZAG1-ZIJ-7(O1)",
    "sy": 2020,
-   "pubs": 4
+   "pubs": 10
   },
   {
    "num": "5K23DK128573-05",
@@ -3197,7 +3171,6 @@
    "foa": "PA-24-182",
    "ss": "Special Emphasis Panel[ZRG1 EPH-M (20)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -3224,7 +3197,6 @@
    "foa": "PA-24-182",
    "ss": "Special Emphasis Panel[ZRG1 HSS-M (90)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -3355,7 +3327,7 @@
    "foa": "PA-20-199",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 36
+   "pubs": 37
   },
   {
    "num": "5K08DK124685-05",
@@ -3849,7 +3821,7 @@
    "foa": "PA-20-206",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2024,
-   "pubs": 11
+   "pubs": 12
   },
   {
    "num": "1K01DK140521-01A1",
@@ -3901,7 +3873,6 @@
    "foa": "PA-24-182",
    "ss": "Special Emphasis Panel[ZRG1 F12B-G (20)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -4162,7 +4133,7 @@
    "foa": "PA-20-190",
    "ss": "Nursing Science Review Committee[NRRC(89)]",
    "sy": 2024,
-   "pubs": 3
+   "pubs": 4
   },
   {
    "num": "1K01DK147422-01",
@@ -4682,7 +4653,7 @@
    "foa": "PA-24-254",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2025,
-   "pubs": 1
+   "pubs": 16
   },
   {
    "num": "5K01DK124443-05",
@@ -4708,7 +4679,7 @@
    "foa": "PAR-18-419",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 0
+   "pubs": 3
   },
   {
    "num": "5K01DK139400-03",
@@ -5176,7 +5147,7 @@
    "foa": "PAR-18-419",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 0
+   "pubs": 2
   },
   {
    "num": "7K01DK128384-05",
@@ -5228,7 +5199,6 @@
    "foa": "PA-24-176",
    "ss": "Special Emphasis Panel[ZRG1 T12B-D (20)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
@@ -5437,7 +5407,7 @@
    "foa": "PAR-18-419",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 0
+   "pubs": 10
   },
   {
    "num": "5K01DK135929-03",
@@ -5596,10 +5566,10 @@
    "pubs": 2
   },
   {
-   "num": "1K24HL175495-01A1",
+   "num": "5K24HL175495-02",
    "core": "K24HL175495",
    "ac": "K24",
-   "fy": 2025,
+   "fy": 2026,
    "amt": 131886,
    "org": "BRIGHAM AND WOMEN'S HOSPITAL",
    "st": "MA",
@@ -5615,9 +5585,9 @@
    "t": "Volume And Patient-Oriented Research in Chronic Kidney Disease (VAPOR-CKD)",
    "sub": "CKD progression",
    "cl": "Observational / clinical",
-   "id": 11144785,
+   "id": 11401065,
    "foa": "PA-24-187",
-   "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR (JA)]",
+   "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(JA)]",
    "sy": 2025,
    "pubs": 0
   },
@@ -5778,6 +5748,33 @@
    "pubs": 0
   },
   {
+   "num": "1K99AG093043-01A1",
+   "core": "K99AG093043",
+   "ac": "K99",
+   "fy": 2026,
+   "amt": 123204,
+   "org": "UNIVERSITY OF CALIFORNIA LOS ANGELES",
+   "st": "CA",
+   "city": "LOS ANGELES",
+   "pi": "Lingyun  Xiong",
+   "pis": [
+    "Lingyun  Xiong"
+   ],
+   "po": [
+    "CHRISTY  CARTER"
+   ],
+   "ic": "NIA",
+   "t": "Male-female dynamic differences in the aging kidney",
+   "sub": "Glomerular disease",
+   "cl": "Non-clinical / basic",
+   "id": 11301717,
+   "foa": "PA-24-194",
+   "ss": "Special Emphasis Panel[ZRG1 F12B-G (20)]",
+   "sy": 2026,
+   "new": true,
+   "pubs": 0
+  },
+  {
    "num": "1K01DK144609-01A1",
    "core": "K01DK144609",
    "ac": "K01",
@@ -5856,6 +5853,33 @@
    "pubs": 5
   },
   {
+   "num": "1K01AG103877-01",
+   "core": "K01AG103877",
+   "ac": "K01",
+   "fy": 2026,
+   "amt": 119448,
+   "org": "UNIVERSITY OF ARKANSAS AT FAYETTEVILLE",
+   "st": "AR",
+   "city": "FAYETTEVILLE",
+   "pi": "Zachary John McKenna",
+   "pis": [
+    "Zachary John McKenna"
+   ],
+   "po": [
+    "JOHN  WILLIAMS"
+   ],
+   "ic": "NIA",
+   "t": "Mitigating the renal consequences of extreme heat in older adults",
+   "sub": "Glomerular disease",
+   "cl": "Non-clinical / basic",
+   "id": 11436562,
+   "foa": "PA-24-175",
+   "ss": "Special Emphasis Panel[ZRG1 EPH-M (20)]",
+   "sy": 2026,
+   "new": true,
+   "pubs": 0
+  },
+  {
    "num": "5K01HL155235-05",
    "core": "K01HL155235",
    "ac": "K01",
@@ -5906,32 +5930,6 @@
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(MA)]",
    "sy": 2022,
    "pubs": 19
-  },
-  {
-   "num": "5K24HL150235-05",
-   "core": "K24HL150235",
-   "ac": "K24",
-   "fy": 2024,
-   "amt": 114404,
-   "org": "NORTHWESTERN UNIVERSITY",
-   "st": "IL",
-   "city": "CHICAGO",
-   "pi": "Tamara  Isakova",
-   "pis": [
-    "Tamara  Isakova"
-   ],
-   "po": [
-    "NICOLE  REDMOND"
-   ],
-   "ic": "NHLBI",
-   "t": "Mentored patient-oriented research of novel mechanisms for cardiovascular disease in patients with chronic kidney disease",
-   "sub": "CKD progression",
-   "cl": "Clinical trial",
-   "id": 10763779,
-   "foa": "PA-19-122",
-   "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(OA)]",
-   "sy": 2020,
-   "pubs": 42
   },
   {
    "num": "5K01DK127002-04",
@@ -6087,7 +6085,6 @@
    "foa": "PA-24-194",
    "ss": "Special Emphasis Panel[ZRG1 T12B-D (20)]",
    "sy": 2026,
-   "new": true,
    "pubs": 0
   },
   {
