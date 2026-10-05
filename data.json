@@ -1,19 +1,19 @@
 {
  "meta": {
-  "generated": "2026-09-28",
+  "generated": "2026-10-05",
   "source": "NIH RePORTER API v2 (active K-series, kidney study-population filter)",
   "snapshot_note": "Active career-development (K) awards where kidney disease is the study focus or study population (comorbidity studies in CKD/dialysis/transplant cohorts are included; incidental kidney mentions and pure kidney-cancer/urology are excluded). Subarea and clinical/non-clinical labels are first-pass algorithmic classifications.",
   "application_pdf_note": "NIH does not publish full grant applications publicly (FOIA-only); each award links to its NIH RePORTER record with the public abstract.",
-  "universe_total_active": 222,
+  "universe_total_active": 224,
   "n_institutions": 78,
-  "total_current_year_award_usd": 36504716,
-  "prev_generated": "2026-09-21",
+  "total_current_year_award_usd": 36838100,
+  "prev_generated": "2026-09-28",
   "n_new_this_refresh": 2
  },
  "stats": {
   "by_mechanism": {
    "K23": 101,
-   "K08": 50,
+   "K08": 52,
    "K01": 49,
    "K24": 8,
    "K99": 8,
@@ -24,7 +24,7 @@
   },
   "by_subarea": {
    "CKD progression": 47,
-   "Acute kidney injury": 38,
+   "Acute kidney injury": 40,
    "Transplant": 34,
    "Glomerular disease": 28,
    "ESKD / Dialysis": 17,
@@ -36,12 +36,12 @@
   },
   "by_clinical": {
    "Observational / clinical": 106,
-   "Non-clinical / basic": 70,
+   "Non-clinical / basic": 72,
    "Clinical trial": 43,
    "Clinical (other)": 3
   },
   "by_institute": {
-   "NIDDK": 159,
+   "NIDDK": 161,
    "NHLBI": 27,
    "NIA": 10,
    "NIAID": 8,
@@ -57,9 +57,9 @@
    "FIC": 1
   },
   "by_fiscal_year": {
-   "2026": 144,
-   "2025": 42,
-   "2024": 36
+   "2026": 146,
+   "2025": 41,
+   "2024": 37
   }
  },
  "institutions": [
@@ -120,6 +120,13 @@
    "nonclinical": 0
   },
   {
+   "name": "MASSACHUSETTS GENERAL HOSPITAL",
+   "state": "MA",
+   "total": 6,
+   "clinical": 4,
+   "nonclinical": 2
+  },
+  {
    "name": "STANFORD UNIVERSITY",
    "state": "CA",
    "total": 6,
@@ -169,13 +176,6 @@
    "nonclinical": 0
   },
   {
-   "name": "MASSACHUSETTS GENERAL HOSPITAL",
-   "state": "MA",
-   "total": 5,
-   "clinical": 4,
-   "nonclinical": 1
-  },
-  {
    "name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
    "state": "CA",
    "total": 5,
@@ -211,6 +211,13 @@
    "nonclinical": 2
   },
   {
+   "name": "OREGON HEALTH & SCIENCE UNIVERSITY",
+   "state": "OR",
+   "total": 4,
+   "clinical": 1,
+   "nonclinical": 3
+  },
+  {
    "name": "UNIV OF NORTH CAROLINA CHAPEL HILL",
    "state": "NC",
    "total": 4,
@@ -237,13 +244,6 @@
    "total": 3,
    "clinical": 2,
    "nonclinical": 1
-  },
-  {
-   "name": "OREGON HEALTH & SCIENCE UNIVERSITY",
-   "state": "OR",
-   "total": 3,
-   "clinical": 1,
-   "nonclinical": 2
   },
   {
    "name": "RESEARCH INST NATIONWIDE CHILDREN'S HOSP",
@@ -613,7 +613,7 @@
  "states": {
   "NY": 30,
   "CA": 24,
-  "MA": 22,
+  "MA": 23,
   "PA": 18,
   "MD": 11,
   "NC": 10,
@@ -628,10 +628,10 @@
   "FL": 6,
   "CT": 5,
   "WI": 5,
+  "OR": 4,
   "MN": 4,
   "TN": 4,
   "UT": 3,
-  "OR": 3,
   "VA": 3,
   "GA": 3,
   "KS": 1,
@@ -654,6 +654,11 @@
    "name": "Flythe JE",
    "count": 2,
    "subs": "Transplant"
+  },
+  {
+   "name": "Abdel-Rahman EM",
+   "count": 2,
+   "subs": "Acute kidney injury"
   },
   {
    "name": "CRIC Study Investigators",
@@ -1179,7 +1184,7 @@
    "foa": "PA-20-206",
    "ss": "ZDK1-GRB-G(M1)L",
    "sy": 2021,
-   "pubs": 20
+   "pubs": 18
   },
   {
    "num": "5K23DK133677-04",
@@ -1777,7 +1782,7 @@
    "foa": "PA-19-122",
    "ss": "Allergy, Immunology, and Transplantation Research Committee[AITC]",
    "sy": 2022,
-   "pubs": 302
+   "pubs": 304
   },
   {
    "num": "5K23DK128657-04",
@@ -3028,6 +3033,33 @@
    "pubs": 0
   },
   {
+   "num": "5K08DK124568-05",
+   "core": "K08DK124568",
+   "ac": "K08",
+   "fy": 2024,
+   "amt": 172800,
+   "org": "MASSACHUSETTS GENERAL HOSPITAL",
+   "st": "MA",
+   "city": "BOSTON",
+   "pi": "Petra  Simic",
+   "pis": [
+    "Petra  Simic"
+   ],
+   "po": [
+    "TRACY L RANKIN"
+   ],
+   "ic": "NIDDK",
+   "t": "Lysophosphatidic acid (LPA) is a novel FGF23 regulator in acute kidney injury.",
+   "sub": "Acute kidney injury",
+   "cl": "Non-clinical / basic",
+   "id": 10755684,
+   "foa": "PA-19-117",
+   "ss": "ZDK1-GRB-G(J2)",
+   "sy": 2020,
+   "new": true,
+   "pubs": 0
+  },
+  {
    "num": "1K08AR086331-01A1",
    "core": "K08AR086331",
    "ac": "K08",
@@ -3285,7 +3317,7 @@
    "foa": "PA-20-203",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
-   "pubs": 0
+   "pubs": 1
   },
   {
    "num": "5K08DK125776-05",
@@ -3545,7 +3577,7 @@
    "foa": "PA-20-206",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2023,
-   "pubs": 7
+   "pubs": 8
   },
   {
    "num": "5K08DK127250-05",
@@ -3649,7 +3681,7 @@
    "foa": "PA-24-182",
    "ss": "Special Emphasis Panel[ZRG1 T12B-D (20)]",
    "sy": 2026,
-   "pubs": 0
+   "pubs": 1
   },
   {
    "num": "7K01HL164978-04",
@@ -4224,6 +4256,33 @@
    "pubs": 11
   },
   {
+   "num": "1K08DK149410-01",
+   "core": "K08DK149410",
+   "ac": "K08",
+   "fy": 2026,
+   "amt": 160584,
+   "org": "OREGON HEALTH & SCIENCE UNIVERSITY",
+   "st": "OR",
+   "city": "PORTLAND",
+   "pi": "Kevin Glenn Burfeind",
+   "pis": [
+    "Kevin Glenn Burfeind"
+   ],
+   "po": [
+    "TRACY L RANKIN"
+   ],
+   "ic": "NIDDK",
+   "t": "Natural killer T cells in acute cardiorenal syndrome",
+   "sub": "Acute kidney injury",
+   "cl": "Non-clinical / basic",
+   "id": 11436387,
+   "foa": "PA-24-182",
+   "ss": "Special Emphasis Panel[ZRG1 T12B-D (20)]",
+   "sy": 2026,
+   "new": true,
+   "pubs": 0
+  },
+  {
    "num": "5K01DK144648-02",
    "core": "K01DK144648",
    "ac": "K01",
@@ -4351,7 +4410,7 @@
    "foa": "PA-19-117",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2021,
-   "pubs": 15
+   "pubs": 16
   },
   {
    "num": "1K08DK147651-01",
@@ -4455,7 +4514,7 @@
    "foa": "PA-19-119",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(MA)]",
    "sy": 2020,
-   "pubs": 84
+   "pubs": 85
   },
   {
    "num": "5K01DK125616-04",
@@ -4689,7 +4748,7 @@
    "foa": "PA-24-254",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2025,
-   "pubs": 7
+   "pubs": 13
   },
   {
    "num": "5K01DK124443-05",
@@ -5056,10 +5115,10 @@
    "pubs": 5
   },
   {
-   "num": "1K01DK140634-01A1",
+   "num": "5K01DK140634-02",
    "core": "K01DK140634",
    "ac": "K01",
-   "fy": 2025,
+   "fy": 2026,
    "amt": 148986,
    "org": "UNIVERSITY OF PITTSBURGH AT PITTSBURGH",
    "st": "PA",
@@ -5075,7 +5134,7 @@
    "t": "Role of BK gamma subunits in renal K secretion",
    "sub": "Stones / Electrolytes",
    "cl": "Non-clinical / basic",
-   "id": 11135912,
+   "id": 11378377,
    "foa": "PA-24-176",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2025,
@@ -5131,7 +5190,6 @@
    "foa": "PA-20-205",
    "ss": "Nursing Science Review Committee[NRRC(82)]",
    "sy": 2022,
-   "new": true,
    "pubs": 7
   },
   {
@@ -5964,7 +6022,7 @@
    "foa": "PA-20-193",
    "ss": "NHLBI Mentored Patient-Oriented Research Study Section[MPOR(MA)]",
    "sy": 2022,
-   "pubs": 19
+   "pubs": 20
   },
   {
    "num": "5K24HL150235-05",
@@ -6354,7 +6412,7 @@
    "foa": "PA-20-272",
    "ss": "Kidney, Urologic and Hematologic Diseases D Study Section[DDK-D]",
    "sy": 2022,
-   "pubs": 12
+   "pubs": 13
   },
   {
    "num": "3K23DK123413-05S1",
@@ -6432,7 +6490,6 @@
    "foa": "PA-20-188",
    "ss": "Special Emphasis Panel[ZES1 ARL-D (C9)]",
    "sy": 2024,
-   "new": true,
    "pubs": 1
   },
   {
